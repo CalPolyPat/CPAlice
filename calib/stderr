@@ -1,0 +1,399 @@
+Error in <TUnixSystem::DynamicPathName>: libOADB[.so | .dll | .dylib | .sl | .dl | .a] does not exist in .:/nfshome/psteffan/alicesw/fastjet/3.1.3/inst/lib:/nfshome/psteffan/alicesw/aliphysics/vAN-20160201/inst/lib:/nfshome/psteffan/alicesw/aliroot/v5-07-20/inst/lib:/nfshome/psteffan/alicesw/aliroot/v5-07-20/inst/lib/tgt_linuxx8664gcc:/nfshome/psteffan/alicesw/geant3/v2-0/inst/lib/tgt_linuxx8664gcc:/nfshome/psteffan/alicesw/geant3/v2-0/inst/lib:/nfshome/psteffan/alicesw/geant3/v2-0/inst/lib64:/nfshome/psteffan/alicesw/root/v5-34-30/inst/lib:/nfshome/psteffan/alicesw/alien/api/lib:/nfshome/psteffan/cpalice/calib:/usr/lib:.:/nfshome/psteffan/alicesw/root/v5-34-30/inst/lib::/nfshome/psteffan/alicesw/root/v5-34-30/inst/lib/cint/cint/stl
+Error in <TUnixSystem::DynamicPathName>: libCORRFW[.so | .dll | .dylib | .sl | .dl | .a] does not exist in .:/nfshome/psteffan/alicesw/fastjet/3.1.3/inst/lib:/nfshome/psteffan/alicesw/aliphysics/vAN-20160201/inst/lib:/nfshome/psteffan/alicesw/aliroot/v5-07-20/inst/lib:/nfshome/psteffan/alicesw/aliroot/v5-07-20/inst/lib/tgt_linuxx8664gcc:/nfshome/psteffan/alicesw/geant3/v2-0/inst/lib/tgt_linuxx8664gcc:/nfshome/psteffan/alicesw/geant3/v2-0/inst/lib:/nfshome/psteffan/alicesw/geant3/v2-0/inst/lib64:/nfshome/psteffan/alicesw/root/v5-34-30/inst/lib:/nfshome/psteffan/alicesw/alien/api/lib:/nfshome/psteffan/cpalice/calib:/usr/lib:.:/nfshome/psteffan/alicesw/root/v5-34-30/inst/lib::/nfshome/psteffan/alicesw/root/v5-34-30/inst/lib/cint/cint/stl
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 16 (Thread 0x7ffbe4cb5700 (LWP 30527)):
+#0  0x00007ffbeada4f3d in nanosleep () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbeada4dd4 in __sleep (seconds=0) at ../sysdeps/unix/sysv/linux/sleep.c:137
+#2  0x00007ffbe6ab71dc in GarbageCollectorThread (arg=0x2d99580, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientConnMgr.cc:73
+#3  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x2d9b830) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#4  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbe4cb5700) at pthread_create.c:312
+#5  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 15 (Thread 0x7ffbe3990700 (LWP 30532)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbe398d930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x2da24e0, buffer=0x7ffbdc0012e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x2da0fe0, buf=buf
+entry=0x7ffbdc0012e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbe398defc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbdc0012a0, phy=phy
+entry=0x2da0fe0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x2da0fe0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x2da0fe0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x2d9f480) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbe3990700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 14 (Thread 0x7ffbe2915700 (LWP 30588)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbe2912930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3460420, buffer=0x7ffbd4000900, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x345e9d0, buf=buf
+entry=0x7ffbd4000900, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbe2912efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbd40008c0, phy=phy
+entry=0x345e9d0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x345e9d0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x345e9d0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x345ce90) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbe2915700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 13 (Thread 0x7ffbd1ba8700 (LWP 30597)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbd1ba5930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x345fb30, buffer=0x7ffbcc000a30, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x345a7d0, buf=buf
+entry=0x7ffbcc000a30, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbd1ba5efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbcc0009f0, phy=phy
+entry=0x345a7d0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x345a7d0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x345a7d0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3460010) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbd1ba8700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 12 (Thread 0x7ffbc9d6d700 (LWP 30716)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbc9d6a930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3cbcae0, buffer=0x7ffbc4000900, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3425e20, buf=buf
+entry=0x7ffbc4000900, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbc9d6aefc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbc40008c0, phy=phy
+entry=0x3425e20) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3425e20, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3425e20, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3c106f0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbc9d6d700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 11 (Thread 0x7ffbc956c700 (LWP 30727)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbc9569930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3f68ff0, buffer=0x7ffbbc000970, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x345e490, buf=buf
+entry=0x7ffbbc000970, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbc9569efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbbc000930, phy=phy
+entry=0x345e490) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x345e490, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x345e490, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3f4fa90) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbc956c700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 10 (Thread 0x7ffbc8d6b700 (LWP 30795)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbc8d68930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3e7e9f0, buffer=0x7ffbc00009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3f71ed0, buf=buf
+entry=0x7ffbc00009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbc8d68efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbc00009a0, phy=phy
+entry=0x3f71ed0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3f71ed0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3f71ed0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x34d8610) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbc8d6b700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 9 (Thread 0x7ffbbbfff700 (LWP 30899)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbbbffc930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3f57870, buffer=0x7ffbb40009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3f56cf0, buf=buf
+entry=0x7ffbb40009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbbbffcefc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbb40009a0, phy=phy
+entry=0x3f56cf0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3f56cf0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3f56cf0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3c6d9e0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbbbfff700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 8 (Thread 0x7ffbbb7fe700 (LWP 30999)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbbb7fb930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3f1f2b0, buffer=0x7ffbac0009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x345de60, buf=buf
+entry=0x7ffbac0009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbbb7fbefc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbac0009a0, phy=phy
+entry=0x345de60) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x345de60, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x345de60, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3e7ee90) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbbb7fe700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 7 (Thread 0x7ffbbaffd700 (LWP 31107)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbbaffa930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x345d1b0, buffer=0x7ffbb00009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3f4b770, buf=buf
+entry=0x7ffbb00009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbbaffaefc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffbb00009a0, phy=phy
+entry=0x3f4b770) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3f4b770, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3f4b770, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3c3ab80) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbbaffd700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 6 (Thread 0x7ffbba7fc700 (LWP 31197)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbba7f9930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3ce58d0, buffer=0x7ffba40009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3461a50, buf=buf
+entry=0x7ffba40009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbba7f9efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffba40009a0, phy=phy
+entry=0x3461a50) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3461a50, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3461a50, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3e2f1e0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbba7fc700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 5 (Thread 0x7ffbb9ffb700 (LWP 31287)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbb9ff8930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x34601d0, buffer=0x7ffba80009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3f1e490, buf=buf
+entry=0x7ffba80009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbb9ff8efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffba80009a0, phy=phy
+entry=0x3f1e490) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3f1e490, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3f1e490, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x345e460) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbb9ffb700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 4 (Thread 0x7ffbb97fa700 (LWP 31379)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbb97f7930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3f65b70, buffer=0x7ffb9c0009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3f675b0, buf=buf
+entry=0x7ffb9c0009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbb97f7efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffb9c0009a0, phy=phy
+entry=0x3f675b0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3f675b0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3f675b0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3c774a0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbb97fa700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 3 (Thread 0x7ffbb8ff9700 (LWP 31470)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffbb8ff6930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3f56570, buffer=0x7ffba00009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3f560d0, buf=buf
+entry=0x7ffba00009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffbb8ff6efc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffba00009a0, phy=phy
+entry=0x3f560d0) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3f560d0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x3f560d0, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3cbcc40) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffbb8ff9700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 2 (Thread 0x7ffb960a0700 (LWP 31574)):
+#0  0x00007ffbeadd112d in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffbe6a9cb63 in poll (__timeout=1000, __nfds=1, __fds=0x7ffb9609d930) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3f6f950, buffer=0x7ffb900009e0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientSock.cc:133
+#3  0x00007ffbe6ac1eb8 in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x345d850, buf=buf
+entry=0x7ffb900009e0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7ffb9609defc) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:359
+#4  0x00007ffbe6ad09ee in XrdClientMessage::ReadRaw (this=this
+entry=0x7ffb900009a0, phy=phy
+entry=0x345d850) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientMessage.cc:152
+#5  0x00007ffbe6ac4ca5 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x345d850, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:440
+#6  0x00007ffbe6ac6902 in SocketReaderThread (arg=0x345d850, thr=<optimized out>) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdClient/XrdClientPhyConnection.cc:57
+#7  0x00007ffbe682aae7 in XrdSysThread_Xeq (myargs=0x3bed520) at /tmp/alien-temp-inst-psteffan/xrootd-3.2.7/src/XrdSys/XrdSysPthread.cc:67
+#8  0x00007ffbeb0b1182 in start_thread (arg=0x7ffb960a0700) at pthread_create.c:312
+#9  0x00007ffbeadde47d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 1 (Thread 0x7ffbed531140 (LWP 30511)):
+#0  0x00007ffbeada4b99 in __libc_waitpid (pid=32321, stat_loc=stat_loc
+entry=0x7ffef0466940, options=options
+entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:40
+#1  0x00007ffbead2a2e2 in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:148
+#2  0x00007ffbecc00d43 in TUnixSystem::StackTrace (this=0x20d8bc0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/unix/src/TUnixSystem.cxx:2419
+#3  0x00007ffbecc0295c in TUnixSystem::DispatchSignals (this=0x20d8bc0, sig=kSigSegmentationViolation) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/unix/src/TUnixSystem.cxx:1294
+#4  <signal handler called>
+#5  0x00007ffbead62f91 in _int_free (av=0x235d73656972746e, p=0x70fe200, have_lock=0) at malloc.c:3870
+#6  0x00007ffbecbaaadb in TClonesArray::~TClonesArray (this=0x7ffef0469180, __in_chrg=<optimized out>) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/cont/src/TClonesArray.cxx:267
+#7  0x00007ffbd805256d in AliAnalysisTaskSanity::UserExec (this=0x33713f0) at /nfshome/psteffan/cpalice/calib/./AliAnalysisTaskSanity.cxx:137
+#8  0x00007ffbd981e5ec in AliAnalysisTaskSE::Exec (this=0x33713f0, option=0x7ffbdaf64157 "") at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSISalice/AliAnalysisTaskSE.cxx:766
+#9  0x00007ffbecb9282a in TTask::ExecuteTask (this=0x33713f0, option=0x7ffbdaf64157 "") at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/base/src/TTask.cxx:272
+#10 0x00007ffbdaf22725 in AliAnalysisManager::ExecAnalysis (this=0x31fef50, option=option
+entry=0x7ffbdaf64157 "") at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSIS/AliAnalysisManager.cxx:2418
+#11 0x00007ffbdaf2c91f in AliAnalysisSelector::Process (this=0x33a9590, entry=37) at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSIS/AliAnalysisSelector.cxx:163
+#12 0x00007ffbdabb8af3 in TTreePlayer::Process (this=0x33a8e40, selector=0x33a9590, option=<optimized out>, nentries=<optimized out>, firstentry=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/tree/treeplayer/src/TTreePlayer.cxx:2179
+#13 0x00007ffbdaf2649b in AliAnalysisManager::StartAnalysis (this=0x31fef50, type=type
+entry=0x33c1e38 "localfile", tree=tree
+entry=0x33bf710, nentries=2000, firstentry=0) at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSIS/AliAnalysisManager.cxx:1986
+#14 0x00007ffbdaf55c1f in G__G__ANALYSIS_215_0_14 (result7=0x7ffef04706d0, funcname=<optimized out>, libp=<optimized out>, hash=<optimized out>) at /nfshome/psteffan/alicesw/aliroot/v5-07-20/build/ANALYSIS/ANALYSIS/G__ANALYSIS.cxx:4591
+#15 0x00007ffbebfd473a in Cint::G__ExceptionWrapper (funcp=0x7ffbdaf55b20 <G__G__ANALYSIS_215_0_14(G__value*, char const*, G__param*, int)>, result7=0x7ffef04706d0, funcname=0x30f02d0 "", libp=0x7ffef0470710, hash=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/Api.cxx:393
+#16 0x00007ffbec0b721a in G__execute_call (result7=0x7ffef04706d0, libp=0x7ffef0470710, ifunc=0x30f02d0, ifn=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/newlink.cxx:2408
+#17 0x00007ffbec0b7bbd in G__call_cppfunc (result7=0x7ffef04706d0, libp=0x7ffef0470710, ifunc=0x30f02d0, ifn=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/newlink.cxx:2612
+#18 0x00007ffbec092dfb in G__interpret_func (result7=0x7ffef04706d0, funcname=0x21532e0 "StartAnalysis", libp=0x7ffef0470710, hash=1362, p_ifunc=0x30f02d0, funcmatch=1, memfunc_flag=1) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/ifunc.cxx:5791
+#19 0x00007ffbec06b918 in G__getfunction (item=0x21003e5 "StartAnalysis(\"localfile\",chain,2000,0)", known3=0x7ffef047bf9c, memfunc_flag=1) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/func.cxx:2660
+#20 0x00007ffbec1a03c0 in G__getstructmem (store_var_type=112, varname=..., membername=0x21003e5 "StartAnalysis(\"localfile\",chain,2000,0)", memnamesize=2147483647, tagname=0x21526b0 "mgr", known2=0x7ffef047bf9c, varglobal=0x7ffbec46e400 <G__global>, objptr=2) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/var.cxx:6821
+#21 0x00007ffbec18fe33 in G__getvariable (item=0x21003e0 "mgr->StartAnalysis(\"localfile\",chain,2000,0)", known=0x7ffef047bf9c, varglobal=0x7ffbec46e400 <G__global>, varlocal=0x7ffef047eee0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/var.cxx:5407
+#22 0x00007ffbec05b932 in G__getitem (item=0x21003e0 "mgr->StartAnalysis(\"localfile\",chain,2000,0)") at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/expr.cxx:1906
+#23 0x00007ffbec058f40 in G__getexpr (expression=0x211b4c0 "mgr->StartAnalysis(\"localfile\",chain,2000,0)") at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/expr.cxx:1488
+#24 0x00007ffbec0ea50a in G__exec_function (statement=..., pc=0x7ffef047e7a0, piout=0x7ffef047e7a4, plargestep=0x7ffef047e7ac, presult=0x7ffef047e890) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/parse.cxx:645
+#25 0x00007ffbec0fbb65 in G__exec_statement (mparen=0x7ffef047ead4) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/parse.cxx:7371
+#26 0x00007ffbec09649b in G__interpret_func (result7=0x7ffef047f8c0, funcname=0x20f2dc0 "example_task", libp=0x7ffef047f900, hash=1278, p_ifunc=0x2b44620, funcmatch=1, memfunc_flag=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/ifunc.cxx:6710
+#27 0x00007ffbec06c6c8 in G__getfunction (item=0x20f25a0 "example_task()", known3=0x7ffef048a3dc, memfunc_flag=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/func.cxx:2901
+#28 0x00007ffbec05ba74 in G__getitem (item=0x20f25a0 "example_task()") at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/expr.cxx:1918
+#29 0x00007ffbec058f40 in G__getexpr (expression=0x2bb70f0 "example_task()") at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/expr.cxx:1488
+#30 0x00007ffbec045cb0 in G__calc_internal (exprwithspace=0x20f4610 "example_task()") at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/expr.cxx:1071
+#31 0x00007ffbec106487 in G__process_cmd (line=0x2b86580 ".X  /nfshome/psteffan/cpalice/calib/./example_task.C", prompt=0x20e32c8 "", more=0x20e32c0, err=0x7ffef048dc7c, rslt=0x7ffef048dcb0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/cint/cint/src/pause.cxx:2333
+#32 0x00007ffbecbbe32e in TCint::ProcessLine (this=0x20e3280, line=0x2b86580 ".X  /nfshome/psteffan/cpalice/calib/./example_task.C", error=0x7ffef048ea5c) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/meta/src/TCint.cxx:549
+#33 0x00007ffbecbbe951 in TCint::ProcessLineSynch (this=0x20e3280, line=0x2b86580 ".X  /nfshome/psteffan/cpalice/calib/./example_task.C", error=0x7ffef048ea5c) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/meta/src/TCint.cxx:628
+#34 0x00007ffbecb2947c in TApplication::ExecuteFile (file=<optimized out>, error=0x7ffef048ea5c, keep=<optimized out>) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/base/src/TApplication.cxx:1110
+#35 0x00007ffbecb289ff in TApplication::ProcessLine (this=0x2261ba0, line=<optimized out>, sync=<optimized out>, err=0x7ffef048ea5c) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/base/src/TApplication.cxx:959
+#36 0x00007ffbebcfe09d in TRint::Run (this=0x2261ba0, retrn=<optimized out>) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/rint/src/TRint.cxx:417
+#37 0x000000000040101c in main (argc=1, argv=0x7ffef0490be8) at /nfshome/psteffan/alicesw/root/v5-34-30/src/main/src/rmain.cxx:29
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00007ffbead62f91 in _int_free (av=0x235d73656972746e, p=0x70fe200, have_lock=0) at malloc.c:3870
+#6  0x00007ffbecbaaadb in TClonesArray::~TClonesArray (this=0x7ffef0469180, __in_chrg=<optimized out>) at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/cont/src/TClonesArray.cxx:267
+#7  0x00007ffbd805256d in AliAnalysisTaskSanity::UserExec (this=0x33713f0) at /nfshome/psteffan/cpalice/calib/./AliAnalysisTaskSanity.cxx:137
+#8  0x00007ffbd981e5ec in AliAnalysisTaskSE::Exec (this=0x33713f0, option=0x7ffbdaf64157 "") at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSISalice/AliAnalysisTaskSE.cxx:766
+#9  0x00007ffbecb9282a in TTask::ExecuteTask (this=0x33713f0, option=0x7ffbdaf64157 "") at /nfshome/psteffan/alicesw/root/v5-34-30/src/core/base/src/TTask.cxx:272
+#10 0x00007ffbdaf22725 in AliAnalysisManager::ExecAnalysis (this=0x31fef50, option=option
+entry=0x7ffbdaf64157 "") at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSIS/AliAnalysisManager.cxx:2418
+#11 0x00007ffbdaf2c91f in AliAnalysisSelector::Process (this=0x33a9590, entry=37) at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSIS/AliAnalysisSelector.cxx:163
+#12 0x00007ffbdabb8af3 in TTreePlayer::Process (this=0x33a8e40, selector=0x33a9590, option=<optimized out>, nentries=<optimized out>, firstentry=0) at /nfshome/psteffan/alicesw/root/v5-34-30/src/tree/treeplayer/src/TTreePlayer.cxx:2179
+#13 0x00007ffbdaf2649b in AliAnalysisManager::StartAnalysis (this=0x31fef50, type=type
+entry=0x33c1e38 "localfile", tree=tree
+entry=0x33bf710, nentries=2000, firstentry=0) at /nfshome/psteffan/alicesw/aliroot/v5-07-20/src/ANALYSIS/ANALYSIS/AliAnalysisManager.cxx:1986
+===========================================================
+
+
+Function example_task() busy flag cleared
+Output file sanityhistos.root not found. Job FAILED !
+Output files were not validated by the analysis manager

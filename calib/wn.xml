@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<alien>
+  <collection name="collection">
+    <event name="1">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 02:57:44" dir="167961037" entryId="167961202" expiretime="" gowner="alidaq" guid="FE6244A6-075B-11E6-8334-FFE714374F5A" guidtime="11E6075B" jobid="649745959" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.10/AliESDs.root" md5="30fa0aa099a0bc1231a3aeb95a1076e3" owner="alidaq" perm="755" replicated="0" size="249796690" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.10/AliESDs.root" type="f" />
+    </event>
+    <event name="10">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 03:31:11" dir="167972118" entryId="167972418" expiretime="" gowner="alidaq" guid="9FD2B498-0760-11E6-8B0D-978825520599" guidtime="11E60760" jobid="649745968" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.21/AliESDs.root" md5="a56c55a2cb44157d892f7a7f179dbeef" owner="alidaq" perm="755" replicated="0" size="259233153" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.21/AliESDs.root" type="f" />
+    </event>
+    <event name="2">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-20 23:59:29" dir="167895627" entryId="167895933" expiretime="" gowner="alidaq" guid="8FCA93D6-0742-11E6-91E7-277B80CC0314" guidtime="11E60742" jobid="649745960" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.11/AliESDs.root" md5="39a647b6005a60b75dee562e2d36798c" owner="alidaq" perm="755" replicated="0" size="255438549" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.11/AliESDs.root" type="f" />
+    </event>
+    <event name="3">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-20 23:22:44" dir="167890329" entryId="167891424" expiretime="" gowner="alidaq" guid="2AB72DB0-073D-11E6-9454-E74EAB16D1C9" guidtime="11E6073D" jobid="649745961" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.12/AliESDs.root" md5="51f1844aa2f25c43ea752c3395f376b8" owner="alidaq" perm="755" replicated="0" size="255100222" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.12/AliESDs.root" type="f" />
+    </event>
+    <event name="4">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 02:12:02" dir="167944304" entryId="167944552" expiretime="" gowner="alidaq" guid="97D9809C-0755-11E6-B477-43D8BD5A0950" guidtime="11E60755" jobid="649745962" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.13/AliESDs.root" md5="61e5b1bdc28ce2cf4263afae9973ff15" owner="alidaq" perm="755" replicated="0" size="252348034" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.13/AliESDs.root" type="f" />
+    </event>
+    <event name="5">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 01:30:05" dir="167925113" entryId="167925303" expiretime="" gowner="alidaq" guid="C03E0342-074F-11E6-9E38-B359FD80B61D" guidtime="11E6074F" jobid="649745963" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.14/AliESDs.root" md5="5bcb2886113eafa546099325f735372d" owner="alidaq" perm="755" replicated="0" size="250725340" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.14/AliESDs.root" type="f" />
+    </event>
+    <event name="6">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 01:28:35" dir="167924342" entryId="167924575" expiretime="" gowner="alidaq" guid="8750CB14-074F-11E6-8901-632F7DA86AFC" guidtime="11E6074F" jobid="649745964" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.15/AliESDs.root" md5="3981d5e116ee360c89f932861678a6e4" owner="alidaq" perm="755" replicated="0" size="255249697" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.15/AliESDs.root" type="f" />
+    </event>
+    <event name="7">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 01:04:10" dir="167913682" entryId="167914000" expiretime="" gowner="alidaq" guid="1B199D66-074C-11E6-AE20-036A0469F73B" guidtime="11E6074C" jobid="649745965" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.16/AliESDs.root" md5="80bd076aa46605a5f82710ad81b9dd3a" owner="alidaq" perm="755" replicated="0" size="254699243" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.16/AliESDs.root" type="f" />
+    </event>
+    <event name="8">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 01:46:07" dir="167933415" entryId="167933743" expiretime="" gowner="alidaq" guid="F5A7C174-0751-11E6-9E85-7755D80A9DD6" guidtime="11E60751" jobid="649745966" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.17/AliESDs.root" md5="73dcdd4a38954972cb750dd3ad8c7a3c" owner="alidaq" perm="755" replicated="0" size="252144053" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.17/AliESDs.root" type="f" />
+    </event>
+    <event name="9">
+      <file name="AliESDs.root" aclId="" broken="0" ctime="2016-04-21 01:52:32" dir="167936136" entryId="167936465" expiretime="" gowner="alidaq" guid="D398C74E-0752-11E6-9ED0-473D44612084" guidtime="11E60752" jobid="649745967" lfn="/alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.20/AliESDs.root" md5="400cec5ad5ad9fe919be23646891934a" owner="alidaq" perm="755" replicated="0" size="252825300" turl="alien:///alice/data/2013/LHC13c/000195673/emcal_tofrecpoints/13000195673000.20/AliESDs.root" type="f" />
+    </event>
+    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 10 -o 0 /alice/data/2013/LHC13c/000195673 emcal_tofrecpoints/*ESDs.root" creator="admin" date="Mon May  9 03:19:21 CEST 2016" timestamp="1462756761" />
+  </collection>
+</alien>
+
+
+
+
+
+
+
+
+
+

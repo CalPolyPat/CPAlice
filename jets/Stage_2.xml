@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<alien>
+  <collection name="Stage_2">
+    <info command="[/alice/cern.ch/user/p/psteffan/example_task/out/]: find -z -x Stage_2 /alice/cern.ch/user/p/psteffan//example_task/out/011 Stage_1/*root_archive.zip" creator="admin" date="Sun Jun 26 06:32:33 CEST 2016" timestamp="1466915553" />
+  </collection>
+</alien>
+

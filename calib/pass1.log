@@ -1,0 +1,760 @@
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   5.34/26  20 February 2015   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+ROOT 5.34/26 (v5-34-26@v5-34-26, Jun 12 2015, 14:53:27 on linuxx8664gcc)
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+Processing run1.C...
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+In file included from /nfshome/psteffan/cpalice/calib/AliAnalysisTaskPJ_B_cxx_ACLiC_dict.h:34:0,
+                 from /nfshome/psteffan/cpalice/calib/AliAnalysisTaskPJ_B_cxx_ACLiC_dict.cxx:17:
+/nfshome/psteffan/cpalice/calib/./AliAnalysisTaskPJ_B.cxx: In constructor ‘AliAnalysisTaskPJ_B::AliAnalysisTaskPJ_B(const char*)’:
+/nfshome/psteffan/cpalice/calib/./AliAnalysisTaskPJ_B.cxx:28:1: warning: ‘AliAnalysisTaskPJ_B::fHistTOFMatch’ should be initialized in the member initialization list [-Weffc++]
+ AliAnalysisTaskPJ_B::AliAnalysisTaskPJ_B(const char *name) 
+ ^
+/nfshome/psteffan/cpalice/calib/./AliAnalysisTaskPJ_B.cxx: In constructor ‘AliAnalysisTaskPJ_B::AliAnalysisTaskPJ_B()’:
+/nfshome/psteffan/cpalice/calib/./AliAnalysisTaskPJ_B.cxx:46:1: warning: ‘AliAnalysisTaskPJ_B::fHistTOFMatch’ should be initialized in the member initialization list [-Weffc++]
+ AliAnalysisTaskPJ_B::AliAnalysisTaskPJ_B() 
+ ^
+In file included from /nfshome/psteffan/cpalice/calib/AliAnalysisTaskPJ_B_cxx_ACLiC_dict.cxx:32:0:
+/nfshome/psteffan/alicesw/root/v5-34-26/inst/include/TFileMergeInfo.h: At global scope:
+/nfshome/psteffan/alicesw/root/v5-34-26/inst/include/TFileMergeInfo.h:42:7: warning: ‘class TFileMergeInfo’ has pointer data members [-Weffc++]
+ class TFileMergeInfo {
+       ^
+/nfshome/psteffan/alicesw/root/v5-34-26/inst/include/TFileMergeInfo.h:42:7: warning:   but does not override ‘TFileMergeInfo(const TFileMergeInfo&)’ [-Weffc++]
+/nfshome/psteffan/alicesw/root/v5-34-26/inst/include/TFileMergeInfo.h:42:7: warning:   or ‘operator=(const TFileMergeInfo&)’ [-Weffc++]
+In file included from /nfshome/psteffan/cpalice/calib/AliAnalysisTaskPJ_B_cxx_ACLiC_dict.cxx:32:0:
+/nfshome/psteffan/alicesw/root/v5-34-26/inst/include/TFileMergeInfo.h: In constructor ‘TFileMergeInfo::TFileMergeInfo(TDirectory*)’:
+/nfshome/psteffan/alicesw/root/v5-34-26/inst/include/TFileMergeInfo.h:49:4: warning: ‘TFileMergeInfo::fOptions’ should be initialized in the member initialization list [-Weffc++]
+    TFileMergeInfo(TDirectory *outputfile) : fOutputDirectory(outputfile), fIsFirst(kTRUE), fUserData(0) {}
+    ^
+I-TUnixSystem::ACLiC: creating shared library /nfshome/psteffan/cpalice/calib/./AliAnalysisTaskPJ_B_cxx.so
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: OurTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [PJ_Bhist]
+      Container: PJ_Bhist     DATA TYPE: TList
+       = Filename: PJB.Calib.root
+(class TClass*)0x2cfa180
+StartAnalysis testAnalysis
+===== RUNNING LOCAL ANALYSIS testAnalysis ON TREE esdTree
+->AliAnalysisSelector->Begin: Analysis manager restored
+->AliAnalysisSelector->SlaveBegin() after Restore
+->AliAnalysisManager::SlaveBegin()
+(class TClass*)0x2cfa180
+Initialization time: 3.31758 [sec]
+<-AliAnalysisManager::SlaveBegin()
+<-AliAnalysisSelector->SlaveBegin()
+->AliAnalysisSelector->Init()
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libANALYSISalice.so" already loaded
+Note: File "/nfshome/psteffan/alicesw/aliroot/v5-06-16/inst/lib/libSTEER.so" already loaded
+->AliAnalysisManager::Init(esdTree)
+W-TClass::TClass: no dictionary for class AliESDCentrality is available
+W-AliESDEvent::ReadFromTree: AliESDEvent::ReadFromTree() TList contains less than the standard contents 32 < 37 
+
+W-AliESDEvent::ReadFromTree: AliESDEvent::ReadFromTree() No Branch found with Name MuonClusters or MuonClusters.
+W-AliESDEvent::ReadFromTree: AliESDEvent::ReadFromTree() No Branch found with Name MuonPads or MuonPads.
+W-AliESDEvent::ReadFromTree: AliESDEvent::ReadFromTree() No Branch found with Name AliESDCosmicTracks or AliESDCosmicTracks.
+E-TChain::SetBranchAddress: unknown branch -> fDetectorStatus
+E-TChain::SetBranchAddress: unknown branch -> fDAQDetectorPattern
+E-TChain::SetBranchAddress: unknown branch -> fDAQAttributes
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763003.10/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763012.13/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763022.13/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763026.11/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/AOD055/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/AOD106/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/lego_train_esd.xml/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/MergedESDTags/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/PWGGA/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/PWGPP/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/QA69/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/QA71/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/QA74/AliESDs.root does not exist
+E-TFile::TFile: file /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/qa1.xml/AliESDs.root does not exist
+E-AliAnalysisManager::CreateReadCache: Current tree or tree file not yet defined
+E-TTree::SetBranchStatus: unknown branch -> fDetectorStatus
+E-TTree::SetBranchStatus: unknown branch -> fDAQDetectorPattern
+E-TTree::SetBranchStatus: unknown branch -> fDAQAttributes
+<-AliAnalysisManager::Init(esdTree)
+<-AliAnalysisSelector->Init()
+->AliAnalysisSelector::Process()
+->AliAnalysisManager::Notify() file: /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763000.10/AliESDs.root
+I-AliAnalysisManager::GetRunFromAlienPath: Run 154763 of real data
+   ### run found from path: 154763
+I-AliESDInputHandlerRP::Notify: Directory change /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763000.10/AliESDs.root 
+
+AliESDInputHandlerRP::Notify() Path: /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763000.10/
+E-AliESDInputHandlerRP::Init: AliESDInputHandlerRP: No file with RecPoints found in /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763000.10/ ! 
+
+I-AliESDInputHandlerRP::Notify: Directory change /nfshome/psteffan/alice/data/2011/LHC11c/000154763/ESDs/pass1/11000154763000.10/AliESDs.root 
+
+<-AliAnalysisManager::Notify()
+MGR: Processing event #0
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 0, 0, 1048576, 1308644167
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #1
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 1, 0, 1048576, 1308644169
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #2
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 2, 0, 1048576, 1308644169
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #3
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 3, 0, 1048576, 1308644170
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #4
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 4, 0, 1048576, 1308644170
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #5
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 5, 0, 1048576, 1308644171
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #6
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 6, 0, 1048576, 1308644173
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #7
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 7, 0, 1048576, 1308644174
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #8
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 8, 0, 1048576, 1308644175
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #9
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 9, 0, 1048576, 1308644175
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #10
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 10, 0, 1048576, 1308644176
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #11
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 11, 0, 1048576, 1308644176
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #12
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 12, 0, 1048576, 1308644176
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #13
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 13, 0, 1048576, 1308644177
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #14
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 14, 0, 1048576, 1308644177
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #15
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 15, 0, 1048576, 1308644177
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #16
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 16, 0, 1048576, 1308644178
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #17
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 17, 0, 1048576, 1308644178
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #18
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 18, 0, 1048576, 1308644178
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #19
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 19, 0, 1048576, 1308644179
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #20
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 20, 0, 1048576, 1308644179
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #21
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 21, 0, 1048576, 1308644180
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #22
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 22, 0, 1048576, 1308644191
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #23
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 23, 0, 1048576, 1308644194
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #24
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 24, 0, 2097152, 1308644167
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #25
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 25, 0, 2097152, 1308644168
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #26
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 26, 0, 2097152, 1308644169
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #27
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 27, 0, 2097152, 1308644170
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #28
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 28, 0, 2097152, 1308644170
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #29
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 29, 0, 2097152, 1308644171
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #30
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 30, 0, 2097152, 1308644172
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #31
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 31, 0, 2097152, 1308644174
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #32
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 32, 0, 2097152, 1308644175
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #33
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 33, 0, 2097152, 1308644175
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #34
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 34, 0, 2097152, 1308644176
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #35
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 35, 0, 2097152, 1308644176
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #36
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 36, 0, 2097152, 1308644176
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #37
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 37, 0, 2097152, 1308644177
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #38
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 38, 0, 2097152, 1308644177
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #39
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 39, 0, 2097152, 1308644177
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #40
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 40, 0, 2097152, 1308644178
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #41
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 41, 0, 2097152, 1308644178
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #42
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 42, 0, 2097152, 1308644178
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #43
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 43, 0, 2097152, 1308644179
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #44
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 44, 0, 2097152, 1308644179
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #45
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 45, 0, 2097152, 1308644179
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #46
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 46, 0, 2097152, 1308644186
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #47
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 47, 0, 2097152, 1308644194
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #48
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 48, 1837, 5042807, 1308644214
+<INFO>Nclusters=0.055428
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #49
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 49, 2731, 5071642, 1308644217
+<INFO>Nclusters=0.053892
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #50
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 50, 3069, 5112318, 1308644220
+<INFO>Nclusters=0.047031
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #51
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 51, 3065, 5153353, 1308644224
+<INFO>Nclusters=0.034069
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #52
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 52, 3009, 5175262, 1308644226
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #53
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 53, 2308, 5212210, 1308644229
+<INFO>Nclusters=0.033063
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #54
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 54, 3009, 5225725, 1308644230
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #55
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 55, 384, 5264682, 1308644234
+<INFO>Nclusters=0.047642
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #56
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 56, 1228, 5278432, 1308644235
+<INFO>Nclusters=0.043654
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #57
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 57, 2652, 5045100, 1308644235
+<INFO>Nclusters=0.057405
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #58
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 58, 1758, 5057103, 1308644235
+<INFO>Nclusters=0.058552
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #59
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 59, 1228, 5085061, 1308644235
+<INFO>Nclusters=0.048381
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #60
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 60, 3071, 5144799, 1308644236
+<INFO>Nclusters=0.059878
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #61
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 61, 3083, 5183266, 1308644236
+<INFO>Nclusters=0.058053
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #62
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 62, 398, 5175152, 1308644236
+<INFO>Nclusters=0.008864
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #63
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 63, 2308, 5180834, 1308644236
+<INFO>Nclusters=0.049476
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #64
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 64, 3069, 5221156, 1308644236
+<INFO>Nclusters=0.015516
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #65
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 65, 2731, 5266068, 1308644236
+<INFO>Nclusters=0.049457
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #66
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 66, 3009, 5310594, 1308644238
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #67
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 67, 2731, 5320489, 1308644239
+<INFO>Nclusters=0.044484
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #68
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 68, 404, 5331975, 1308644240
+<INFO>Nclusters=0.039254
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #69
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 69, 402, 5348432, 1308644241
+<INFO>Nclusters=0.070765
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #70
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 70, 3071, 5392872, 1308644245
+<INFO>Nclusters=0.065281
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #71
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 71, 3081, 5415295, 1308644247
+<INFO>Nclusters=0.060502
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #72
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 72, 3079, 5443549, 1308644250
+<INFO>Nclusters=0.061484
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #73
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 73, 390, 5452872, 1308644251
+<INFO>Nclusters=0.071118
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #74
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 74, 388, 5474344, 1308644253
+<INFO>Nclusters=0.045648
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #75
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 75, 3083, 5487561, 1308644254
+<INFO>Nclusters=0.083531
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #76
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 76, 1758, 5510335, 1308644256
+<INFO>Nclusters=0.047528
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #77
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 77, 1414, 5533460, 1308644258
+<INFO>Nclusters=0.080398
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #78
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 78, 2810, 5551739, 1308644259
+<INFO>Nclusters=0.065788
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #79
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 79, 2122, 5568031, 1308644261
+<INFO>Nclusters=0.051996
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #80
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 80, 3009, 5673008, 1308644270
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #81
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 81, 384, 5719142, 1308644274
+<INFO>Nclusters=-0.067881
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #82
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 82, 384, 5737027, 1308644276
+<INFO>Nclusters=0.057992
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #83
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 83, 3073, 5746642, 1308644277
+<INFO>Nclusters=0.038303
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #84
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 84, 1758, 5767924, 1308644279
+<INFO>Nclusters=0.050470
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #85
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 85, 386, 5776080, 1308644279
+<INFO>Nclusters=0.022748
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #86
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 86, 2308, 5794799, 1308644281
+<INFO>Nclusters=0.056800
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #87
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 87, 402, 5818277, 1308644283
+<INFO>Nclusters=0.020643
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #88
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 88, 3063, 5838387, 1308644285
+<INFO>Nclusters=0.032841
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #89
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 89, 1414, 5855209, 1308644286
+<INFO>Nclusters=0.067194
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #90
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 90, 1228, 5877476, 1308644288
+<INFO>Nclusters=0.056826
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #91
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 91, 406, 5894344, 1308644290
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #92
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 92, 3009, 5906971, 1308644291
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #93
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 93, 394, 5947924, 1308644295
+<INFO>Nclusters=0.061629
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #94
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 94, 388, 5966557, 1308644296
+<INFO>Nclusters=0.054941
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #95
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 95, 390, 5985152, 1308644298
+<INFO>Nclusters=0.027080
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #96
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 96, 3083, 6009471, 1308644300
+<INFO>Nclusters=0.110912
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #97
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 97, 398, 6030023, 1308644302
+<INFO>Nclusters=0.037630
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #98
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 98, 3083, 6046080, 1308644303
+<INFO>Nclusters=0.056043
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #99
+    Executing task OurTask
+Event Number In File, Bunch Crossing, Orbit Number, Time Stamp: 99, 3077, 6061642, 1308644305
+<INFO>Nclusters=0.034330
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::SlaveTerminate()
+->AliAnalysisManager::PackOutput()
+->FinishTaskOutput: task OurTask
+<-FinishTaskOutput: task OurTask
+=Analysis testAnalysis= init time:       5.70122[sec]            
+              I/O & data mng.: 0.278106 [sec]            
+              task execution: 0.00182009 [sec]            
+              total time:     CPU=2.61 [sec]  REAL=5.98114[sec]
+<-AliAnalysisManager::PackOutput: output list contains 0 containers
+<-AliAnalysisSelector::SlaveTerminate()
+->AliAnalysisSelector::Terminate()
+->AliAnalysisManager::UnpackOutput()
+   Source list contains 0 containers
+<-AliAnalysisManager::UnpackOutput()
+->AliAnalysisManager::Terminate()
+Opening file: PJB.Calib.root  option=RECREATE
+...writing container PJ_Bhist to file PJB.Calib.root:
+=Analysis testAnalysis= Terminate time:  0.0217412[sec]
+<-AliAnalysisManager::Terminate()
+<-AliAnalysisSelector::Terminate()
+(class AliAnalysisTask*)0x0

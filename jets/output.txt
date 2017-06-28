@@ -1,0 +1,1515 @@
+W-TGClient::GetFontByName: couldn't retrieve font -*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+W-TGClient::GetFontByName: couldn't retrieve font -*-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+W-TGClient::GetFontByName: couldn't retrieve font -*-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+W-TGClient::GetFontByName: couldn't retrieve font -*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1, using "fixed"
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   5.34/30     23 April 2015   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+ROOT 5.34/30 (heads/v5-34-00-patches@v5-34-28-57-gec27989, Jul 09 2016, 18:37:00 on linuxx8664gcc)
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+Processing runETag.C...
+Made it heregrid analysis chosenE-TUnixSystem::DynamicPathName: libPWGEMCAL[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliRoot/47e5c20d555e5401e1c7ecf1885d4581555bf5f3-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/vgm/4.3-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/lib::/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/cint/cint/stl
+setting run toI-AliCDBManager::Init: AliEn classes enabled in Root. AliCDBGrid factory registered.
+I-AliCDBGrid::AliCDBGrid: Connection to the Grid...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User psteffan 
+I-AliCDBGrid::QueryCDB: Querying files valid for run 183913 and path "*" into CDB storage  "alien:///alice/data/2012/OCDB/"
+I-AliCDBGrid::QueryValidFiles: Only latest version will be returned
+I-AliCDBGrid::QueryCDB: 282 valid files found!
+I-AliCDBGrid::QueryCDB: Querying files valid for run 183913 and path "GRP/GRP/Data" into CDB storage  "alien:///alice/data/2012/OCDB/"
+I-AliCDBGrid::QueryValidFiles: Only latest version will be returned
+I-AliCDBGrid::QueryCDB: 282 valid files found!
+I-AliCDBGrid::GetEntryId: Only latest version will be returned
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/OCDB/GRP/Geometry/Data/Run0_999999999_v5_s0.root in SE <ALICE::CERN::OCDB>
+I-TGeoManager::CloseGeometry: Geometry loaded from file...
+I-TGeoManager::SetTopVolume: Top volume is ALIC. Master volume is ALIC
+I-TGeoNavigator::BuildCache: --- Maximum geometry depth set to 100
+I-TGeoManager::Voxelize: Voxelizing...
+I-TGeoManager::CountLevels: max level = 12, max placements = 547
+I-TGeoManager::CloseGeometry: 5346285 nodes/ 5536 volume UID's in ALICE geometry
+I-TGeoManager::CloseGeometry: ----------------modeler ready----------------
+I-AliGeomManager::LoadGeometry: From now on using geometry from CDB base folder "alien://?User=?DBFolder=/alice/data/2012/OCDB/?SE=default?CacheFolder=?OperateDisconnected=1?CacheSize=1073741824?CleanupInterval=0"
+I-AliCDBGrid::GetEntryId: Only latest version will be returned
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/OCDB/GRP/Align/Data/Run0_999999999_v1_s0.root in SE <ALICE::CERN::OCDB>
+I-AliGeomManager::ApplyAlignObjsFromCDB: Alignment objects loaded for: GRP 
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/OCDB/GRP/GRP/Data/Run183913_183913_v1_s0.root in SE <ALICE::CERN::OCDB>
+I-AliMagF::Print: MagneticFieldMap:L3: +30000 Dip: +5999 kA;  | Polarities in LHC convention
+I-AliMagF::Print: Solenoid (+1.00*)5 kG, Dipole ON (+1.00) 
+I-AliMagF::Print: Machine B fields for p-p beam (4000 GeV): QGrad: 12.5715 Dipole: 21.6446
+I-AliMagF::Print: Uses Sol30_Dip6_Hole of $(ALICE_ROOT)/data/maps/mfchebKGI_sym.root
+Running with the B field constructed out of GRP !I-TGeoGlobalMagField::SetField: Global magnetic field set to <MagneticFieldMap>
+(class TAlienJDL*)0x709be40
+(class TAlienJDL*)0x709c090
+I-AliAnalysisAlien::SetDefaultOutputs: Plugin will use the output files taken from analysis manager
+W-AliAnalysisAlien::SetRootVersionForProof: Obsolete. Use SetROOTVersion instead
+E-AliAnalysisAlien::SetRootVersionForProof: ROOT version already set to v5-34-30-alice5-alice-1
+Using: PROOF_UseMergers   : -1
+I-AliPhysicsSelectionTask::AliPhysicsSelectionTask: Physics Event Selection enabled.
+========================================================================================
+PIDResponse: Initialising AliAnalysisTaskPIDResponse
+========================================================================================
+I-TUnixSystem::ACLiC: creating shared library /nfshome/psteffan/cpalice/jets/./AliAnalysisTaskPSHFE_cxx.so
+Created track cuts for: Global tracks jet analysis with ITSrefit and NclsIter1=PtDep, noSPD requirement, no upper pt cut, golden chi2 + additional: ITSrefit=kFALSE
+I-AliESDtrackCuts::GetStandardITSTPCTrackCuts2011: Creating track cuts for ITS+TPC (2011 definition).
+Created track cuts for: Global tracks 2011 with NCrossedRows cut + additional: w/o hits in SPD
+I-AliAnalysisManager::PrintStatus: System information will be collected each 100 events
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: AliPhysicsSelectionTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [cstatsout]
+      Container: cstatsout     DATA TYPE: TList
+       = Filename: EventStat_temp.root
+______________________________________________________________________________
+   task: PIDResponseTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+______________________________________________________________________________
+   task: PSHFEtask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [Min-Bias]
+      OUTPUT #2: TList ->  [EMCal7]
+      OUTPUT #3: TList ->  [EMCal8]
+      OUTPUT #4: TList ->  [EMCalJet]
+      Container: Min-Bias     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+      Container: EMCal7     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+      Container: EMCal8     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+      Container: EMCalJet     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+______________________________________________________________________________
+   task: PIDqaTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [PIDqa]
+      Container: PIDqa     DATA TYPE: TList
+       = Filename: phistos.root
+Starting Analysis....
+(class TClass*)0x62b9620
+StartAnalysis Etag_task
+===== RUNNING GRID ANALYSIS: Etag_task
+[TFile::Cp] Total 0.00 MB	|>...................| 0.00 % [0.0 MB/s][TFile::Cp] Total 0.00 MB	|====================| 100.00 % [1.2 MB/s]
+[TFile::Cp] Total 0.05 MB	|>...................| 0.00 % [0.0 MB/s][TFile::Cp] Total 0.05 MB	|====================| 100.00 % [212.2 MB/s]
+=========================================
+############## PATH : ##############
+/nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliRoot/47e5c20d555e5401e1c7ecf1885d4581555bf5f3-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/bin:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/bin:/nfshome/psteffan/util:/nfsopt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/nfshome/psteffan/alice/alibuild
+############## LD_LIBRARY_PATH : ##############
+.:/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64/:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib64/:/nfshome/psteffan/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliRoot/47e5c20d555e5401e1c7ecf1885d4581555bf5f3-1/lib/:/usr/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/vgm/4.3-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib/:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliRoot/47e5c20d555e5401e1c7ecf1885d4581555bf5f3-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/vgm/4.3-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/lib:/nfshome/psteffan/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib
+############## ROOTSYS : ##############
+/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1
+############## which root : ##############
+/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/bin/root
+############## ALICE_ROOT : ##############
+/nfshome/psteffan/sw/ubuntu1404_x86-64/AliRoot/47e5c20d555e5401e1c7ecf1885d4581555bf5f3-1
+############## which aliroot : ##############
+/nfshome/psteffan/sw/ubuntu1404_x86-64/AliRoot/47e5c20d555e5401e1c7ecf1885d4581555bf5f3-1/bin/aliroot
+############## system limits : ##############
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 514897
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 514897
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+############## memory : ##############
+             total       used       free     shared    buffers     cached
+Mem:      65928548   59464388    6464160        220     607264    5697708
+-/+ buffers/cache:   53159416   12769132
+Swap:     67060732   51441632   15619100
+=========================================
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   5.34/30     23 April 2015   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+ROOT 5.34/30 (heads/v5-34-00-patches@v5-34-28-57-gec27989, Jul 09 2016, 18:37:00 on linuxx8664gcc)
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+Processing Etag_task.C...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User psteffan 
+Include path: -I. -I"/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/include"  -I"/nfshome/psteffan/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice5-alice-1/include"  -I"$ALICE_ROOT/include" 
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: AliPhysicsSelectionTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [cstatsout]
+      Container: cstatsout     DATA TYPE: TList
+       = Filename: EventStat_temp.root
+______________________________________________________________________________
+   task: PIDResponseTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+______________________________________________________________________________
+   task: PSHFEtask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [Min-Bias]
+      OUTPUT #2: TList ->  [EMCal7]
+      OUTPUT #3: TList ->  [EMCal8]
+      OUTPUT #4: TList ->  [EMCalJet]
+      Container: Min-Bias     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+      Container: EMCal7     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+      Container: EMCal8     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+      Container: EMCalJet     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: (null)
+______________________________________________________________________________
+   task: PIDqaTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [PIDqa]
+      Container: PIDqa     DATA TYPE: TList
+       = Filename: phistos.root
+***************************************
+    Getting chain of trees esdTree
+***************************************
+### Run number detected from chain: 184127
+(class TClass*)0x31f3430
+StartAnalysis Etag_task
+===== RUNNING LOCAL ANALYSIS Etag_task ON TREE esdTree
+->AliAnalysisSelector->Begin: Analysis manager restored
+->AliAnalysisSelector->SlaveBegin() after Restore
+->AliAnalysisManager::SlaveBegin()
+(class TClass*)0x31f3430
+AliPhysicsSelectionTask::CreateOutputObjects
+I-AliTOFPIDResponse::LoadTOFtailHisto: Loaded TOF tail histogram from file $ALICE_ROOT/TOF/data/addTOFtail.root
+I-AliESDtrackCuts::GetStandardITSTPCTrackCuts2010: Creating track cuts for ITS+TPC (2010 definition).
+Initialization time: 0.213576 [sec]
+<-AliAnalysisManager::SlaveBegin()
+<-AliAnalysisSelector->SlaveBegin()
+->AliAnalysisSelector->Init()
+160803 09:25:01 16748 Xrd: XrdClientMessage::ReadRaw: Failed to read header (8 bytes).
+160803 09:25:01 14593 Xrd: XrdClientMessage::ReadRaw: Failed to read header (8 bytes).
+160803 09:25:01 16122 Xrd: XrdClientMessage::ReadRaw: Failed to read header (8 bytes).
+160803 09:25:31 28197 Xrd: XrdClientMessage::ReadRaw: Failed to read header (8 bytes).
+160803 09:29:02 12383 Xrd: XrdClientMessage::ReadRaw: Failed to read header (8 bytes).
+->AliAnalysisManager::Init(esdTree)
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.21/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.25/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.22/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.23/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.24/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.25/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.26/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.27/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.30/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.31/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.32/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.11/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.33/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.34/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.35/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.36/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.37/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.40/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.41/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.43/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.45/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.47/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.12/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.10/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.11/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.12/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.13/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.14/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.15/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.16/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.17/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.20/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.21/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.13/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.22/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.23/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.24/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.25/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.26/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.27/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.30/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.31/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.32/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.33/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.14/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.34/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.35/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.36/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.37/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.40/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.41/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127002.45/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.10/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.11/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.12/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.15/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.13/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.14/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.15/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.16/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.17/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.20/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.21/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.22/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.23/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.24/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.16/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.25/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.26/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.27/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.30/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.31/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.32/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.33/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.34/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.35/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.36/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.17/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.37/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.40/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.41/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.42/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.43/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.45/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127003.46/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.10/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.11/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.12/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.20/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.13/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.14/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.15/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.16/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.17/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.20/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.21/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.22/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.23/AliESDs.root in SE <ALICE::CERN::EOS>
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127004.24/AliESDs.root in SE <ALICE::CERN::EOS>
+I-AliAnalysisManager::CreateReadCache: Read cache enabled 100000000 bytes with async reading=0
+<-AliAnalysisManager::Init(esdTree)
+<-AliAnalysisSelector->Init()
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root in SE <ALICE::CERN::EOS>
+->AliAnalysisSelector::Process()
+->AliAnalysisManager::Notify() file: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliAnalysisManager::GetRunFromAlienPath: Run 184127 of real data
+I-AliESDInputHandler::Notify: Directory change alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root 
+
+<-AliAnalysisManager::Notify()
+MGR: Processing event #0
+I-AliMagF::Print: MagneticFieldMap:L3: +30000 Dip: +5999 kA;  | Polarities in LHC convention
+I-AliMagF::Print: Solenoid (+1.00*)5 kG, Dipole ON (+1.00) 
+I-AliMagF::Print: Machine B fields for p-p beam (4000 GeV): QGrad: 12.5715 Dipole: 21.6446
+I-AliMagF::Print: Uses Sol30_Dip6_Hole of $(ALICE_ROOT)/data/maps/mfchebKGI_sym.root
+I-TGeoGlobalMagField::SetField: Global magnetic field set to <MagneticFieldMap>
+I-TGeoGlobalMagField::Lock: Global magnetic field <MagneticFieldMap> is now locked
+I-AliESDRun::InitMagneticField: Running with the B field constructed out of the Run Header !
+I-AliPhysicsSelection::DetectPassName: pass name: pass2
+
+I-AliPhysicsSelection::Initialize: Initializing for run 184127
+I-AliPhysicsSelection::Initialize: Using Standard OADB
+W-AliOADBContainer::GetIndexForRun: No object (physSel) found for run 184127 !
+
+ <message repeated 1 time>
+W-AliOADBContainer::GetIndexForRun: No object (fillScheme) found for run 184127 !
+
+ <message repeated 1 time>
+W-AliOADBContainer::GetIndexForRun: No object (trigAnalysis) found for run 184127 !
+
+Physics selection cut settings:
+  FMDLowCut            0.200000
+  FMDHitCut            0.500000
+  ZDCCutRefSum         -568.500000
+  ZDCCutRefDelta       -2.100000
+  ZDCCutSigmaSum       3.250000
+  ZDCCutSigmaDelta     2.250000
+  ZDCCutRefSumCorr     0.000000
+  ZDCCutRefDeltaCorr   0.000000
+  ZDCCutSigmaSumCorr   2.000000
+  ZDCCutSigmaDeltaCorr 2.000000
+  ZDCCutZNATimeCorrMin 5.000000
+  ZDCCutZNATimeCorrMax 100.000000
+  ZDCCutZNCTimeCorrMin 5.000000
+  ZDCCutZNCTimeCorrMax 100.000000
+  SPDClsVsTklA         65.000000
+  SPDClsVsTklB         4.000000
+  V0C012vsTklA         150.000000
+  V0C012vsTklB         20.000000
+  V0MOnVsOfA           -145.000000
+  V0MOnVsOfB           7.200000
+  SPDOnVsOfA           -4.160000
+  SPDOnVsOfB           0.840000
+  VtxMinContributors   3
+  VtxMinZdist          0.800000
+  VtxNSigmaZdist       3.000000
+  VtxNSigmaDiamXY      2.000000
+  VtxNSigmaDiamZ       5.000000
+  V0CasymA             -25.000000
+  V0CasymB             0.150000
+  NBCsPast             4
+  NBCsFuture           7
+  VHMBBAflags          -1
+  VHMBBCflags          -1
+  VHMBGAflags          33
+  VHMBGCflags          33
+  VIRBBAflags          10
+  VIRBBCflags          10
+  VIRBGAflags          33
+  VIRBGCflags          33
+  V0MOnThreshold       -1
+  V0MOfThreshold       -1.000000
+  SPDGFOThreshold      2
+  SH1OuterThreshold    -1
+  SH2OuterThreshold    -1
+  TklThreshold         -1
+  TRDptHSE             3.000000
+  TRDpidHSE            144
+  TRDptHQU             2.000000
+  TRDpidHQU            164
+  TRDptHEE             3.000000
+  TRDpidHEE            144
+  TRDminSectorHEE      6
+  TRDmaxSectorHEE      8
+  TRDptHJT             3.000000
+  TRDnHJT              3
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+ <message repeated 1 time>
+W-AliProdInfo::ParseProdInfo: AliRoot SVN version is not extracted, setting to 65263
+W-AliProdInfo::ParseProdInfo: ROOT SVN version number not decimal, might be on git. Reading as hex e0a841 -> 14723137
+I-AliProdInfo::List: ALICE Production Info found in UserInfo: 
+I-AliProdInfo::List:   ALIROOT Version: v5-05-Rev-30 [SVN #: 65263]
+I-AliProdInfo::List:   ROOT Version: heads/v5-34-00-patches [SVN #: 14723137]
+I-AliProdInfo::List:   Reconstruction Pass: 2
+I-AliProdInfo::List:   LHC Period: LHC12d
+I-AliProdInfo::List:   ProductionTag: LHC12d
+I-AliProdInfo::List:   MC Flag: 0
+I-AliProdInfo::List:   - Buffered production tags:
+I-AliProdInfo::List:     v5-05-Rev-30:ThisIsaBranchNoRevisionProvided
+I-AliProdInfo::List:     heads/v5-34-00-patches:e0a8419
+I-AliProdInfo::List:     /alice/data/2012/LHC12d/000184127/pass2/#alienfilename/.root//#
+I-AliProdInfo::List:     2
+I-AliProdInfo::List:     RAW
+I-AliProdInfo::List:     LHC12d
+ <message repeated 1 time>
+I-AliESDpid::InitializeTPCResponse: ---------------------------- TPC Response Configuration (New) ----------------------------
+I-AliTPCPIDResponse::InitFromOADB: ----------------------| Initialisation TPC PID Response from OADB |----------------------
+I-AliTPCPIDResponse::InitFromOADB: ----------------------| Run: 184127, pass: 2                   |----------------------
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root and key TPCSplines
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Couldn't find file, opening it
+
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 0 - TSPLINE3_DATA_ELECTRON_LHC12D_PASS2_PP_MEAN (MD5(spline) = ce82381c264968f91f0007089bf7b848)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 1 - TSPLINE3_DATA_PION_LHC12D_PASS2_PP_MEAN (MD5(spline) = 0f005622ca6b14cc2e8ceb61c56382e3)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 2 - TSPLINE3_DATA_PION_LHC12D_PASS2_PP_MEAN (MD5(spline) = 0f005622ca6b14cc2e8ceb61c56382e3)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 3 - TSPLINE3_DATA_KAON_LHC12D_PASS2_PP_MEAN (MD5(spline) = 457cbf31c8176ca0825ae4700ec0691d)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 4 - TSPLINE3_DATA_PROTON_LHC12D_PASS2_PP_MEAN (MD5(spline) = a33170832448d22af99b88f8d37380d7)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 5 - TSPLINE3_DATA_PROTON_LHC12D_PASS2_PP_MEAN (MD5(spline) = a33170832448d22af99b88f8d37380d7)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 6 - TSPLINE3_DATA_PROTON_LHC12D_PASS2_PP_MEAN (MD5(spline) = a33170832448d22af99b88f8d37380d7)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 7 - TSPLINE3_DATA_PROTON_LHC12D_PASS2_PP_MEAN (MD5(spline) = a33170832448d22af99b88f8d37380d7)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 8 - TSPLINE3_DATA_PROTON_LHC12D_PASS2_PP_MEAN (MD5(spline) = a33170832448d22af99b88f8d37380d7)
+I-AliESDpid::InitializeTPCResponse: ------------------------------------------------------------------------------------------
+I-AliESDpid::SetTPCEtaMaps: Current period and reco pass: LHC12D.pass2
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root and key TPCetaMaps_DATA_pass2
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Couldn't find file, opening it
+
+I-AliESDpid::SetTPCEtaMaps: Loading TPC eta correction map from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-TH2D::SaveAs: C++ Macro file: tempChecksum.C has been generated
+I-AliESDpid::SetTPCEtaMaps: Loaded TPC eta correction map (refine factors 6.00/6.00) from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root: LHC12d.pass2 (refined) (MD5(map) = 9fc9ae57327cb342f231752942c64995)
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root and key TPCetaSigmaMaps_DATA_pass2
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Success! File was already open!
+
+I-AliESDpid::SetTPCEtaMaps: Loading TPC eta sigma map from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-TH2D::SaveAs: C++ Macro file: tempChecksum.C has been generated
+I-AliESDpid::SetTPCEtaMaps: Loaded TPC sigma correction map (refine factors 6.00/6.00) from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root: LHC12d.pass2 (refined) (MD5(map) = a0a6bac18380425d2547ae46411bc79a, sigmaPar0 = 0.000000)
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root and key AliTRDPIDResponseObject
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Couldn't find file, opening it
+
+I-AliESDpid::SetTRDPidResponseMaster: Loading TRD Response from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxParams.root and key TRDdEdxParamsContainer
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxParams.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Couldn't find file, opening it
+
+I-AliESDpid::SetTRDdEdxParams: Loading TRDdEdxParamsContainer from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxParams.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDdEdxParamsContainer) found for run 184127 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDdEdxParamsContainer) not found !
+
+E-AliESDpid::SetTRDdEdxParams: TRD dEdx Params default not found
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root and key TRDCorrectionMaps
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxParams.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Couldn't find file, opening it
+
+I-AliESDpid::SetTRDEtaMaps: Loading TRDCorrectionMaps from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDCorrectionMaps) found for run 184127 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDCorrectionMaps) not found !
+
+E-AliESDpid::SetTRDEtaMaps: TRD Eta Correction Params not found
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root and key TRDCorrectionMaps
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxParams.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Success! File was already open!
+
+I-AliESDpid::SetTRDClusterMaps: Loading TRDCorrectionMaps from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDCorrectionMaps) found for run 184127 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDCorrectionMaps) not found !
+
+E-AliESDpid::SetTRDClusterMaps: TRD Cluster Correction Params not found
+I-AliESDpid::SetTOFPidResponseMaster: Loading TOF Params from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TOFPIDParams.root for run 184127 (pass: pass2)
+I-AliESDpid::InitializeTOFResponse: ---------------------------- TOF Response Configuration ----------------------------
+I-AliESDpid::InitializeTOFResponse: TOF PID Params loaded from OADB [entryTag: LHC12pp-pass2]
+I-AliESDpid::InitializeTOFResponse:   TOF resolution 90.00 [ps]
+I-AliESDpid::InitializeTOFResponse:   StartTime method 3
+I-AliESDpid::InitializeTOFResponse:   TOF res. mom. params:  0.004  0.000  0.009 15.000
+I-AliESDpid::InitializeTOFResponse:   Start Time Offset   0.00 ps
+I-AliESDpid::InitializeTOFResponse:   Fraction of tracks within gaussian behaviour: 0.9500
+I-AliESDpid::InitializeTOFResponse:   MC: Fraction of tracks (percentage) to cut to fit matching in data:   0.00%
+I-AliESDpid::InitializeTOFResponse:   MC: Fraction of random hits (percentage) to add to fit mismatch in data:   0.00%
+I-AliESDpid::InitializeTOFResponse: TZERO resolution loaded from ESDrun/AODheader
+I-AliESDpid::InitializeTOFResponse:   TZERO spreads from data: (A+C)/2 187.562195 A 194.968811 C 194.348434 (A'-C')/2: 38.838612
+I-AliESDpid::InitializeTOFResponse:   TZERO resolution set to: T0A: 65.891541 [ps] T0C: 64.032585 [ps] T0AC 38.838612 [ps]
+I-AliESDpid::InitializeTOFResponse: ------------------------------------------------------------------------------------
+I-AliOADBContainer::InitFromFile: File: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/EMCALPIDParams.root and key AliEMCALPIDParams
+
+I-AliOADBContainer::InitFromFile: File name expanded to /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/EMCALPIDParams.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: List of already open files:
+
+I-AliOADBContainer::InitFromFile: Etag_task.root
+I-AliOADBContainer::InitFromFile: AnalysisResults.root
+I-AliOADBContainer::InitFromFile: alien:///alice/data/2012/LHC12d/000184127/pass2/12000184127000.10/AliESDs.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PHYSICSSELECTION/data/physicsSelection.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCPIDResponseOADB.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TPCetaMaps.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxParams.root
+I-AliOADBContainer::InitFromFile: /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+I-AliOADBContainer::InitFromFile: -----------------------------------------------
+I-AliOADBContainer::InitFromFile: Couldn't find file, opening it
+
+I-AliESDpid::SetEMCALPidResponseMaster: Loading EMCAL Params from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/EMCALPIDParams.root
+W-AliOADBContainer::GetIndexForRun: No object (AliEMCALPIDParams) found for run 184127 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (AliEMCALPIDParams) not found !
+
+I-AliESDpid::SetEMCALPidResponseMaster: EMCAL Params not found in run 184127 pass 2
+I-AliESDpid::SetEMCALPidResponseMaster: Will take the standard LHC11d instead ...
+I-AliESDpid::SetHMPIDPidResponseMaster: Loading HMPID Params from /nfshome/psteffan/sw/ubuntu1404_x86-64/AliPhysics/5dbe69db152c14eec2a8d0ea2c3052ba6ef68323-1/OADB/COMMON/PID/data/HMPIDPIDParams.root
+    Executing task PSHFEtask
+W-AliAnalysisTaskPSHFE::UserExec: This is not an EMCal triggered event
+    Executing task PIDqaTask
+I-AliESDtrackCuts::GetStandardTPCOnlyTrackCuts: Creating track cuts for TPC-only.
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #1
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+W-AliAnalysisTaskPSHFE::UserExec: This is not an EMCal triggered event
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #2
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #3
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #4
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #5
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #6
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #7
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #8
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #9
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #10
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #11
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #12
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #13
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #14
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #15
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #16
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #17
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #18
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #19
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #20
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #21
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #22
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #23
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #24
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #25
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #26
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #27
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #28
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #29
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #30
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #31
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #32
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #33
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #34
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #35
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #36
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #37
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #38
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #39
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #40
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+    Executing task PIDqaTask
+<-AliAnalysisSelector::Process()
+->AliAnalysisSelector::Process()
+MGR: Processing event #41
+    Executing task AliPhysicsSelectionTask
+    Executing task PIDResponseTask
+    Executing task PSHFEtask
+======== ERROR : Etag_task.C finished with NON zero code: 1 ========
+*******************************************************
+* Automatically generated validation script           *
+* Time:    Wed Aug  3 09:37:45 PDT 2016 
+* Dir:     .
+* Workdir: /nfshome/psteffan/cpalice/jets
+* ----------------------------------------------------*
+total 849488
+-rw-r--r--  1 psteffan domain^users  10832839 Jan 27  2016 :.
+drwxr-xr-x 10 psteffan domain^users     65536 Aug  3 09:37 .
+drwxr-xr-x  6 psteffan domain^users      4096 Aug 24  2015 ..
+-rw-r--r--  1 psteffan domain^users  13336562 Aug  2 13:14 000184127_000184967.xml
+-rw-r--r--  1 psteffan domain^users   1024217 Aug  2 13:11 000184127.xml
+-rw-r--r--  1 psteffan domain^users    842859 Aug  2 13:11 000184132.xml
+-rw-r--r--  1 psteffan domain^users    842951 Aug  2 13:12 000184135.xml
+-rw-r--r--  1 psteffan domain^users    842905 Aug  2 13:12 000184137.xml
+-rw-r--r--  1 psteffan domain^users    842423 Aug  2 13:12 000184138.xml
+-rw-r--r--  1 psteffan domain^users    831128 Aug  2 13:12 000184188.xml
+-rw-r--r--  1 psteffan domain^users    841756 Aug  2 13:12 000184208.xml
+-rw-r--r--  1 psteffan domain^users    852139 Aug  2 13:12 000184209.xml
+-rw-r--r--  1 psteffan domain^users   1116279 Aug  2 13:12 000184215.xml
+-rw-r--r--  1 psteffan domain^users   1104609 Aug  2 13:13 000184371.xml
+-rw-r--r--  1 psteffan domain^users   3111144 Aug  2 13:13 000184673.xml
+-rw-r--r--  1 psteffan domain^users   1419994 Aug  2 13:13 000184678.xml
+-rw-r--r--  1 psteffan domain^users   1438777 Aug  2 13:28 000184682.xml
+-rw-r--r--  1 psteffan domain^users    841167 Aug  2 13:13 000184687.xml
+-rw-r--r--  1 psteffan domain^users    839152 Aug  2 13:13 000184784.xml
+-rw-r--r--  1 psteffan domain^users   1668532 Aug  2 13:13 000184786.xml
+-rw-r--r--  1 psteffan domain^users    279444 Aug  2 13:13 000184928.xml
+-rw-r--r--  1 psteffan domain^users   1397438 Aug  2 13:14 000184933.xml
+-rw-r--r--  1 psteffan domain^users    822451 Aug  2 13:14 000184938.xml
+-rw-r--r--  1 psteffan domain^users    568479 Aug  2 13:14 000184964.xml
+-rw-r--r--  1 psteffan domain^users    278402 Aug  2 13:14 000184967.xml
+-rw-r--r--  1 psteffan domain^users  16703637 Aug  2 13:17 000184968_000185292.xml
+-rw-r--r--  1 psteffan domain^users   2295628 Aug  2 13:15 000184968.xml
+-rw-r--r--  1 psteffan domain^users    553338 Aug  2 13:15 000184987.xml
+-rw-r--r--  1 psteffan domain^users    282201 Aug  2 13:15 000184988.xml
+-rw-r--r--  1 psteffan domain^users    558213 Aug  2 13:15 000184990.xml
+-rw-r--r--  1 psteffan domain^users   3355493 Aug  2 13:15 000185029.xml
+-rw-r--r--  1 psteffan domain^users   2534914 Aug  2 13:15 000185031.xml
+-rw-r--r--  1 psteffan domain^users   1401595 Aug  2 13:28 000185116.xml
+-rw-r--r--  1 psteffan domain^users   2492711 Aug  2 13:16 000185126.xml
+-rw-r--r--  1 psteffan domain^users    404852 Aug  2 13:16 000185127.xml
+-rw-r--r--  1 psteffan domain^users   1407575 Aug  2 13:27 000185132.xml
+-rw-r--r--  1 psteffan domain^users    413113 Aug  2 13:16 000185134.xml
+-rw-r--r--  1 psteffan domain^users    375376 Aug  2 13:27 000185157.xml
+-rw-r--r--  1 psteffan domain^users    605065 Aug  2 13:27 000185160.xml
+-rw-r--r--  1 psteffan domain^users    862113 Aug  2 13:16 000185164.xml
+-rw-r--r--  1 psteffan domain^users   1993055 Aug  2 13:16 000185189.xml
+-rw-r--r--  1 psteffan domain^users   1945037 Aug  2 13:16 000185196.xml
+-rw-r--r--  1 psteffan domain^users    607092 Aug  2 13:27 000185198.xml
+-rw-r--r--  1 psteffan domain^users   1131703 Aug  2 13:16 000185203.xml
+-rw-r--r--  1 psteffan domain^users    857632 Aug  2 13:17 000185206.xml
+-rw-r--r--  1 psteffan domain^users   1120405 Aug  2 13:17 000185208.xml
+-rw-r--r--  1 psteffan domain^users   1094233 Aug  2 13:27 000185217.xml
+-rw-r--r--  1 psteffan domain^users    826947 Aug  2 13:27 000185221.xml
+-rw-r--r--  1 psteffan domain^users   1675429 Aug  2 13:17 000185282.xml
+-rw-r--r--  1 psteffan domain^users   1106526 Aug  2 13:27 000185284.xml
+-rw-r--r--  1 psteffan domain^users    888210 Aug  2 13:17 000185288.xml
+-rw-r--r--  1 psteffan domain^users    357996 Aug  2 13:17 000185289.xml
+-rw-r--r--  1 psteffan domain^users   1123981 Aug  2 13:17 000185291.xml
+-rw-r--r--  1 psteffan domain^users    653055 Aug  2 13:17 000185292.xml
+-rw-r--r--  1 psteffan domain^users    856163 Aug  2 13:27 000185293.xml
+-rw-r--r--  1 psteffan domain^users    855380 Aug  2 13:26 000185296.xml
+-rw-r--r--  1 psteffan domain^users  10973723 Aug  2 13:20 000185299_000185697.xml
+-rw-r--r--  1 psteffan domain^users    333805 Aug  2 13:18 000185299.xml
+-rw-r--r--  1 psteffan domain^users    355097 Aug  2 13:18 000185300.xml
+-rw-r--r--  1 psteffan domain^users    618925 Aug  2 13:18 000185302.xml
+-rw-r--r--  1 psteffan domain^users    404357 Aug  2 13:18 000185303.xml
+-rw-r--r--  1 psteffan domain^users    668759 Aug  2 13:18 000185349.xml
+-rw-r--r--  1 psteffan domain^users    644625 Aug  2 13:18 000185350.xml
+-rw-r--r--  1 psteffan domain^users   1657660 Aug  2 13:18 000185351.xml
+-rw-r--r--  1 psteffan domain^users   2823088 Aug  2 13:19 000185356.xml
+-rw-r--r--  1 psteffan domain^users   7476219 Aug  2 13:28 000185359_000184682.xml
+-rw-r--r--  1 psteffan domain^users    845034 Aug  2 13:26 000185359.xml
+-rw-r--r--  1 psteffan domain^users    885315 Aug  2 13:26 000185360.xml
+-rw-r--r--  1 psteffan domain^users    839228 Aug  2 13:26 000185361.xml
+-rw-r--r--  1 psteffan domain^users    823598 Aug  2 13:26 000185362.xml
+-rw-r--r--  1 psteffan domain^users    824130 Aug  2 13:26 000185363.xml
+-rw-r--r--  1 psteffan domain^users    822469 Aug  2 13:25 000185371.xml
+-rw-r--r--  1 psteffan domain^users    821343 Aug  2 13:25 000185375.xml
+-rw-r--r--  1 psteffan domain^users   1811957 Aug  2 13:25 000185457.xml
+-rw-r--r--  1 psteffan domain^users   1665638 Aug  2 13:25 000185461.xml
+-rw-r--r--  1 psteffan domain^users    590123 Aug  2 13:19 000185465.xml
+-rw-r--r--  1 psteffan domain^users    509709 Aug  2 13:25 000185563.xml
+-rw-r--r--  1 psteffan domain^users   1933875 Aug  2 13:25 000185565.xml
+-rw-r--r--  1 psteffan domain^users    427981 Aug  2 13:19 000185574.xml
+-rw-r--r--  1 psteffan domain^users    640348 Aug  2 13:19 000185575.xml
+-rw-r--r--  1 psteffan domain^users    399007 Aug  2 13:19 000185578.xml
+-rw-r--r--  1 psteffan domain^users   1830010 Aug  2 13:19 000185580.xml
+-rw-r--r--  1 psteffan domain^users    890626 Aug  2 13:19 000185581.xml
+-rw-r--r--  1 psteffan domain^users    619135 Aug  2 13:19 000185582.xml
+-rw-r--r--  1 psteffan domain^users    652859 Aug  2 13:20 000185583.xml
+-rw-r--r--  1 psteffan domain^users    453689 Aug  2 13:20 000185588.xml
+-rw-r--r--  1 psteffan domain^users    611957 Aug  2 13:20 000185589.xml
+-rw-r--r--  1 psteffan domain^users   2875042 Aug  2 13:24 000185687.xml
+-rw-r--r--  1 psteffan domain^users    996739 Aug  2 13:20 000185695.xml
+-rw-r--r--  1 psteffan domain^users   1113707 Aug  2 13:20 000185697.xml
+-rw-r--r--  1 psteffan domain^users  11270752 Aug  2 13:23 000185698_000186167.xml
+-rw-r--r--  1 psteffan domain^users   1108784 Aug  2 13:20 000185698.xml
+-rw-r--r--  1 psteffan domain^users   1113210 Aug  2 13:21 000185699.xml
+-rw-r--r--  1 psteffan domain^users    838178 Aug  2 13:21 000185701.xml
+-rw-r--r--  1 psteffan domain^users   3063853 Aug  2 13:24 000185734.xml
+-rw-r--r--  1 psteffan domain^users    674211 Aug  2 13:24 000185735.xml
+-rw-r--r--  1 psteffan domain^users   1398934 Aug  2 13:21 000185738.xml
+-rw-r--r--  1 psteffan domain^users    515637 Aug  2 13:24 000185756.xml
+-rw-r--r--  1 psteffan domain^users   1300147 Aug  2 13:24 000185757.xml
+-rw-r--r--  1 psteffan domain^users   1403241 Aug  2 13:21 000185764.xml
+-rw-r--r--  1 psteffan domain^users    470713 Aug  2 13:21 000185765.xml
+-rw-r--r--  1 psteffan domain^users    859407 Aug  2 13:24 000185768.xml
+-rw-r--r--  1 psteffan domain^users    339220 Aug  2 13:21 000185775.xml
+-rw-r--r--  1 psteffan domain^users    360737 Aug  2 13:21 000185776.xml
+-rw-r--r--  1 psteffan domain^users   1125171 Aug  2 13:24 000185778.xml
+-rw-r--r--  1 psteffan domain^users    328346 Aug  2 13:21 000185784.xml
+-rw-r--r--  1 psteffan domain^users   1847200 Aug  2 13:23 000185909.xml
+-rw-r--r--  1 psteffan domain^users  15699768 Aug  2 13:26 000185912_000185360.xml
+-rw-r--r--  1 psteffan domain^users    734612 Aug  2 13:23 000185912.xml
+-rw-r--r--  1 psteffan domain^users    888327 Aug  2 13:22 000186163.xml
+-rw-r--r--  1 psteffan domain^users    676924 Aug  2 13:22 000186164.xml
+-rw-r--r--  1 psteffan domain^users    649953 Aug  2 13:22 000186165.xml
+-rw-r--r--  1 psteffan domain^users   1963826 Aug  2 13:23 000186167.xml
+-rw-r--r--  1 psteffan domain^users    733776 Aug  2 13:23 000186200.xml
+-rw-r--r--  1 psteffan domain^users    891101 Aug  2 13:22 000186205.xml
+-rw-r--r--  1 psteffan domain^users    633230 Aug  2 13:23 000186208.xml
+-rw-r--r--  1 psteffan domain^users    842116 Aug  2 13:22 000186229.xml
+-rw-r--r--  1 psteffan domain^users   1077534 Aug  2 13:22 000186318.xml
+-rw-r--r--  1 psteffan domain^users   1117484 Aug  2 13:22 000186319.xml
+-rw-r--r--  1 psteffan domain^users    339661 Aug  2 13:22 000186320.xml
+-rw-r--r--  1 psteffan domain^users      4037 Jun 11  2015 AddTaskEmcalJetSample.C
+-rw-r--r--  1 psteffan domain^users      2012 Aug  3 08:33 AddTaskPSHFE.C
+-rw-r--r--  1 psteffan domain^users     24112 Aug  2 13:07 AliAnalysisTaskeID_cxx.d
+-rwxr-xr-x  1 psteffan domain^users   1908308 Aug  2 13:08 AliAnalysisTaskeID_cxx.so
+-rwxr-xr-x  1 psteffan domain^users    295659 Jul 16 08:26 AliAnalysisTaskeID_h.so
+-rw-r--r--  1 psteffan domain^users     26392 Jul 12 04:55 AliAnalysisTaskElectronTagging_cxx.d
+-rwxr-xr-x  1 psteffan domain^users   1722675 Jul 12 04:55 AliAnalysisTaskElectronTagging_cxx.so
+-rw-r--r--  1 psteffan domain^users       251 May 26 23:56 AliAnalysisTaskElectronTagging_h.d
+-rw-r--r--  1 psteffan domain^users     11858 Jun 11  2015 AliAnalysisTaskEmcalJetSample.cxx
+-rw-r--r--  1 psteffan domain^users      2196 Jun 11  2015 AliAnalysisTaskEmcalJetSample.h
+-rw-r--r--  1 psteffan domain^users      7332 Jun 11  2015 AliAnalysisTaskEmcalSampleTEST.cxx
+-rw-r--r--  1 psteffan domain^users      1604 Jun 11  2015 AliAnalysisTaskEmcalSampleTEST.h
+-rw-r--r--  1 psteffan domain^users     43295 Jul 15 10:25 AliAnalysisTaskEventChar.cxx
+-rw-r--r--  1 psteffan domain^users      4735 Jul 13 12:43 AliAnalysisTaskEventChar.h
+-rw-r--r--  1 psteffan domain^users    110663 Apr 11  2015 AliAnalysisTaskFullppJetkdt.cxx
+-rw-r--r--  1 psteffan domain^users     25556 Apr 11  2015 AliAnalysisTaskFullppJetkdt.h
+-rw-r--r--  1 psteffan domain^users    243541 Aug  3 08:34 AliAnalysisTaskPSHFE.cxx
+-rw-r--r--  1 psteffan domain^users     24492 Aug  3 09:19 AliAnalysisTaskPSHFE_cxx.d
+-rwxr-xr-x  1 psteffan domain^users   1897844 Aug  3 09:20 AliAnalysisTaskPSHFE_cxx.so
+-rw-r--r--  1 psteffan domain^users     14513 Aug  3 08:31 AliAnalysisTaskPSHFE.h
+drwxr-xr-x  3 psteffan domain^users      4096 Jul  6 00:27 ali-master
+-rw-r--r--  1 psteffan domain^users   4940299 Aug  1 12:34 Analysis presentation 2.0.pdf
+-rw-r--r--  1 psteffan domain^users  12466441 Jul 27 08:04 Analysis presentation.pdf
+-rw-r--r--  1 psteffan domain^users       520 Aug  3 09:37 AnalysisResults.root
+-rw-r--r--  1 psteffan domain^users     14653 Aug  2 05:22 c1.png
+-rw-r--r--  1 psteffan domain^users     15813 May 31 15:03 Canvas_1.pdf
+-rw-------  1 psteffan domain^users 419250176 Jun 27 14:17 core
+-rw-r--r--  1 psteffan domain^users      6275 Apr 11  2015 CreateESDChain.C
+-rw-r--r--  1 psteffan domain^users       253 Jun 10 14:27 creCol.py
+-rw-r--r--  1 psteffan domain^users      3669 Aug  3 09:23 Etag_task.C
+-rw-r--r--  1 psteffan domain^users      1797 Aug  2 13:28 Etag_task.jdl
+-rw-r--r--  1 psteffan domain^users     22521 Aug  3 09:23 Etag_task.root
+-rw-r--r--  1 psteffan domain^users      1405 Aug  3 09:23 Etag_task.sh
+-rw-r--r--  1 psteffan domain^users      2686 Aug  3 09:23 Etag_task_validation.sh
+-rw-r--r--  1 psteffan domain^users      2786 Jun 10 15:09 ETag.xml
+-rw-r--r--  1 psteffan domain^users   1388743 Aug  3 08:05 event_stat.root
+-rw-r--r--  1 psteffan domain^users      3686 Jul  1 12:21 example_task.C
+-rw-r--r--  1 psteffan domain^users      1837 Jun 30 10:16 example_task.jdl
+-rw-r--r--  1 psteffan domain^users      3410 Jun 19 12:32 example_task_merge.C
+-rw-r--r--  1 psteffan domain^users      1751 Jun 19 12:32 example_task_merge_final.jdl
+-rw-r--r--  1 psteffan domain^users      2013 Jun 19 12:32 example_task_merge.jdl
+-rw-r--r--  1 psteffan domain^users      1373 Jun 19 12:32 example_task_merge.sh
+-rw-r--r--  1 psteffan domain^users     17649 Jul  1 12:21 example_task.root
+-rw-r--r--  1 psteffan domain^users      1414 Jul  1 12:21 example_task.sh
+-rw-r--r--  1 psteffan domain^users      2349 Jun 19 12:32 example_task_validation_merge.sh
+-rw-r--r--  1 psteffan domain^users      2293 Jul  1 12:21 example_task_validation.sh
+lrwxrwxrwx  1 psteffan domain^users        12 Jun 11  2015 files_esd.txt -> goodruns.txt
+-rw-r--r--  1 psteffan domain^users        94 May 27  2015 goodruns.txt
+drwxr-xr-x  9 psteffan domain^users      4096 Aug  2 07:54 GridOutputs
+drwxr-xr-x  2 psteffan domain^users      4096 Dec 28  2015 .ipynb_checkpoints
+-rw-r--r--  1 psteffan domain^users     44396 Dec 28  2015 JetZLeadingCut.pdf
+-rw-r--r--  1 psteffan domain^users       389 Jan  1  2016 LHC12 Pass 2 notes
+-rw-------  1 psteffan domain^users   9632010 Aug  1 00:35 nohup.out
+-rw-r--r--  1 psteffan domain^users    278392 Jun 18 16:11 output1.txt
+-rw-r--r--  1 psteffan domain^users     64532 Aug  3 09:37 output.txt
+-rw-r--r--  1 psteffan domain^users     58495 Jun 18 17:05 out.txt
+-rw-r--r--  1 psteffan domain^users       274 Jun 12  2015 plotit.C
+drwxr-xr-x  3 psteffan domain^users     69632 Aug  3 08:14 plotsKlay
+drwxr-xr-x  2 psteffan domain^users     12288 Jul 26 13:32 plotsKlayTRD
+-rw-r--r--  1 psteffan domain^users      1034 Dec 28  2015 Proposed_Cuts.txt
+-rw-r--r--  1 psteffan domain^users        55 Mar  6  2015 README
+-rw-r--r--  1 psteffan domain^users        79 Aug  1 06:28 rname.sh
+-rw-r--r--  1 psteffan domain^users   1481290 Jul 31 07:50 ROOTMERGE-015e13b6-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1304187 Jul 31 07:57 ROOTMERGE-0184d9c8-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1299906 Jul 31 07:57 ROOTMERGE-06fa6968-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1479586 Jul 31 07:50 ROOTMERGE-074dfcaa-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1311291 Jul 31 07:57 ROOTMERGE-0bc29c5e-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1511517 Jul 31 07:50 ROOTMERGE-0c7bb528-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1301868 Jul 31 07:58 ROOTMERGE-10a1ef5e-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1512397 Jul 31 07:50 ROOTMERGE-11a1bc6e-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1305792 Jul 31 07:58 ROOTMERGE-15cfc474-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1514716 Jul 31 07:51 ROOTMERGE-169556d6-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1254984 Jul 31 07:58 ROOTMERGE-1abf6a5c-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1509659 Jul 31 07:51 ROOTMERGE-1b667f1e-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 22:44 ROOTMERGE-2041ca0c-57ab-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1310087 Jul 31 07:58 ROOTMERGE-21026d2e-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1518734 Jul 31 07:51 ROOTMERGE-210c68a2-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1304464 Jul 31 07:58 ROOTMERGE-265dac02-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1514948 Jul 31 07:51 ROOTMERGE-28c44eb6-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 20:36 ROOTMERGE-2bb5f12c-5799-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1296315 Jul 31 07:58 ROOTMERGE-2bd58542-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1519812 Jul 31 07:51 ROOTMERGE-2df5cc52-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1304114 Jul 31 07:58 ROOTMERGE-30fa142a-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1247085 Jul 31 07:51 ROOTMERGE-33d79498-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1306162 Jul 31 07:59 ROOTMERGE-360b1e32-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1503262 Jul 31 07:52 ROOTMERGE-38c9773c-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1303303 Jul 31 07:59 ROOTMERGE-3b4be96c-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1511315 Jul 31 07:52 ROOTMERGE-3ddc7abc-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1300796 Jul 31 07:59 ROOTMERGE-41319426-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1521034 Jul 31 07:52 ROOTMERGE-42af27d8-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1300588 Jul 31 07:59 ROOTMERGE-4660604e-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1515460 Jul 31 07:52 ROOTMERGE-47649132-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 23:36 ROOTMERGE-4887b042-57b2-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1302572 Jul 31 07:59 ROOTMERGE-4b85ef1c-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1518362 Jul 31 07:52 ROOTMERGE-4e4e8bd8-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1301112 Jul 31 07:59 ROOTMERGE-5041f208-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1515857 Jul 31 07:52 ROOTMERGE-53ac623a-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1249704 Jul 31 08:00 ROOTMERGE-55875212-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1518874 Jul 31 07:52 ROOTMERGE-5884a34e-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1302200 Jul 31 08:00 ROOTMERGE-5a797b6a-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1533788 Jul 31 07:53 ROOTMERGE-5e4111fa-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1303386 Jul 31 08:00 ROOTMERGE-5f60dd12-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1537680 Jul 31 07:53 ROOTMERGE-63330fc4-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users         0 Jul 31 08:00 ROOTMERGE-649e8626-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 21:28 ROOTMERGE-665b4f46-57a0-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1542306 Jul 31 07:53 ROOTMERGE-685b0d44-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1251153 Jul 31 07:53 ROOTMERGE-6d868d84-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Aug  1 00:27 ROOTMERGE-706b6016-57b9-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1533082 Jul 31 07:53 ROOTMERGE-71b4ba7a-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1536380 Jul 31 07:53 ROOTMERGE-76e1e81a-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1537576 Jul 31 07:53 ROOTMERGE-7c3edc28-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1533265 Jul 31 07:54 ROOTMERGE-81a343ac-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1534783 Jul 31 07:54 ROOTMERGE-867f4b14-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users         0 Jul 31 08:08 ROOTMERGE-8747b43a-5730-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1530003 Jul 31 07:54 ROOTMERGE-8bc4a358-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 22:19 ROOTMERGE-8d432a32-57a7-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1541026 Jul 31 07:54 ROOTMERGE-90e8fe56-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1532075 Jul 31 07:54 ROOTMERGE-9610ca8a-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1523032 Jul 31 07:54 ROOTMERGE-9b163470-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1519284 Jul 31 07:54 ROOTMERGE-a03bca64-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1255752 Jul 31 07:55 ROOTMERGE-a59ee6f8-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1520100 Jul 31 07:55 ROOTMERGE-aaacc6ba-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1526275 Jul 31 07:55 ROOTMERGE-b00db6aa-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 23:10 ROOTMERGE-b3cf71fe-57ae-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1522979 Jul 31 07:55 ROOTMERGE-b51c1f74-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1526392 Jul 31 07:55 ROOTMERGE-ba98cec0-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1529876 Jul 31 07:55 ROOTMERGE-c06069c6-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 21:02 ROOTMERGE-c7b5d6fc-579c-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1524170 Jul 31 07:56 ROOTMERGE-c87eff3c-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1543314 Jul 31 07:56 ROOTMERGE-cd88c5da-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1297644 Jul 31 07:56 ROOTMERGE-d23d3bc4-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1308640 Jul 31 07:56 ROOTMERGE-d82a27b8-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Aug  1 00:01 ROOTMERGE-db578386-57b5-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1303553 Jul 31 07:56 ROOTMERGE-de218936-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1135220 Jul 31 07:49 ROOTMERGE-e1837694-572d-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1250664 Jul 31 07:56 ROOTMERGE-e2f3b5ce-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1034178 Jul 31 07:49 ROOTMERGE-e6fbe6c4-572d-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1304308 Jul 31 07:56 ROOTMERGE-e7ca7c68-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1135220 Jul 31 08:04 ROOTMERGE-e9ce4ed0-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1243881 Jul 31 07:49 ROOTMERGE-ebe86b4e-572d-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1305865 Jul 31 07:57 ROOTMERGE-ed095564-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1034178 Jul 31 08:04 ROOTMERGE-ef5a211c-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1248277 Jul 31 07:50 ROOTMERGE-f10fffb0-572d-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1298917 Jul 31 07:57 ROOTMERGE-f211ce06-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1000000 Jul 31 08:04 ROOTMERGE-f442b9b4-572f-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1245599 Jul 31 07:50 ROOTMERGE-f7082ce4-572d-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1301544 Jul 31 07:57 ROOTMERGE-f78e00b6-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users  10713925 Jul 31 21:53 ROOTMERGE-f93c1f36-57a3-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1479664 Jul 31 07:50 ROOTMERGE-fbe17b4e-572d-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users   1311964 Jul 31 07:57 ROOTMERGE-fc989f30-572e-11e6-9717-2b174181beef.root
+-rw-r--r--  1 psteffan domain^users     15042 Nov 27  2015 run_121040.txt
+-rw-r--r--  1 psteffan domain^users      3196 Jun 24  2015 run154383.txt
+-rw-r--r--  1 psteffan domain^users     15416 Jun 24  2015 run163207.txt
+-rw-r--r--  1 psteffan domain^users     12690 Apr 11  2015 run164599.txt
+-rw-r--r--  1 psteffan domain^users      4490 Apr 11  2015 run1.C
+-rw-r--r--  1 psteffan domain^users     14292 Jun 11  2015 runEMCalAnalysis.C
+-rw-r--r--  1 psteffan domain^users     16289 Jul 29  2015 runEMCalJetAnalysis.C
+-rw-r--r--  1 psteffan domain^users     21342 Aug  3 09:16 runETag.C
+-rw-r--r--  1 psteffan domain^users      3919 Jun 15 04:49 runETag_C.d
+-rw-r--r--  1 psteffan domain^users       978 Jun 10 15:01 run_selection_1.xml
+-rw-r--r--  1 psteffan domain^users      2786 Jun 10 15:04 run_selection.xml
+-rw-r--r--  1 psteffan domain^users     12224 Aug  3 08:13 savScrip.C
+-rw-r--r--  1 psteffan domain^users      1790 Jul 27 05:39 savScripTRD.C
+-rw-r--r--  1 psteffan domain^users     32387 Jun 25 10:09 Stage_1.xml
+-rw-r--r--  1 psteffan domain^users       335 Jun 25 21:32 Stage_2.xml
+-rw-r--r--  1 psteffan domain^users     78788 Aug  3 09:37 stderr
+-rw-r--r--  1 psteffan domain^users        56 Aug  3 08:53 stdout
+drwxr-xr-x  3 psteffan domain^users      4096 Jul  6 00:21 sw
+-rw-r--r--  1 psteffan domain^users      2495 Aug  3 09:37 syswatch.log
+-rw-r--r--  1 psteffan domain^users    202514 Aug  3 08:05 syswatch.root
+-rw-r--r--  1 psteffan domain^users      6519 Aug  2 09:52 TagEvents.txt
+drwxr-xr-x  2 psteffan domain^users      4096 May  9 13:14 temphistos
+-rw-r--r--  1 psteffan domain^users         0 Nov 27  2015 trainDebug.C
+drwxr-xr-x  2 psteffan domain^users      4096 Jan 27  2016 TrainResults
+-rw-r--r--  1 psteffan domain^users         0 Dec 28  2015 untitled.txt
+-rw-r--r--  1 psteffan domain^users     53856 Aug  3 09:23 wn.xml
+* ----------------------------------------------------*
+* ########## Job not validated - Segment. violation  ###
+ *** Break *** segmentation violation
+Error = 1
+Output file EventStat_temp.root not found. Job FAILED !
+Output file phistos.root not found. Job FAILED !
+* ----------------------------------------------------*
+*******************************************************
+/nfshome/psteffan/cpalice/jets
+I-AliAnalysisAlien::StartAnalysis: 
+##### LOCAL MODE #####   Your analysis will be run locally on a subset of the requested       
+                         dataset.
+### AliEn analysis plugin current settings ###
+=   OverwriteMode:________________________________ 1
+***** NOTE: Overwrite mode will overwrite the input generated datasets and partial results from previous analysis.             
+*****       To disable, use: plugin->SetOverwriteMode(kFALSE);
+=   Copy files to grid: __________________________ YES
+=   Check if files can be copied to grid: ________ YES
+=   Production mode:______________________________ 0
+=   Version of API requested: ____________________ V1.1x
+=   Version of ROOT requested: ___________________ v5-34-30-alice5-alice-1
+=   Version of AliRoot requested: ________________ v5-08-13a-1
+=   Version of AliPhysics requested: _____________ vAN-20160626-1
+=   Grid workdir relative to user $HOME: _________ Etag_task
+=   Grid output directory relative to workdir: ___ out
+=   Data base directory path requested: __________ /alice/data/2012/LHC12d
+=   Data search pattern: _________________________ pass2/*ESDs.root
+=   Input data format: ___________________________ xml-single
+=   Run numbers to be processed: _________________ 000184127 000184132 000184135 000184137 000184138 000184188 000184208 000184209 000184215 000184371 000184673 000184678 000184687 000184784 000184786 000184928 000184933 000184938 000184964 000184967 000184968 000184987 000184988 000184990 000185029 000185031 000185126 000185127 000185134 000185164 000185189 000185196 000185203 000185206 000185208 000185282 000185288 000185289 000185291 000185292 000185299 000185300 000185302 000185303 000185349 000185350 000185351 000185356 000185465 000185574 000185575 000185578 000185580 000185581 000185582 000185583 000185588 000185589 000185695 000185697 000185698 000185699 000185701 000185738 000185764 000185765 000185775 000185776 000185784 000186163 000186164 000186165 000186205 000186319 000186320 000186318 000186229 000186208 000186200 000186167 000185912 000185909 000185778 000185768 000185757 000185756 000185735 000185734 000185687 000185682 000185565 000185563 000185461 000185457 000185375 000185371 000185363 000185362 000185361 000185360 000185359 000185296 000185293 000185284 000185221 000185217 000185198 000185160 000185157 000185132 000185116 000184682
+=   Number of input files used in test mode: _____ 100
+=   List of output files to be registered: _______ EventStat_temp.root,AnalysisResults.root,phistos.root
+=   List of outputs going to be archived: ________ log_archive.zip:std*@disk=1 root_archive.zip:EventStat_temp.root,AnalysisResults.root,phistos.root,*.stat@disk=2
+=   List of outputs that should not be merged: ___ 
+=   List of outputs that should not be registered: 
+=   List of outputs produced during Terminate: ___ 
+=====================================================================
+=   Job price: ___________________________________ 1
+=   Time to live (TTL): __________________________ 30000
+=   Max files per subjob: ________________________ 100
+=   Resubmit master job if failed subjobs >_______ 90
+=   Number of replicas for the output files_______ 2
+=   Number of runs per master job: _______________ 20
+=   Number of files in one chunk to be merged: ___ 100
+=   Name of the generated execution script: ______ Etag_task.sh
+=   Executable command: __________________________ root -b -q -x
+=   Name of the generated analysis macro: ________ Etag_task.C
+=   User analysis files to be deployed: __________ AliAnalysisTaskPSHFE.cxx
+=   Additional libs to be loaded or souces to be compiled runtime: <AliAnalysisTaskPSHFE.h AliAnalysisTaskPSHFE.cxx libGui.so libProof.so libMinuit.so libANALYSIS.so libOADB.so libANALYSISalice.so>
+=   Master jobs split mode: ______________________ se
+=   Custom name for the dataset to be created: ___ 
+=   Name of the generated JDL: ___________________ Etag_task.jdl
+=   Include path for runtime task compilation: ___ 
+I-AliAnalysisAlien::CheckFileCopy: Checking possibility to copy files to your AliEn home directory...         
+ +++ NOTE: You can disable this via: plugin->SetCheckCopy(kFALSE);
+W-AliAnalysisAlien::CheckFileCopy: Your current close storage is empty ! Depending on your location, file copying may fail.
+I-AliAnalysisAlien::CheckFileCopy: ### ...SUCCESS ###
+I-AliAnalysisAlien::CheckDataType: Using supplied run numbers (run ranges are ignored)
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184127.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184132.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184135.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184137.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184138.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184188.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184208.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184209.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184215.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184371.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184673.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184678.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184687.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184784.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184786.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184928.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184933.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184938.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184964.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184967.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184968.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184987.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184988.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184990.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185029.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185031.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185126.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185127.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185134.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185164.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185189.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185196.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185203.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185206.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185208.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185282.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185288.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185289.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185291.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185292.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185299.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185300.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185302.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185303.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185349.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185350.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185351.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185356.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185465.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185574.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185575.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185578.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185580.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185581.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185582.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185583.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185588.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185589.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185695.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185697.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185698.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185699.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185701.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185738.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185764.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185765.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185775.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185776.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185784.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186163.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186164.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186165.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186205.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186319.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186320.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186318.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186229.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186208.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186200.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000186167.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185912.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185909.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185778.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185768.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185757.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185756.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185735.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185734.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185687.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185682.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185565.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185563.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185461.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185457.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185375.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185371.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185363.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185362.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185361.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185360.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185359.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185296.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185293.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185284.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185221.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185217.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185198.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185160.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185157.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185132.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000185116.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/Etag_task/000184682.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CreateDataset: Created dataset wn.xml with 100 files
+I-AliAnalysisAlien::WriteAnalysisFile: 
+#####   Analysis manager: Etag_task wrote to file <Etag_task.root>
+
+I-AliAnalysisAlien::WriteAnalysisMacro: 
+#####   Analysis macro to run on worker nodes <Etag_task.C> written
+I-AliAnalysisAlien::StartAnalysis: 
+_______________________________________________________________________       
+   Running analysis script in a daughter shell as on a worker node       
+_______________________________________________________________________
+I-AliAnalysisManager::StartAnalysis: Grid analysis was stopped and cannot be terminated

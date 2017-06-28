@@ -1,0 +1,551 @@
+W-TGClient::GetFontByName: couldn't retrieve font -*-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+W-TGClient::GetFontByName: couldn't retrieve font -*-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+W-TGClient::GetFontByName: couldn't retrieve font -*-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+W-TGClient::GetFontByName: couldn't retrieve font -*-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1, using "fixed"
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   5.34/30     23 April 2015   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+ROOT 5.34/30 (heads/v5-34-00-patches@v5-34-28-57-gec27989, May 29 2016, 16:00:00 on linuxx8664gcc)
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+Processing runETag.C...
+Error: cannot open file "AliAnalysisTaskSE.h"  AliAnalysisTaskElectronTagging.h:23:
+*** Interpreter error recovered ***
+Warning: Automatic variable DoCutsHistos is allocated runETag.C:185:
+Made it heregrid analysis chosenE-TUnixSystem::DynamicPathName: libOADB[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libCORRFW[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libTender[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGPP[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGHFbase[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGDQdielectron[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGHFhfe[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGCaloTrackCorrBase[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libTender[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libTenderSupplies[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGTools[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGEMCAL[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGGAEMCALTasks[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGCFCorrelationsBase[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+E-TUnixSystem::DynamicPathName: libPWGCFCorrelationsDPhi[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliPhysics/162066596f0b1351a3aac8b24d9fb98dcebd70c2-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4_VMC/v3-2-p1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT4/v4.10.01.p03-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GEANT3/v2-1-1/lib64:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/fastjet/v3.1.3_1.020-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/cgal/v4.6.3-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/boost/v1.59.0-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/GSL/v1.16-1/lib:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/AliEn-Runtime/v2-19-le-1/lib:/usr/lib:.:/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/lib::/nfshome/psteffan/alice/sw/ubuntu1404_x86-64/ROOT/v5-34-30-alice-1/cint/cint/stl
+setting run toI-AliCDBManager::Init: AliEn classes enabled in Root. AliCDBGrid factory registered.
+I-AliCDBGrid::AliCDBGrid: Connection to the Grid...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User psteffan 
+I-AliCDBGrid::QueryCDB: Querying files valid for run 183913 and path "*" into CDB storage  "alien:///alice/data/2012/OCDB/"
+I-AliCDBGrid::QueryValidFiles: Only latest version will be returned
+I-AliCDBGrid::QueryCDB: 282 valid files found!
+I-AliCDBGrid::QueryCDB: Querying files valid for run 183913 and path "GRP/GRP/Data" into CDB storage  "alien:///alice/data/2012/OCDB/"
+I-AliCDBGrid::QueryValidFiles: Only latest version will be returned
+I-AliCDBGrid::QueryCDB: 282 valid files found!
+I-AliCDBGrid::GetEntryId: Only latest version will be returned
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/OCDB/GRP/Geometry/Data/Run0_999999999_v5_s0.root in SE <ALICE::CERN::OCDB>
+I-TGeoManager::CloseGeometry: Geometry loaded from file...
+I-TGeoManager::SetTopVolume: Top volume is ALIC. Master volume is ALIC
+I-TGeoNavigator::BuildCache: --- Maximum geometry depth set to 100
+I-TGeoManager::Voxelize: Voxelizing...
+I-TGeoManager::CountLevels: max level = 12, max placements = 547
+I-TGeoManager::CloseGeometry: 5346285 nodes/ 5536 volume UID's in ALICE geometry
+I-TGeoManager::CloseGeometry: ----------------modeler ready----------------
+I-AliGeomManager::LoadGeometry: From now on using geometry from CDB base folder "alien://?User=?DBFolder=/alice/data/2012/OCDB/?SE=default?CacheFolder=?OperateDisconnected=1?CacheSize=1073741824?CleanupInterval=0"
+I-AliCDBGrid::GetEntryId: Only latest version will be returned
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/OCDB/GRP/Align/Data/Run0_999999999_v1_s0.root in SE <ALICE::CERN::OCDB>
+I-AliGeomManager::ApplyAlignObjsFromCDB: Alignment objects loaded for: GRP 
+I-TAlienFile::Open: Accessing image 1 of alien:///alice/data/2012/OCDB/GRP/GRP/Data/Run183913_183913_v1_s0.root in SE <ALICE::CERN::OCDB>
+I-AliMagF::Print: MagneticFieldMap:L3: +30000 Dip: +5999 kA;  | Polarities in LHC convention
+I-AliMagF::Print: Solenoid (+1.00*)5 kG, Dipole ON (+1.00) 
+I-AliMagF::Print: Machine B fields for p-p beam (4000 GeV): QGrad: 12.5715 Dipole: 21.6446
+I-AliMagF::Print: Uses Sol30_Dip6_Hole of $(ALICE_ROOT)/data/maps/mfchebKGI_sym.root
+Running with the B field constructed out of GRP !I-TGeoGlobalMagField::SetField: Global magnetic field set to <MagneticFieldMap>
+(class TAlienJDL*)0x50acdc0
+(class TAlienJDL*)0x50ba2a0
+I-AliAnalysisAlien::SetDefaultOutputs: Plugin will use the output files taken from analysis manager
+W-AliAnalysisAlien::SetRootVersionForProof: Obsolete. Use SetROOTVersion instead
+E-AliAnalysisAlien::SetRootVersionForProof: ROOT version already set to v5-34-30-alice-24
+Using: PROOF_UseMergers   : -1
+========================================================================================
+PIDResponse: Initialising AliAnalysisTaskPIDResponse
+========================================================================================
+I-AliAnalysisManager::PrintStatus: System information will be collected each 100 events
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: PIDResponseTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+______________________________________________________________________________
+   task: PIDqaTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [PIDqa]
+      Container: PIDqa     DATA TYPE: TList
+       = Filename: phistos.root
+______________________________________________________________________________
+   task: example_task  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [phistos]
+      Container: phistos     DATA TYPE: TList
+       = Filename: phistos.root
+Starting Analysis....
+(class TClass*)0x517d580
+StartAnalysis example_task
+===== RUNNING GRID ANALYSIS: example_task
+I-AliAnalysisAlien::StartAnalysis: 
+##### MERGE MODE #####   The registered outputs of the analysis will be merged
+I-AliAnalysisAlien::CheckDataType: Using supplied run numbers (run ranges are ignored)
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184127.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184132.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184135.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184137.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184138.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184188.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184208.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184209.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184215.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184371.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184673.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184678.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184687.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184784.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184786.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184928.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184933.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184938.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184964.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184967.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184968.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184987.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184988.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184990.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185029.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185031.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185126.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185127.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185134.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185164.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185189.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185196.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185203.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185206.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185208.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185282.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185288.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185289.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185291.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185292.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185299.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185300.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185302.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185303.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185349.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185350.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185351.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185356.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185465.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185574.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185575.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185578.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185580.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185581.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185582.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185583.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185588.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185589.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185695.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185697.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185698.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185699.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185701.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185738.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185764.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185765.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185775.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185776.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185784.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186163.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186164.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186165.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186205.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186319.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186320.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186318.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186229.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186208.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186200.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000186167.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185912.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185909.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185778.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185768.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185757.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185756.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185735.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185734.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185687.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185682.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185565.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185563.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185461.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185457.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185375.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185371.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185363.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185362.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185361.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185360.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185359.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185296.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185293.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185284.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185221.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185217.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185198.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185160.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185157.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185132.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000185116.xml type: xml_collection; using_tags: No
+I-AliAnalysisAlien::CheckDataType: 
+#####   file: /alice/cern.ch/user/p/psteffan/example_task/000184682.xml type: xml_collection; using_tags: No
+===== MERGING OUTPUTS REGISTERED BY YOUR ANALYSIS JOB: example_task
+Error: stdout was already redirected to a file, it will be redirected but we will not be able to undo this redirection!
+I-AliAnalysisAlien::MergeOutputs: Submitting merging JDL
+### Submitting merging job for master <000>
+Error: stdout was already redirected to a file, it will be redirected but we will not be able to undo this redirection!
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 7 (Thread 0x7f23a9a7b700 (LWP 43458)):
+#0  0x00007f23c3271dfd in nanosleep () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f23c3271c94 in __sleep (seconds=0) at ../sysdeps/unix/sysv/linux/sleep.c:137
+#2  0x00007f23aa2ea0fc in GarbageCollectorThread (arg=0x18b0bc0, thr=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientConnMgr.cc:93
+#3  0x00007f23aa055717 in XrdSysThread_Xeq (myargs=0x18b2e70) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdSys/XrdSysPthread.cc:86
+#4  0x00007f23bd119184 in start_thread (arg=0x7f23a9a7b700) at pthread_create.c:312
+#5  0x00007f23c32ab37d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 6 (Thread 0x7f23a889a700 (LWP 43459)):
+#0  0x00007f23c329dfdd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f23aa2d0d13 in poll (__timeout=1000, __nfds=1, __fds=0x7f23a88970d0) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x18b9b40, buffer=0x7f23a4000900, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientSock.cc:156
+#3  0x00007f23aa2f49ec in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x18b8640, buf=buf
+entry=0x7f23a4000900, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7f23a889768c) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:381
+#4  0x00007f23aa30278e in XrdClientMessage::ReadRaw (this=this
+entry=0x7f23a40008c0, phy=phy
+entry=0x18b8640) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientMessage.cc:172
+#5  0x00007f23aa2f7305 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x18b8640, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:462
+#6  0x00007f23aa2f92f2 in SocketReaderThread (arg=0x18b8640, thr=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:79
+#7  0x00007f23aa055717 in XrdSysThread_Xeq (myargs=0x18b6ae0) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdSys/XrdSysPthread.cc:86
+#8  0x00007f23bd119184 in start_thread (arg=0x7f23a889a700) at pthread_create.c:312
+#9  0x00007f23c32ab37d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 5 (Thread 0x7f23a3784700 (LWP 43474)):
+#0  0x00007f23c329dfdd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f23aa2d0d13 in poll (__timeout=1000, __nfds=1, __fds=0x7f23a37810d0) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x1a21780, buffer=0x7f239c000db0, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientSock.cc:156
+#3  0x00007f23aa2f49ec in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x1a4b920, buf=buf
+entry=0x7f239c000db0, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7f23a378168c) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:381
+#4  0x00007f23aa30278e in XrdClientMessage::ReadRaw (this=this
+entry=0x7f239c000d70, phy=phy
+entry=0x1a4b920) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientMessage.cc:172
+#5  0x00007f23aa2f7305 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x1a4b920, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:462
+#6  0x00007f23aa2f92f2 in SocketReaderThread (arg=0x1a4b920, thr=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:79
+#7  0x00007f23aa055717 in XrdSysThread_Xeq (myargs=0x1a22480) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdSys/XrdSysPthread.cc:86
+#8  0x00007f23bd119184 in start_thread (arg=0x7f23a3784700) at pthread_create.c:312
+#9  0x00007f23c32ab37d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 4 (Thread 0x7f23a185d700 (LWP 43475)):
+#0  0x00007f23c329dfdd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f23aa2d0d13 in poll (__timeout=1000, __nfds=1, __fds=0x7f23a185a0d0) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x1a52500, buffer=0x7f2394000900, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientSock.cc:156
+#3  0x00007f23aa2f49ec in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x1a22ef0, buf=buf
+entry=0x7f2394000900, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7f23a185a68c) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:381
+#4  0x00007f23aa30278e in XrdClientMessage::ReadRaw (this=this
+entry=0x7f23940008c0, phy=phy
+entry=0x1a22ef0) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientMessage.cc:172
+#5  0x00007f23aa2f7305 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x1a22ef0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:462
+#6  0x00007f23aa2f92f2 in SocketReaderThread (arg=0x1a22ef0, thr=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:79
+#7  0x00007f23aa055717 in XrdSysThread_Xeq (myargs=0x1a24190) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdSys/XrdSysPthread.cc:86
+#8  0x00007f23bd119184 in start_thread (arg=0x7f23a185d700) at pthread_create.c:312
+#9  0x00007f23c32ab37d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 3 (Thread 0x7f23a105c700 (LWP 43486)):
+#0  0x00007f23c329dfdd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f23aa2d0d13 in poll (__timeout=1000, __nfds=1, __fds=0x7f23a10590d0) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x4f1bb00, buffer=0x7f2398000900, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientSock.cc:156
+#3  0x00007f23aa2f49ec in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x4f1e0d0, buf=buf
+entry=0x7f2398000900, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7f23a105968c) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:381
+#4  0x00007f23aa30278e in XrdClientMessage::ReadRaw (this=this
+entry=0x7f23980008c0, phy=phy
+entry=0x4f1e0d0) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientMessage.cc:172
+#5  0x00007f23aa2f7305 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x4f1e0d0, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:462
+#6  0x00007f23aa2f92f2 in SocketReaderThread (arg=0x4f1e0d0, thr=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:79
+#7  0x00007f23aa055717 in XrdSysThread_Xeq (myargs=0x4f1ba30) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdSys/XrdSysPthread.cc:86
+#8  0x00007f23bd119184 in start_thread (arg=0x7f23a105c700) at pthread_create.c:312
+#9  0x00007f23c32ab37d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 2 (Thread 0x7f23a085b700 (LWP 43488)):
+#0  0x00007f23c329dfdd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f23aa2d0d13 in poll (__timeout=1000, __nfds=1, __fds=0x7f23a08580d0) at /usr/include/x86_64-linux-gnu/bits/poll2.h:46
+#2  XrdClientSock::RecvRaw (this=0x3c29fa0, buffer=0x7f238c000900, length=8, substreamid=<optimized out>, usedsubstreamid=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientSock.cc:156
+#3  0x00007f23aa2f49ec in XrdClientPhyConnection::ReadRaw (this=this
+entry=0x3c29b00, buf=buf
+entry=0x7f238c000900, len=len
+entry=8, substreamid=substreamid
+entry=-1, usedsubstreamid=usedsubstreamid
+entry=0x7f23a085868c) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:381
+#4  0x00007f23aa30278e in XrdClientMessage::ReadRaw (this=this
+entry=0x7f238c0008c0, phy=phy
+entry=0x3c29b00) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientMessage.cc:172
+#5  0x00007f23aa2f7305 in XrdClientPhyConnection::BuildMessage (this=this
+entry=0x3c29b00, IgnoreTimeouts=IgnoreTimeouts
+entry=true, Enqueue=Enqueue
+entry=true) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:462
+#6  0x00007f23aa2f92f2 in SocketReaderThread (arg=0x3c29b00, thr=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdClient/XrdClientPhyConnection.cc:79
+#7  0x00007f23aa055717 in XrdSysThread_Xeq (myargs=0x3c2a0e0) at /nfshome/psteffan/alice/sw/SOURCES/XRootD/v3.3.6/v3.3.6/src/XrdSys/XrdSysPthread.cc:86
+#8  0x00007f23bd119184 in start_thread (arg=0x7f23a085b700) at pthread_create.c:312
+#9  0x00007f23c32ab37d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+
+Thread 1 (Thread 0x7f23c57f79c0 (LWP 43424)):
+#0  0x00007f23c3271a59 in __libc_waitpid (pid=44112, stat_loc=stat_loc
+entry=0x7ffe184c3a40, options=options
+entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:40
+#1  0x00007f23c31f7232 in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:148
+#2  0x00007f23c428c063 in TUnixSystem::StackTrace (this=0x729c20) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/unix/src/TUnixSystem.cxx:2419
+#3  0x00007f23c428dc8c in TUnixSystem::DispatchSignals (this=0x729c20, sig=kSigSegmentationViolation) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/unix/src/TUnixSystem.cxx:1294
+#4  <signal handler called>
+#5  freopen (filename=0x17e8f90 "Stage_2.xml", mode=0x7f23bdb6d07d "w", fp=0x0) at freopen.c:46
+#6  0x00007f23bd9e65b8 in G__redirectoutput (com=<optimized out>, psout=psout
+entry=0x7ffe184c6480, pserr=pserr
+entry=0x7ffe184c6478, psin=psin
+entry=0x7ffe184c6488, asemicolumn=asemicolumn
+entry=1, keyword=<optimized out>, pipefile=0x17e8b80 "Stage_2.xml") at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/pause.cxx:1213
+#7  0x00007f23bd9e9ae3 in G__process_cmd (line=<optimized out>, prompt=<optimized out>, more=<optimized out>, err=0x7ffe184c73bc, rslt=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/pause.cxx:1698
+#8  0x00007f23c4274f30 in TCint::ProcessLine (this=0x733ae0, line=0x1a11040 "gGrid->Stdout(); > Stage_2.xml", error=0x0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/meta/src/TCint.cxx:549
+#9  0x00007f23c4301936 in TApplication::ProcessLine (this=0xc5ec90, line=<optimized out>, sync=<optimized out>, err=0x0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/base/src/TApplication.cxx:978
+#10 0x00007f23c42bfef1 in TROOT::ProcessLine (this=0x7f23c46d5d20 <ROOT::GetROOT()::root>, line=<optimized out>, error=error
+entry=0x0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/base/src/TROOT.cxx:1758
+#11 0x00007f23b3104a0c in AliAnalysisAlien::CheckMergedFiles (this=this
+entry=0x5fe16f0, filename=<optimized out>, aliendir=0x51b4a80 "/alice/cern.ch/user/p/psteffan//example_task/out/001", nperchunk=100, jdl=0x5183430 "example_task_merge.jdl") at /nfshome/psteffan/alice/sw/SOURCES/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7/84352c32e0/ANALYSIS/ANALYSISaliceBase/AliAnalysisAlien.cxx:2781
+#12 0x00007f23b31055e1 in AliAnalysisAlien::SubmitMerging (this=0x5fe16f0) at /nfshome/psteffan/alice/sw/SOURCES/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7/84352c32e0/ANALYSIS/ANALYSISaliceBase/AliAnalysisAlien.cxx:3896
+#13 0x00007f23b310749f in AliAnalysisAlien::MergeOutputs (this=0x5fe16f0) at /nfshome/psteffan/alice/sw/SOURCES/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7/84352c32e0/ANALYSIS/ANALYSISaliceBase/AliAnalysisAlien.cxx:3159
+#14 0x00007f23c21fabb5 in AliAnalysisManager::StartAnalysis (this=0x14068f0, type=type
+entry=0x15f4a08 "grid", tree=tree
+entry=0x0, nentries=2000, firstentry=0) at /nfshome/psteffan/alice/sw/SOURCES/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7/84352c32e0/ANALYSIS/ANALYSIS/AliAnalysisManager.cxx:1895
+#15 0x00007f23c21fbb4c in AliAnalysisManager::StartAnalysis (this=<optimized out>, type=type
+entry=0x15f4a08 "grid", nentries=<optimized out>, firstentry=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7/84352c32e0/ANALYSIS/ANALYSIS/AliAnalysisManager.cxx:1835
+#16 0x00007f23c222a2d6 in G__G__ANALYSIS_215_0_17 (result7=result7
+entry=0x7ffe184c8c00, funcname=funcname
+entry=0x50ada50 "", libp=libp
+entry=0x7ffe184c8c40, hash=hash
+entry=0) at /nfshome/psteffan/alice/sw/BUILD/868489f0ece7c7eebd92b146581f6934ed0a60eb/AliRoot/ANALYSIS/ANALYSIS/G__ANALYSIS.cxx:4638
+#17 0x00007f23bd9c654d in Cint::G__ExceptionWrapper (funcp=funcp
+entry=0x7f23c222a230 <G__G__ANALYSIS_215_0_17(G__value*, char const*, G__param*, int)>, result7=result7
+entry=0x7ffe184c8c00, funcname=funcname
+entry=0x50ada50 "", libp=libp
+entry=0x7ffe184c8c40, hash=hash
+entry=0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/Api.cxx:393
+#18 0x00007f23bda42807 in G__execute_call (result7=result7
+entry=0x7ffe184c8c00, libp=libp
+entry=0x7ffe184c8c40, ifunc=ifunc
+entry=0x50ada50, ifn=ifn
+entry=0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/newlink.cxx:2408
+#19 0x00007f23bda42bc5 in G__call_cppfunc (result7=0x7ffe184c8c00, libp=0x7ffe184c8c40, ifunc=0x50ada50, ifn=0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/newlink.cxx:2612
+#20 0x00007f23bd9db541 in G__interpret_func (result7=0x7ffe184c8c00, funcname=0x17c4b70 "StartAnalysis", libp=0x7ffe184c8c40, hash=1362, p_ifunc=0x50ada50, funcmatch=1, memfunc_flag=1) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/ifunc.cxx:5791
+#21 0x00007f23bdabbe60 in G__getfunction (item=0x16062f5 "StartAnalysis(runtype,nentries,firstentry)", known3=0x7ffe184d4214, memfunc_flag=1) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/func.cxx:2660
+#22 0x00007f23bda75645 in G__getstructmem (store_var_type=store_var_type
+entry=112, varname=..., membername=membername
+entry=0x16062f5 "StartAnalysis(runtype,nentries,firstentry)", memnamesize=memnamesize
+entry=2147483647, tagname=tagname
+entry=0x1619000 "mgr", known2=known2
+entry=0x7ffe184d4214, varglobal=varglobal
+entry=0x7f23be2c9d40 <G__global>, objptr=objptr
+entry=2) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/var.cxx:6821
+#23 0x00007f23bda6c9d5 in G__getvariable (item=<optimized out>, known=0x7ffe184d4214, varglobal=0x7f23be2c9d40 <G__global>, varlocal=0x7ffe184d7cb0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/var.cxx:5407
+#24 0x00007f23bdb0b5c9 in G__getitem (item=0x16062f0 "mgr->StartAnalysis(runtype,nentries,firstentry)") at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/expr.cxx:1906
+#25 0x00007f23bdb10f45 in G__getexpr (expression=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/expr.cxx:1488
+#26 0x00007f23bd9f7228 in G__exec_function (presult=0x7ffe184d6cd0, plargestep=0x7ffe184d6b7c, piout=0x7ffe184d6b78, pc=<synthetic pointer>, statement=...) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/parse.cxx:645
+#27 G__exec_statement (mparen=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/parse.cxx:7371
+#28 0x00007f23bd9d96c3 in G__interpret_func (result7=0x7ffe184d8650, funcname=0x743770 "runETag", libp=<optimized out>, hash=<optimized out>, p_ifunc=0x15f48f0, funcmatch=<optimized out>, memfunc_flag=0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/ifunc.cxx:6710
+#29 0x00007f23bdabbebe in G__getfunction (item=0x742f50 "runETag()", known3=0x7ffe184e3174, memfunc_flag=0) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/func.cxx:2901
+#30 0x00007f23bdb0bad6 in G__getitem (item=0x742f50 "runETag()") at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/expr.cxx:1918
+#31 0x00007f23bdb10f45 in G__getexpr (expression=expression
+entry=0x15da770 "runETag()") at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/expr.cxx:1488
+#32 0x00007f23bdb1c81b in G__calc_internal (exprwithspace=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/expr.cxx:1071
+#33 0x00007f23bd9ebb56 in G__process_cmd (line=<optimized out>, prompt=<optimized out>, more=<optimized out>, err=0x7ffe184e6a7c, rslt=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/cint/cint/src/pause.cxx:2331
+#34 0x00007f23c4274f30 in TCint::ProcessLine (this=0x733ae0, line=0x15afe80 ".X  /nfshome/psteffan/cpalice/jets/./runETag.C", error=0x7ffe184e782c) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/meta/src/TCint.cxx:549
+#35 0x00007f23c426defb in TCint::ProcessLineSynch (this=0x733ae0, line=0x15afe80 ".X  /nfshome/psteffan/cpalice/jets/./runETag.C", error=0x7ffe184e782c) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/meta/src/TCint.cxx:631
+#36 0x00007f23c430284c in TApplication::ExecuteFile (file=<optimized out>, error=0x7ffe184e782c, keep=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/base/src/TApplication.cxx:1110
+#37 0x00007f23c4301dbf in TApplication::ProcessLine (this=0xc5ec90, line=<optimized out>, sync=<optimized out>, err=0x7ffe184e782c) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/base/src/TApplication.cxx:959
+#38 0x00007f23c470434d in TRint::Run (this=0xc5ec90, retrn=<optimized out>) at /nfshome/psteffan/alice/sw/SOURCES/ROOT/v5-34-30-alice/5e1baee178/core/rint/src/TRint.cxx:417
+#39 0x00000000004038ff in main (argc=1, argv=0x7ffe184e99f8) at /nfshome/psteffan/alice/sw/SOURCES/AliRoot/84352c32e001ed90378bd8b3346e194240b01db7/84352c32e0/ALIROOT/aliroot.cxx:145
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  freopen (filename=0x17e8f90 "Stage_2.xml", mode=0x7f23bdb6d07d "w", fp=0x0) at freopen.c:46
+===========================================================
+
+
+Function runETag() busy flag cleared

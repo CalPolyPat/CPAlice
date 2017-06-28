@@ -1,0 +1,49 @@
+
+**** Save data and exit application ****
+
+
+ *** Break *** segmentation violation
+E-RootX11IOErrorHandler: fatal X11 error (connection to server lost?!)
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x00007f9c60fbcb4c in __libc_waitpid (pid=38081, stat_loc=stat_loc
+entry=0x7fffa31c8e40, options=options
+entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:31
+#1  0x00007f9c60f422e2 in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:148
+#2  0x00007f9c65567a13 in TUnixSystem::StackTrace (this=0xa92bc0) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/unix/src/TUnixSystem.cxx:2419
+#3  0x00007f9c6556970c in TUnixSystem::DispatchSignals (this=0xa92bc0, sig=kSigSegmentationViolation) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/unix/src/TUnixSystem.cxx:1294
+#4  <signal handler called>
+#5  0x00007f9c6018c53f in G__destroy_upto (var=0x9999999999999999, global=global
+entry=1, index=-1717986919) at /nfshome/psteffan/alicesw/root/v5-34-26/src/cint/cint/src/scrupto.cxx:854
+#6  0x00007f9c6018d14c in G__scratch_globals_upto (dictpos=0xa9d2f8) at /nfshome/psteffan/alicesw/root/v5-34-26/src/cint/cint/src/scrupto.cxx:1279
+#7  0x00007f9c65528770 in TCint::ResetGlobals (this=0xa9d200) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/meta/src/TCint.cxx:732
+#8  0x00007f9c654d35f1 in TROOT::EndOfProcessCleanups (this=0x7f9c65c64000 <ROOT::GetROOT()::root>, altInterpreter=<optimized out>) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/base/src/TROOT.cxx:751
+#9  0x00007f9c60f38259 in __run_exit_handlers (status=1, listp=0x7f9c612ba6c8 <__exit_funcs>, run_list_atexit=run_list_atexit
+entry=true) at exit.c:82
+#10 0x00007f9c60f382a5 in __GI_exit (status=<optimized out>) at exit.c:104
+#11 0x00007f9c5c04b5f8 in _XIOError () from /usr/lib/x86_64-linux-gnu/libX11.so.6
+#12 0x00007f9c5c04976a in _XReply () from /usr/lib/x86_64-linux-gnu/libX11.so.6
+#13 0x00007f9c5c034c7f in XInternAtom () from /usr/lib/x86_64-linux-gnu/libX11.so.6
+#14 0x00007f9c6651de1f in TGClient::TGClient (this=0x1c700e0, dpyName=<optimized out>) at /nfshome/psteffan/alicesw/root/v5-34-26/src/gui/gui/src/TGClient.cxx:151
+#15 0x00007f9c665f0543 in TRootApplication::TRootApplication (this=0x1c700a0, appClassName=0x7f9c65c64019 <ROOT::GetROOT()::root+25> "aliroot", argc=<optimized out>, argv=0x12d95c0) at /nfshome/psteffan/alicesw/root/v5-34-26/src/gui/gui/src/TRootApplication.cxx:46
+#16 0x00007f9c6660e701 in TRootGuiFactory::CreateApplicationImp (this=<optimized out>, classname=0x7f9c65c64019 <ROOT::GetROOT()::root+25> "aliroot", argc=0x12dafec, argv=0x12d95c0) at /nfshome/psteffan/alicesw/root/v5-34-26/src/gui/gui/src/TRootGuiFactory.cxx:46
+#17 0x00007f9c65493bd5 in TApplication::InitializeGraphics (this=0x12dafc0) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/base/src/TApplication.cxx:306
+#18 0x00007f9c65497033 in TApplication::TApplication (this=0x12dafc0, appClassName=0x40355b "aliroot", argc=0x7fffa31cdadc, argv=0x7fffa31cdc08, numOptions=0) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/base/src/TApplication.cxx:182
+#19 0x00007f9c6892b744 in TRint::TRint (this=0x12dafc0, appClassName=<optimized out>, argc=<optimized out>, argv=<optimized out>, options=<optimized out>, numOptions=<optimized out>, noLogo=false) at /nfshome/psteffan/alicesw/root/v5-34-26/src/core/rint/src/TRint.cxx:134
+#20 0x0000000000403181 in main (argc=1, argv=0x7fffa31cdc08) at /nfshome/psteffan/alicesw/aliroot/v5-06-16/src/ALIROOT/aliroot.cxx:105
+===========================================================
+
+
+The crash is most likely caused by a problem in your script.
+Try to compile it (.L myscript.C+g) and fix any errors.
+If that does not help then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+
+
