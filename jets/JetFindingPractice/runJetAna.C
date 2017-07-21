@@ -23,7 +23,7 @@ void runJetAna(
     const char *gridmode = "test", // Set the run mode (can be "full", "test", "offline", "submit" or "terminate"). Full & Test work for proof
     const bool bMCtruth = 0, // 1 = MCEvent handler is on (MC truth), 0 = MCEvent handler is off (MC reconstructed/real data)
     const bool bMCphyssel = 0, // 1 = looking at MC truth or reconstructed, 0 = looking at real data
-    const Long64_t nentries = 20000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
+    const Long64_t nentries = 10000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
     const Long64_t firstentry = 0, // for local and proof mode, ignored in grid mode
     const char *proofdataset = "/alice/data/LHC10c_000120821_p1", // path to dataset on proof cluster, for proof analysis
     const char *proofcluster = "alice-caf.cern.ch", // which proof cluster to use in proof mode
@@ -38,9 +38,11 @@ void runJetAna(
     }
     printf("%s analysis chosen \n",runtype);
 
+    
     // include ALIROOT and ALIPHYSICS
-    gSystem->AddIncludePath("-I$ALICE_ROOT/include");
-    gSystem->AddIncludePath("-I$ALICE_PHYSICS/include");
+
+
+    
 
     //Initialize the magneic field(Do I need to do this?)
     if (!TGeoGlobalMagField::Instance()->GetField()) printf("Field map is not set.\n");
@@ -58,6 +60,8 @@ void runJetAna(
     // create the alien handler and attach it to the manager
     AliAnalysisGrid *plugin = CreateAlienHandler(taskname, gridmode, proofcluster, proofdataset); 
     mgr->SetGridHandler(plugin);
+    plugin->AddIncludePath("-I -I$ROOTSYS/include -I$ALICE_PHYSICS/include -I$ALICE_PHYSICS/EMCAL");
+    plugin->AddIncludePath("-I$ALICE_ROOT/include");
 
     // create the inputhandler and assign it to the manager
     AliAODInputHandler* iH = AliAnalysisTaskEmcal::AddAODHandler();
@@ -65,8 +69,16 @@ void runJetAna(
 
     mgr->SetInputEventHandler(iH);    
 
-    LoadMacros();
+    LoadLibs();
 
+    LoadMacros();
+    
+        gSystem->AddIncludePath("-I$ALICE_ROOT/include -I$ALICE_ROOT -I$ALICE_PHYSICS/EMCAL");
+    gSystem->AddIncludePath("-I$ALICE_PHYSICS/include");
+
+    gROOT->ProcessLine(".L AliAnalysisTaskPatJet.cxx+");
+    
+    
     //________________________________________________BEGIN TASKS____________________________________________________________________________
 
     // CDB[Conditions Database]connect task
@@ -86,20 +98,48 @@ void runJetAna(
 
     //---------------
 
-    // Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
-    AliEmcalJetTask *FullJet04Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.4, AliJetContainer::kFullJet, 0.15, 0.30, .01, AliJetContainer::pt_scheme, "Jet", 1., kFALSE, kFALSE);
+    // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
+    AliEmcalJetTask *FullJet04Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.4, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
     FullJet04Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
+    FullJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+
+    // Charged jet finder task
+    AliEmcalJetTask *ChargedJet04Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.4, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
+    ChargedJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+    
+    // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
+    AliEmcalJetTask *FullJet02Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.2, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
+    FullJet04Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
+    FullJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+
+    // Charged jet finder task
+    AliEmcalJetTask *ChargedJet02Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.2, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
+    ChargedJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+    
+    // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
+    AliEmcalJetTask *FullJet10Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 1.0, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
+    FullJet04Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
+    FullJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+
+    // Charged jet finder task
+    AliEmcalJetTask *ChargedJet10Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 1.0, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
+    ChargedJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
 
     // Jet analysis task
     AliAnalysisTaskPatJet* JetTask = 0;
     JetTask = AddTaskPatJet("usedefault", "usedefault", "usedefault");
 
     JetTask->SetForceBeamType(AliAnalysisTaskEmcal::kpp);
+    JetTask->SelectCollisionCandidates(AliVEvent::kEMCEJE);
 
 
     // Add a container to the jet analysis task. ""EmcalJetSample adds track and cluster containers in the addtask macro.
-    AliJetContainer* jetCont04 = JetTask->AddJetContainer("Jet_AKTFullR040_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
-
+    AliJetContainer* FjetCont04 = JetTask->AddJetContainer("FJet_AKTFullR040_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
+    AliJetContainer* CjetCont04 = JetTask->AddJetContainer("CJet_AKTChargedR040_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.4);
+    AliJetContainer* FjetCont02 = JetTask->AddJetContainer("FJet_AKTFullR020_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
+    AliJetContainer* CjetCont02 = JetTask->AddJetContainer("CJet_AKTChargedR020_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.4);
+    AliJetContainer* FjetCont10 = JetTask->AddJetContainer("FJet_AKTFullR100_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
+    AliJetContainer* CjetCont10 = JetTask->AddJetContainer("CJet_AKTChargedR100_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.4);
 
     // enable debug printouts
     mgr->SetDebugLevel(2);
@@ -116,9 +156,10 @@ void runJetAna(
 
 void LoadMacros(){
     gROOT->LoadMacro("$ALICE_PHYSICS/PWGPP/PilotTrain/AddTaskCDBconnect.C");
-    gROOT->LoadMacro("AddTaskPatJet.C");
-        gROOT->LoadMacro("AliAnalysisTaskPatJet.cxx+g");
-
+    gROOT->LoadMacro("~/cpalice/jets/JetFindingPractice/AddTaskPatJet.C");
+    gROOT->LoadMacro("~/cpalice/jets/JetFindingPractice/AliAnalysisTaskPatJet.h");
+    gROOT->LoadMacro("~/cpalice/jets/JetFindingPractice/AliAnalysisTaskPatJet.cxx");
+    gROOT->ProcessLine(".include $ALICE_PHYSICS/include");
 }
 
 
@@ -129,6 +170,10 @@ void LoadMacros(){
 AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, const char *proofcluster, const char *proofdataset)
 {
     AliAnalysisAlien *plugin = new AliAnalysisAlien();
+    if (!TGrid::Connect("alien://")) return; 
+    
+    
+
 
     plugin->SetRunMode(gridmode);
 
@@ -136,6 +181,7 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
     plugin->SetAPIVersion("V1.1x");
     plugin->SetROOTVersion("v5-34-30-alice7-11");
     plugin->SetAliROOTVersion("v5-09-09-1");
+    plugin->SetAliPhysicsVersion("vAN-20170628-1");
 
     //Tell the plugin the base directory that will be the same for each run #. Usually will be "/alice/data/year/period"
     plugin->SetGridDataDir("/alice/data/2012/LHC12d");
@@ -145,14 +191,16 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
 
     plugin->SetRunPrefix("000");   // 000 is real data, MC data would be different
     // ...then add run numbers to be considered
-    Int_t runlist[75]={184127, 184132, 184135, 184137, 184138, 184188, 184208, 184209, 184215, 184371, 184673, 184678, 184687, 184784, 184786, 184928, 184933, 184938, 184964, 184967, 184968, 184987, 184988, 184990, 185029, 185031, 185126, 185127, 185134, 185164, 185189, 185196, 185203, 185206, 185208, 185282, 185288, 185289, 185291, 185292, 185299, 185300, 185302, 185303, 185349, 185350, 185351, 185356, 185465, 185574, 185575, 185578, 185580, 185581, 185582, 185583, 185588, 185589, 185695, 185697, 185698, 185699, 185701, 185738, 185764, 185765, 185775, 185776, 185784, 186163, 186164, 186165, 186205, 186319, 186320};  
-    for (Int_t ind=0; ind<1; ind++) {
+    Int_t runlist[110]={184127, 184132, 184135, 184137, 184138, 184188, 184208, 184209, 184215, 184371, 184673, 184678, 184682, 184687, 184784, 184786, 184928, 184933, 184938, 184964, 184967, 184968, 184987, 184988, 184990, 185029, 185031, 185116, 185126, 185127, 185132, 185134, 185157, 185160, 185164, 185189, 185196, 185198, 185203, 185206, 185208, 185221, 185217, 185282, 185284, 185288, 185289, 185291, 185292, 185293, 185296, 185299, 185300, 185302, 185303, 185349, 185350, 185351, 185356, 185359, 185360, 185361, 185362, 185363, 185371, 185375, 185457, 185461, 185465, 185563, 185565, 185574, 185575, 185578, 185580, 185581, 185582, 185583, 185588, 185589, 185680, 185687, 185695, 185697, 185698, 185699, 185701, 185734, 185735, 185738, 185756, 185757, 185764, 185765, 185768, 185775, 185776, 185778, 185784, 185909, 185912, 186163, 186164, 186165, 186167, 186205, 186208, 186229, 186319, 186320};  
+    for (Int_t ind=0; ind<20; ind++) {
         plugin->AddRunNumber(runlist[ind]);
     }
 
-    plugin->SetNrunsPerMaster(1); //Not sure why this is here
+    plugin->SetDefaultOutputs(kTRUE);
+    
+    plugin->SetNrunsPerMaster(20); //Not sure why this is here
 
-    plugin->SetOverwriteMode(kTRUE); //See previous comment
+    plugin->SetOverwriteMode(); //See previous comment
 
     plugin->SetMergeViaJDL(); //Always use unless you would like an output for each subjob
 
@@ -163,7 +211,7 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
     plugin->SetGridOutputDir("out"); // In this case will be $HOME/taskname/out
 
     // Declare the analysis source files names separated by blancs. To be compiled runtime
-    plugin->SetAnalysisSource("AliAnalysisTaskPatJet.cxx");
+    plugin->SetAnalysisSource("AliAnalysisTaskPatJet.cxx+");
 
     // Declare all libraries (other than the default ones from AliROOT/AliPHYSICS. 
     // These will be loaded by the generated analysis macro. Add all extra files (task .cxx/.h) here.
@@ -198,33 +246,16 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
 
     // Optionally modify split mode (default 'se')    
     plugin->SetSplitMode("se");
+    
+    plugin->SetMergeViaJDL(kFALSE);
+    
+    plugin->SetOverwriteMode(kFALSE);
 
     //----------------------------------------------------------
     //---      PROOF MODE SPECIFIC SETTINGS         ------------
     //---------------------------------------------------------- 
     // Proof cluster
-    plugin->SetProofCluster(proofcluster);
-    // Dataset to be used   
-    plugin->SetProofDataSet(proofdataset);
-    // May need to reset proof. Supported modes: 0-no reset, 1-soft, 2-hard
-    plugin->SetProofReset(0);
-    // May limit number of workers
-    plugin->SetNproofWorkers(0);
-    // May limit the number of workers per slave
-    plugin->SetNproofWorkersPerSlave(1);   
-    // May use a specific version of root installed in proof
-    plugin->SetRootVersionForProof("current");
-    // May set the aliroot mode. Check http://aaf.cern.ch/node/83 
-    plugin->SetAliRootMode("default"); // Loads AF libs by default
-    // May request ClearPackages (individual ClearPackage not supported)
-    plugin->SetClearPackages(kFALSE);
-    // Plugin test mode works only providing a file containing test file locations, used in "local" mode also
-    plugin->SetFileForTestMode("junk.txt"); // file should contain path name to a local directory containg *ESDs.root etc
-    // Request connection to alien upon connection to grid
-    plugin->SetProofConnectGrid(kFALSE);
-    // Other PROOF specific parameters
-    plugin->SetProofParameter("PROOF_UseMergers","-1");
-    printf("Using: PROOF_UseMergers   : %s\n", plugin->GetProofParameter("PROOF_UseMergers"));
+    
     return plugin;
 }
 

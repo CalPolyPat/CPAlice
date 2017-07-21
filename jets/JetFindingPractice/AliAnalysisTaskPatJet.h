@@ -38,6 +38,7 @@ class AliAnalysisTaskPatJet : public AliAnalysisTaskEmcalJet {
     
     THistManager fHistManager;///< Histgram manager
     
+    
     private:
     AliAnalysisTaskPatJet(const AliAnalysisTaskPatJet&);
     AliAnalysisTaskPatJet &operator=(const AliAnalysisTaskPatJet&);

@@ -35,13 +35,14 @@ void PSJetTask_merge(const char *dir, Int_t stage=0)
       gSystem->AddIncludePath(current);
    }
    if (listpaths) delete listpaths;
+   gSystem->AddIncludePath("-I -I$ROOTSYS/include -I$ALICE_PHYSICS/include -I$ALICE_PHYSICS/EMCAL -I$ALICE_ROOT/include ");
    gROOT->ProcessLine(".include $ALICE_ROOT/include");
    printf("Include path: %s\n", gSystem->GetIncludePath());
 
 // Add aditional AliRoot libraries
 
 // Analysis source to be compiled at runtime (if any)
-   gROOT->ProcessLine(".L AliAnalysisTaskPatJet.cxx+g");
+   gROOT->ProcessLine(".L AliAnalysisTaskPatJet.cxx++g");
 
 // Connect to AliEn
    if (!TGrid::Connect("alien://")) return;
@@ -90,7 +91,7 @@ void PSJetTask_merge(const char *dir, Int_t stage=0)
    mgr->SetRunFromPath(mgr->GetRunFromAlienPath(dir));
    mgr->SetSkipTerminate(kFALSE);
    mgr->PrintStatus();
-   AliLog::SetGlobalLogLevel(AliLog::kWarning);
+   AliLog::SetGlobalLogLevel(AliLog::kError);
    TTree *tree = NULL;
    mgr->StartAnalysis("gridterminate", tree);
 }

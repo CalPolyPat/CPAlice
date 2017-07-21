@@ -22,10 +22,10 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
 //______________________________________________________________________________
 void runETag(
          const char* runtype = "grid", // local, proof or grid
-         const char *gridmode = "full", // Set the run mode (can be "full", "test", "offline", "submit" or "terminate"). Full & Test work for proof
+         const char *gridmode = "test", // Set the run mode (can be "full", "test", "offline", "submit" or "terminate"). Full & Test work for proof
          const bool bMCtruth = 0, // 1 = MCEvent handler is on (MC truth), 0 = MCEvent handler is off (MC reconstructed/real data)
          const bool bMCphyssel = 0, // 1 = looking at MC truth or reconstructed, 0 = looking at real data
-         const Long64_t nentries = 50000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
+         const Long64_t nentries = 100000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
          const Long64_t firstentry = 0, // for local and proof mode, ignored in grid mode
          const char *proofdataset = "/alice/data/LHC10c_000120821_p1", // path to dataset on proof cluster, for proof analysis
          const char *proofcluster = "alice-caf.cern.ch", // which proof cluster to use in proof mode
@@ -40,7 +40,8 @@ void runETag(
         return;
     }
     printf("%s analysis chosen",runtype);
-  
+      LoadLibs();
+
   
   gSystem->AddIncludePath("-I$ALICE_ROOT/include");
   gSystem->AddIncludePath("-I$ALICE_PHYSICS/include");
@@ -68,6 +69,8 @@ void runETag(
 //    iH->SetCheckStatistics(kTRUE);
     mgr->SetInputEventHandler(iH);
        
+    
+    
     //PID task          
     gROOT->LoadMacro("$ALICE_ROOT/ANALYSIS/macros/AddTaskPIDResponse.C");
     Bool_t isMC=kFALSE; // kTRUE in case of MC
@@ -75,6 +78,7 @@ void runETag(
     
     
     // create user task
+    gROOT->ProcessLine(".L $ALICE_PHYSICS/PWGJE/EMCALJetTasks/UserTasks/AliAnalysisTaskPSHFE.cxx+");
     gROOT->LoadMacro("$ALICE_PHYSICS/PWGJE/EMCALJetTasks/macros/AddTaskPSHFE.C");
     AliAnalysisTaskSE* PSHFEtask = AddTaskPSHFE("PSHFEtask", kFALSE, kFALSE, kTRUE);
     mgr->AddTask(PSHFEtask);
@@ -163,7 +167,7 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
     // Declare the analysis source files names separated by blancs. To be compiled runtime
     // using ACLiC on the worker nodes.
     
-    plugin->AddIncludePath("-I$ALICE_PYSICS/PWGJE/EMCALJetTasks/UserTasks");
+    plugin->AddIncludePath("-I$ALICE_PHYSICS/PWGJE/EMCALJetTasks/UserTasks  -I$ALICE_ROOT -I$ALICE_PHYSICS/EMCAL -I$ALICE_PHYSICS/include");
     
     plugin->SetAnalysisSource("AliAnalysisTaskPSHFE.cxx");
 
@@ -188,7 +192,7 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
     plugin->SetExecutable(Form("%s.sh",taskname));
 
     // set number of test files to use in "test" mode
-    plugin->SetNtestFiles(30);
+    plugin->SetNtestFiles(50);
 
     // Optionally resubmit threshold.
     plugin->SetMasterResubmitThreshold(90);

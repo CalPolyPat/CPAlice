@@ -855,15 +855,14 @@
                 ps->SetX1NDC(.1);
                 ps->SetX2NDC(.4);
 
-                if(hist->GetName()[9]=='T'&&hist->GetName()[10]=='P'&&hist->GetName()[11]=='C'&&hist->GetName()[12]=='T'&&hist->GetName()[13]=='R'){
+                /*if(hist->GetName()[9]=='T'&&hist->GetName()[10]=='P'&&hist->GetName()[11]=='C'&&hist->GetName()[12]=='T'&&hist->GetName()[13]=='R'){
                     TF1* elecFit = new TF1("elecFit", "gaus", 0.2, 1.2);
                     TF1* totalFit = new TF1("totalFit", "gaus(0)+expo(3)", 0.8, 1.2);
 
-                    cout<<totalFit->GetParameter(4)<<'\n';
 
                     if(hist->GetName()[21]=='1'){
                         TF1* hadFit = new TF1("hadFit", "gaus", 0.2, 1.2);
-                        TF1* totalFit = new TF1("totalFit", "gaus(0)+gaus(3)+expo(6)", 0.2, 1.2);
+                        totalFit = new TF1("totalFit", "gaus(0)+gaus(3)+expo(6)", 0.2, 1.2);
                     }
 
                     totalFit->SetParName(0,"Scale_elecFit");
@@ -947,7 +946,7 @@
                         NElec6_EMC7 = hist->Integral(hist->GetXaxis()->FindBin(0.8),hist->GetXaxis()->FindBin(1.2));
                         break;
                     }
-                }
+                }*/
             }
             if(hist->GetName()[5]=='D'&&hist->GetName()[6]=='P'&&hist->GetName()[7]=='h'){
                 if(hist->GetName()[9]=='_'){
@@ -1400,7 +1399,7 @@
                 ps->SetX1NDC(.1);
                 ps->SetX2NDC(.4);
 
-                if(hist->GetName()[9]=='T'&&hist->GetName()[10]=='P'&&hist->GetName()[11]=='C'&&hist->GetName()[12]=='T'&&hist->GetName()[13]=='R'){
+                /*if(hist->GetName()[9]=='T'&&hist->GetName()[10]=='P'&&hist->GetName()[11]=='C'&&hist->GetName()[12]=='T'&&hist->GetName()[13]=='R'){
                     TF1* elecFit = new TF1("elecFit", "gaus", 0.2, 1.2);
                     TF1* totalFit = new TF1("totalFit", "gaus(0)+expo(3)", 0.8, 1.2);
 
@@ -1490,7 +1489,7 @@
                         NElec6_EMCEGA = hist->Integral(hist->GetXaxis()->FindBin(0.8),hist->GetXaxis()->FindBin(1.2));
                         break;
                     }
-                }
+                }*/
             }
             if(hist->GetName()[5]=='D'&&hist->GetName()[6]=='P'&&hist->GetName()[7]=='h'){
                 if(hist->GetName()[9]=='_'){
@@ -1944,7 +1943,7 @@
                 ps->SetX1NDC(.1);
                 ps->SetX2NDC(.4);
 
-                if(hist->GetName()[9]=='T'&&hist->GetName()[10]=='P'&&hist->GetName()[11]=='C'&&hist->GetName()[12]=='T'&&hist->GetName()[13]=='R'){
+                /*if(hist->GetName()[9]=='T'&&hist->GetName()[10]=='P'&&hist->GetName()[11]=='C'&&hist->GetName()[12]=='T'&&hist->GetName()[13]=='R'){
                     TF1* elecFit = new TF1("elecFit", "gaus", 0.8, 1.2);
                     TF1* totalFit = new TF1("totalFit", "gaus(0)+pol0(3)", 0.8, 1.2);
                     totalFit->SetParName(0,"Scale");
@@ -1992,7 +1991,7 @@
                         NElec6_EMCJet = hist->Integral(hist->GetXaxis()->FindBin(0.8),hist->GetXaxis()->FindBin(1.2));
                         break;
                     }
-                }
+                }*/
             }
             if(hist->GetName()[5]=='N'&&hist->GetName()[6]=='e'&&hist->GetName()[7]=='v'){
                 gPad->SetLogy();

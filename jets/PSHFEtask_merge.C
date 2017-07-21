@@ -35,7 +35,7 @@ void PSHFEtask_merge(const char *dir, Int_t stage=0)
       gSystem->AddIncludePath(current);
    }
    if (listpaths) delete listpaths;
-   gSystem->AddIncludePath("-I$ALICE_PYSICS/PWGJE/EMCALJetTasks/UserTasks ");
+   gSystem->AddIncludePath("-I$ALICE_PHYSICS/PWGJE/EMCALJetTasks/UserTasks  -I$ALICE_ROOT -I$ALICE_PHYSICS/EMCAL -I$ALICE_PHYSICS/include ");
    gROOT->ProcessLine(".include $ALICE_ROOT/include");
    printf("Include path: %s\n", gSystem->GetIncludePath());
 
@@ -90,7 +90,7 @@ void PSHFEtask_merge(const char *dir, Int_t stage=0)
    mgr->SetRunFromPath(mgr->GetRunFromAlienPath(dir));
    mgr->SetSkipTerminate(kFALSE);
    mgr->PrintStatus();
-   AliLog::SetGlobalLogLevel(AliLog::kError);
+   AliLog::SetGlobalLogLevel(AliLog::kWarning);
    TTree *tree = NULL;
    mgr->StartAnalysis("gridterminate", tree);
 }

@@ -48,13 +48,14 @@ void PSJetTask()
       gSystem->AddIncludePath(current);
    }
    if (listpaths) delete listpaths;
+   gSystem->AddIncludePath("-I -I$ROOTSYS/include -I$ALICE_PHYSICS/include -I$ALICE_PHYSICS/EMCAL -I$ALICE_ROOT/include ");
    gROOT->ProcessLine(".include $ALICE_ROOT/include");
    printf("Include path: %s\n", gSystem->GetIncludePath());
 
 // Add aditional AliRoot libraries
 
 // analysis source to be compiled at runtime (if any)
-   gROOT->ProcessLine(".L AliAnalysisTaskPatJet.cxx+g");
+   gROOT->ProcessLine(".L AliAnalysisTaskPatJet.cxx++g");
 
 // read the analysis manager from file
    AliAnalysisManager *mgr = AliAnalysisAlien::LoadAnalysisManager("PSJetTask.root");
@@ -63,7 +64,7 @@ void PSJetTask()
    AliLog::SetGlobalLogLevel(AliLog::kWarning);
    TChain *chain = CreateChain("wn.xml", anatype);
 
-   mgr->StartAnalysis("localfile", chain, 20000, 0);
+   mgr->StartAnalysis("localfile", chain, 10000, 0);
    timer.Stop();
    timer.Print();
 }

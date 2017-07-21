@@ -48,7 +48,7 @@ void PSHFEtask()
       gSystem->AddIncludePath(current);
    }
    if (listpaths) delete listpaths;
-   gSystem->AddIncludePath("-I$ALICE_PYSICS/PWGJE/EMCALJetTasks/UserTasks ");
+   gSystem->AddIncludePath("-I$ALICE_PHYSICS/PWGJE/EMCALJetTasks/UserTasks  -I$ALICE_ROOT -I$ALICE_PHYSICS/EMCAL -I$ALICE_PHYSICS/include ");
    gROOT->ProcessLine(".include $ALICE_ROOT/include");
    printf("Include path: %s\n", gSystem->GetIncludePath());
 
@@ -60,10 +60,10 @@ void PSHFEtask()
    AliAnalysisManager *mgr = AliAnalysisAlien::LoadAnalysisManager("PSHFEtask.root");
    if (!mgr) return;
    mgr->PrintStatus();
-   AliLog::SetGlobalLogLevel(AliLog::kError);
+   AliLog::SetGlobalLogLevel(AliLog::kWarning);
    TChain *chain = CreateChain("wn.xml", anatype);
 
-   mgr->StartAnalysis("localfile", chain, 50000, 0);
+   mgr->StartAnalysis("localfile", chain, 100000, 0);
    timer.Stop();
    timer.Print();
 }
