@@ -8200,7 +8200,7 @@
     <event name="999">
       <file name="AliAOD.root" aclId="" broken="0" ctime="2015-03-11 07:10:52" dir="107682752" entryId="107695010" expiretime="" gowner="alidaq" guid="04CB5C0C-C7B5-11E4-9728-43FDB6048532" guidtime="11E4C7B5" jobid="481938327" lfn="/alice/data/2012/LHC12d/000184682/pass2/12000184682030.21/AliAOD.root" md5="517a22756aea798d9b0257ce17aa237a" owner="alidaq" perm="755" replicated="0" size="8719933" turl="alien:///alice/data/2012/LHC12d/000184682/pass2/12000184682030.21/AliAOD.root" type="f" />
     </event>
-    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184682 pass2/*/AliAOD.root" creator="admin" date="Thu Jul 20 02:46:50 CEST 2017" timestamp="1500511610" />
+    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184682 pass2/*/AliAOD.root" creator="admin" date="Tue Jul 25 20:32:22 CEST 2017" timestamp="1501007542" />
   </collection>
 </alien>
 

@@ -6559,7 +6559,7 @@
     <event name="999">
       <file name="AliAOD.root" aclId="" broken="0" ctime="2015-03-11 12:51:15" dir="108566868" entryId="108571503" expiretime="" gowner="alidaq" guid="9B4E254A-C7E4-11E4-ADCD-53E4A572A6BF" guidtime="11E4C7E4" jobid="482038387" lfn="/alice/data/2012/LHC12d/000184371/pass2/12000184371032.32/AliAOD.root" md5="2e75df1fbb353ded80ee085b70dbeecf" owner="alidaq" perm="755" replicated="0" size="8151394" turl="alien:///alice/data/2012/LHC12d/000184371/pass2/12000184371032.32/AliAOD.root" type="f" />
     </event>
-    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184371 pass2/*/AliAOD.root" creator="admin" date="Thu Jul 20 02:46:21 CEST 2017" timestamp="1500511581" />
+    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184371 pass2/*/AliAOD.root" creator="admin" date="Tue Jul 25 20:31:47 CEST 2017" timestamp="1501007507" />
   </collection>
 </alien>
 

@@ -3316,7 +3316,7 @@
     <event name="999">
       <file name="AliAOD.root" aclId="" broken="0" ctime="2015-03-12 14:28:10" dir="110030895" entryId="110031086" expiretime="" gowner="alidaq" guid="760EFFAC-C8BB-11E4-82AD-9B96537CF332" guidtime="11E4C8BB" jobid="482555583" lfn="/alice/data/2012/LHC12d/000184964/pass2/AOD/039/AliAOD.root" md5="e855b82fd37d04529033507cdc4de4ec" owner="alidaq" perm="755" replicated="0" size="633072486" turl="alien:///alice/data/2012/LHC12d/000184964/pass2/AOD/039/AliAOD.root" type="f" />
     </event>
-    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184964 pass2/*/AliAOD.root" creator="admin" date="Thu Jul 20 02:47:44 CEST 2017" timestamp="1500511664" />
+    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184964 pass2/*/AliAOD.root" creator="admin" date="Tue Jul 25 20:33:25 CEST 2017" timestamp="1501007605" />
   </collection>
 </alien>
 

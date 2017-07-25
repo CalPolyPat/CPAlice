@@ -20,7 +20,7 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
 //______________________________________________________________________________
 void runJetAna(
     const char* runtype = "grid", // local, proof or grid
-    const char *gridmode = "test", // Set the run mode (can be "full", "test", "offline", "submit" or "terminate"). Full & Test work for proof
+    const char *gridmode = "terminate", // Set the run mode (can be "full", "test", "offline", "submit" or "terminate"). Full & Test work for proof
     const bool bMCtruth = 0, // 1 = MCEvent handler is on (MC truth), 0 = MCEvent handler is off (MC reconstructed/real data)
     const bool bMCphyssel = 0, // 1 = looking at MC truth or reconstructed, 0 = looking at real data
     const Long64_t nentries = 10000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
@@ -95,8 +95,21 @@ void runJetAna(
     correctionTask->Initialize();
 
 
+    //PID task          
+    gROOT->LoadMacro("$ALICE_ROOT/ANALYSIS/macros/AddTaskPIDResponse.C");
+    Bool_t isMC=kFALSE; // kTRUE in case of MC
+    AddTaskPIDResponse(isMC); 
 
     //---------------
+    
+    // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
+    AliEmcalJetTask *FullJet02Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.2, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
+    FullJet02Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
+    FullJet02Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+
+    // Charged jet finder task
+    AliEmcalJetTask *ChargedJet02Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.2, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
+    ChargedJet02Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
 
     // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
     AliEmcalJetTask *FullJet04Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.4, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
@@ -108,22 +121,13 @@ void runJetAna(
     ChargedJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
     
     // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
-    AliEmcalJetTask *FullJet02Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.2, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
-    FullJet04Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
-    FullJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+    AliEmcalJetTask *FullJet07Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.7, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
+    FullJet07Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
+    FullJet07Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
 
     // Charged jet finder task
-    AliEmcalJetTask *ChargedJet02Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.2, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
-    ChargedJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
-    
-    // Full Jet finder task, usedefault uses the standard container names which must match the branches coming from the input data
-    AliEmcalJetTask *FullJet10Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 1.0, AliJetContainer::kFullJet, 0.15, 0.30, .005, AliJetContainer::pt_scheme, "FJet", 1., kFALSE, kFALSE);
-    FullJet04Task->GetClusterContainer(0)->SetDefaultClusterEnergy(AliVCluster::kHadCorr);
-    FullJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
-
-    // Charged jet finder task
-    AliEmcalJetTask *ChargedJet10Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 1.0, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
-    ChargedJet04Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
+    AliEmcalJetTask *ChargedJet07Task = AliEmcalJetTask::AddTaskEmcalJet("usedefault", "usedefault", AliJetContainer::antikt_algorithm, 0.7, AliJetContainer::kChargedJet, 0.15, 0.30, 0.005, AliJetContainer::pt_scheme, "CJet", 1., kFALSE, kFALSE);
+    ChargedJet07Task->SelectCollisionCandidates(AliVEvent::kEMCEJE);
 
     // Jet analysis task
     AliAnalysisTaskPatJet* JetTask = 0;
@@ -134,12 +138,12 @@ void runJetAna(
 
 
     // Add a container to the jet analysis task. ""EmcalJetSample adds track and cluster containers in the addtask macro.
+    AliJetContainer* FjetCont02 = JetTask->AddJetContainer("FJet_AKTFullR020_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.2);
+    AliJetContainer* CjetCont02 = JetTask->AddJetContainer("CJet_AKTChargedR020_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.2);
     AliJetContainer* FjetCont04 = JetTask->AddJetContainer("FJet_AKTFullR040_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
     AliJetContainer* CjetCont04 = JetTask->AddJetContainer("CJet_AKTChargedR040_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.4);
-    AliJetContainer* FjetCont02 = JetTask->AddJetContainer("FJet_AKTFullR020_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
-    AliJetContainer* CjetCont02 = JetTask->AddJetContainer("CJet_AKTChargedR020_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.4);
-    AliJetContainer* FjetCont10 = JetTask->AddJetContainer("FJet_AKTFullR100_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.4);
-    AliJetContainer* CjetCont10 = JetTask->AddJetContainer("CJet_AKTChargedR100_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.4);
+    AliJetContainer* FjetCont07 = JetTask->AddJetContainer("FJet_AKTFullR070_tracks_pT0150_caloClusters_E0300_pt_scheme", AliEmcalJet::kEMCALfid, 0.7);
+    AliJetContainer* CjetCont07 = JetTask->AddJetContainer("CJet_AKTChargedR070_tracks_pT0150_pt_scheme", AliEmcalJet::kTPCfid, 0.7);
 
     // enable debug printouts
     mgr->SetDebugLevel(2);
@@ -198,9 +202,9 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
 
     plugin->SetDefaultOutputs(kTRUE);
     
-    plugin->SetNrunsPerMaster(20); //Not sure why this is here
+    plugin->SetNrunsPerMaster(3); //Not sure why this is here
 
-    plugin->SetOverwriteMode(); //See previous comment
+    //plugin->SetOverwriteMode(); //See previous comment
 
     plugin->SetMergeViaJDL(); //Always use unless you would like an output for each subjob
 
@@ -249,7 +253,7 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
     
     plugin->SetMergeViaJDL(kFALSE);
     
-    plugin->SetOverwriteMode(kFALSE);
+    //plugin->SetOverwriteMode(kFALSE);
 
     //----------------------------------------------------------
     //---      PROOF MODE SPECIFIC SETTINGS         ------------

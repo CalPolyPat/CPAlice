@@ -1,4 +1,5 @@
-#include <TClonesArray.h>
+#include<vector>
+    #include <TClonesArray.h>
     #include <TH1F.h>
     #include <TH2F.h>
     #include <TList.h>
@@ -17,11 +18,19 @@
     #include "AliAODTrack.h"
     #include "AliAODCluster.h"
     #include "AliAnalysisTaskPatJet.h"
+    #include "AliPIDResponse.h"
+    #include "AliInputEventHandler.h"
+    #include "AliAnalysisManager.h"
+    #include "AliAODCaloCluster.h"
+    #include "AliAODEvent.h"
 
 
     /// \cond CLASSIMP
     ClassImp(AliAnalysisTaskPatJet);
 /// \endcond
+
+using namespace std;
+
 
 AliAnalysisTaskPatJet::AliAnalysisTaskPatJet() : AliAnalysisTaskEmcalJet(),
 fHistManager()
@@ -56,7 +65,16 @@ void AliAnalysisTaskPatJet::UserCreateOutputObjects() //overloading
 
 Bool_t AliAnalysisTaskPatJet::FillHistograms() //overloading
 {
-    FillJetHistos();
+    AliAODEvent *aod = (AliAODEvent*)InputEvent();
+    if (!aod) { Printf("ERROR: Could not retrieve event");}
+    
+    const AliAnalysisManager* man(AliAnalysisManager::GetAnalysisManager());
+    AliInputEventHandler* inputHandler = (AliInputEventHandler*)man->GetInputEventHandler();
+    
+    AliPIDResponse* fPIDResponse = (AliPIDResponse*)inputHandler->GetPIDResponse();
+
+
+    FillJetHistos(aod, fPIDResponse);
     FillTrackHistos();
     FillClusterHistos();
 
@@ -75,7 +93,7 @@ Bool_t AliAnalysisTaskPatJet::Run() //overloading
 
 void AliAnalysisTaskPatJet::InitJetHistos()
 {
-    Int_t NBins = 100; //placeholder until I can think of appropriate binning
+    Int_t NBins = 40; //placeholder until I can think of appropriate binning
 
     TString histoName;
     TString histoTitle;
@@ -91,7 +109,7 @@ void AliAnalysisTaskPatJet::InitJetHistos()
 
     radName[0] = TString("R02");
     radName[1] = TString("R04");
-    radName[2] = TString("R10");
+    radName[2] = TString("R07");
 
 
 
@@ -143,6 +161,14 @@ void AliAnalysisTaskPatJet::InitJetHistos()
             histoName = TString::Format("%s/%s/Angularity", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Angularity vs. parameter a for away side jets");
             fHistManager.CreateTH2(histoName, histoTitle, NBins, -2, 2, NBins, 0, 1);
+            
+            histoName = TString::Format("%s/%s/AngularityDeriv", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Derivative of angularity vs. parameter a for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, NBins, -2, 2, NBins, 0, 1);
+
+            histoName = TString::Format("%s/%s/LeadingPtFraction", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Leading particle pT fraction for away side jets");
+            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1);
 
             histoName = TString::Format("%s/%s/tracks/DCA", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("DCA for tracks in away side jets");
@@ -159,7 +185,24 @@ void AliAnalysisTaskPatJet::InitJetHistos()
             histoName = TString::Format("%s/%s/tracks/dEdx", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("dEdx by Pt for tracks in away side jets");
             fHistManager.CreateTH2(histoName, histoTitle, NBins*2, 0, 50, NBins, -30, 180);
+
         }
+    }
+
+    for(Int_t j=0;j<3;j++){
+        histoName = TString::Format("%s/%s/tracks/LeadingFInvMassLS", groupName[0].Data(), radName[j].Data());
+        histoTitle = TString::Format("Invariant mass of leading electron with like-signed constituents for leading full jet");
+        fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 30);
+
+        histoName = TString::Format("%s/%s/tracks/LeadingFInvMassULS", groupName[0].Data(), radName[j].Data());
+        histoTitle = TString::Format("Invariant mass of leading electron with unlike-signed constituents for leading full jet");
+        fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 30);
+
+        histoName = TString::Format("%s/%s/HFERejection", groupName[0].Data(), radName[j].Data());
+        histoTitle = TString::Format("Number of leading electrons in leading full jet that would pass HFE cuts");
+        fHistManager.CreateTH1(histoName, histoTitle, 2, 0, 2);
+        ((TH1*)fHistManager.FindObject(histoName))->GetXaxis()->SetBinLabel(1, "Passed");
+        ((TH1*)fHistManager.FindObject(histoName))->GetXaxis()->SetBinLabel(2, "Failed");
     }
 
 
@@ -175,9 +218,11 @@ void AliAnalysisTaskPatJet::InitJetHistos()
     ((TH1*)fHistManager.FindObject(histoName))->GetXaxis()->SetBinLabel(5, "Proton");
     ((TH1*)fHistManager.FindObject(histoName))->GetXaxis()->SetBinLabel(6, "Other");
 
+
+
     histoName = TString::Format("JetPt");
     histoTitle = TString::Format("Pt spectrum of all jets");
-    fHistManager.CreateTH1(histoName, histoTitle, 200, 0, 100);
+    fHistManager.CreateTH1(histoName, histoTitle, 50, 0, 100);
 
 
     PostData(1, fOutput);
@@ -190,7 +235,7 @@ void AliAnalysisTaskPatJet::InitTrackHistos()
 void AliAnalysisTaskPatJet::InitClusterHistos()
 {}
 
-void AliAnalysisTaskPatJet::FillJetHistos()
+void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPIDResponse )
 {
     TString histoName;
     TString groupName[3];
@@ -201,8 +246,8 @@ void AliAnalysisTaskPatJet::FillJetHistos()
     AliJetContainer* jetContCharge = 0;
     AliClusterContainer* clusCont = GetClusterContainer(0);
 
-    UInt_t jetCntFull[3];
-    UInt_t jetCntCharged[3];
+    UInt_t jetCntFull[3] = {0,0,0};
+    UInt_t jetCntCharged[3] = {0,0,0};
 
     Double_t PhiFull = -99;
     Double_t PhiCharge = -99;
@@ -216,10 +261,10 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
     radName[0] = TString("R02");
     radName[1] = TString("R04");
-    radName[2] = TString("R10");
+    radName[2] = TString("R07");
 
-    AliEmcalJet* leadingB2BC[3] = {0, 0, 0};
-    AliEmcalJet* leadingB2BF[3] = {0, 0, 0};
+    std::vector<AliEmcalJet*> leadingB2BC(3, NULL);
+    std::vector<AliEmcalJet*> leadingB2BF(3, NULL);
 
     Double_t a_vals[100];
     for(Int_t ind=0;ind<100;ind++){
@@ -266,8 +311,8 @@ void AliAnalysisTaskPatJet::FillJetHistos()
         }
 
 
-        //R10
-        if(TString(jetCont->GetName()).Contains("Full")==kTRUE&&TString(jetCont->GetName()).Contains("R10")==kTRUE){
+        //R07
+        if(TString(jetCont->GetName()).Contains("Full")==kTRUE&&TString(jetCont->GetName()).Contains("R07")==kTRUE){
             jetContFull = jetCont;
             for(auto jet : jetContFull->accepted()){
                 if(!jet) continue;
@@ -275,7 +320,7 @@ void AliAnalysisTaskPatJet::FillJetHistos()
             }
         }
 
-        if(TString(jetCont->GetName()).Contains("Charged")==kTRUE&&TString(jetCont->GetName()).Contains("R10")==kTRUE){
+        if(TString(jetCont->GetName()).Contains("Charged")==kTRUE&&TString(jetCont->GetName()).Contains("R07")==kTRUE){
             jetContCharge = jetCont;
             for(auto jet : jetContCharge->accepted()){
                 if(!jet) continue;
@@ -293,7 +338,7 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
     Int_t leadTrkPID = -1;
 
-
+    Bool_t CJetFill = kFALSE;
 
     Bool_t B2BEv = kFALSE;
 
@@ -303,7 +348,7 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
         Int_t jetInd = 0;
 
-        UInt_t jetCnt = 0;
+        Int_t jetCnt = 0;
 
         //R02
         if(TString(jetCont->GetName()).Contains("Full")==kTRUE&&TString(jetCont->GetName()).Contains("R02")==kTRUE){
@@ -321,11 +366,11 @@ void AliAnalysisTaskPatJet::FillJetHistos()
             jetCnt = jetCntCharged[1];
         }
 
-        //R10
-        if(TString(jetCont->GetName()).Contains("Full")==kTRUE&&TString(jetCont->GetName()).Contains("R10")==kTRUE){
+        //R07
+        if(TString(jetCont->GetName()).Contains("Full")==kTRUE&&TString(jetCont->GetName()).Contains("R07")==kTRUE){
             jetCnt = jetCntFull[2];
         }
-        if(TString(jetCont->GetName()).Contains("Charged")==kTRUE&&TString(jetCont->GetName()).Contains("R10")==kTRUE){
+        if(TString(jetCont->GetName()).Contains("Charged")==kTRUE&&TString(jetCont->GetName()).Contains("R07")==kTRUE){
             jetCnt = jetCntCharged[2];
         }
 
@@ -333,13 +378,28 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
 
         for(Int_t y=0;y<3;y++){
-            if(TString(jetCont->GetName()).Contains("R02")==kTRUE&&y!=0) continue;
-            if(TString(jetCont->GetName()).Contains("R04")==kTRUE&&y!=1) continue;
-            if(TString(jetCont->GetName()).Contains("R10")==kTRUE&&y!=2) continue;
+            if(TString(jetCont->GetName()).Contains("R02")==kTRUE&&y!=0){
+                CJetFill = kFALSE;
+                B2BEv = kFALSE;
+                cout<<"Not R02\n"; 
+                continue;
+            }
+            if(TString(jetCont->GetName()).Contains("R04")==kTRUE&&y!=1){
+                CJetFill = kFALSE;
+                B2BEv = kFALSE;
+                cout<<"Not R04\n"; 
+                continue;
+            }
+            if(TString(jetCont->GetName()).Contains("R07")==kTRUE&&y!=2){
+                CJetFill = kFALSE;
+                B2BEv = kFALSE;
+                cout<<"Not R07\n"; 
+                continue;}
 
             //start loop over jets
             for(auto jet : jetCont->accepted()){   
                 if(!jet) continue;
+                jetInd++;
                 histoName = TString::Format("JetPt");
                 fHistManager.FillTH1(histoName, jet->Pt());
 
@@ -348,11 +408,15 @@ void AliAnalysisTaskPatJet::FillJetHistos()
                 }
 
                 if(TString(jetCont->GetName()).Contains("R04")==kTRUE){
-                    if(jetCntFull[1]==0||jetCntCharged[1]==0){continue;}
+                    if(jetCntFull[1]==0||jetCntCharged[1]==0){
+                        cout<<"Is this where we loseit? R04 no jets?\n";
+                        continue;}
                 }
 
-                if(TString(jetCont->GetName()).Contains("R10")==kTRUE){
-                    if(jetCntFull[2]==0||jetCntCharged[2]==0){continue;}
+                if(TString(jetCont->GetName()).Contains("R07")==kTRUE){
+                    if(jetCntFull[2]==0||jetCntCharged[2]==0){
+                        cout<<"Is this where we loseit? R07 no jets?\n";
+                        continue;}
                 }
 
                 //==========================================================
@@ -386,7 +450,7 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
                 if(TString(jetCont->GetName()).Contains("Full")==kTRUE&&jet==jetCont->GetLeadingJet("")){
                     leadingB2BF[y] = jet;
-                    cout<<"Just filled leading full\n";
+                    cout<<"Just filled leading fullfor container"<<y<<"\n";
                     for(Int_t id=0; id<jet->GetNumberOfTracks(); id++){
                         AliAODTrack* track = (AliAODTrack*)jet->Track(id);
                         if(!track) continue;
@@ -414,15 +478,16 @@ void AliAnalysisTaskPatJet::FillJetHistos()
                     }
                 }
 
-                if(TString(jetCont->GetName()).Contains("Charged")==kTRUE){
+                if(TString(jetCont->GetName()).Contains("Charged")==kTRUE&&leadingB2BF[y]!=NULL){
 
 
                     if(TMath::Abs(jet->Phi_0_2pi()-leadingB2BF[y]->Phi_0_2pi())>TMath::Pi()-TMath::Pi()/8&&TMath::Abs(jet->Phi_0_2pi()-leadingB2BF[y]->Phi_0_2pi())<TMath::Pi()+TMath::Pi()/8){
 
-                        if(!leadingB2BC[y]){leadingB2BC[y] = jet;}
+                        if(leadingB2BC[y]==NULL){leadingB2BC[y] = jet; CJetFill = kTRUE;}
                         else{
                             if(leadingB2BC[y]->Pt() < jet->Pt()){
                                 leadingB2BC[y] = jet;
+                                CJetFill = kTRUE;
                                 cout<<"Refilling B2Bc\n";
                             }
                         }
@@ -436,9 +501,69 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
                 }
 
-                if(B2BEv&&leading1!=NULL&&jetInd == jetCnt-1){
+                if(B2BEv&&leading1!=NULL&&CJetFill&&jetInd==jetCnt){
+
+
+
                     for(Int_t i=0; i<3; i++){
                         if(i==0&&leading1->GetMostProbablePID()==AliAODTrack::kElectron){
+
+                            AliPIDResponse::EDetPidStatus detOK = AliPIDResponse::kDetPidOk;
+
+                            Double_t elecLikeTRD[1];
+
+                            Double_t nSigmaTPC;
+                            nSigmaTPC = fPIDResponse->NumberOfSigmasTPC(leading1,AliPID::kElectron);
+
+                            Double_t EOP = ((AliAODCaloCluster*)aod->GetCaloCluster(leading1->GetEMCALcluster()))->E()/leading1->Pt();
+
+
+                            if(leading1->IsHybridGlobalConstrainedGlobal()  &&  ((AliAODCaloCluster*)aod->GetCaloCluster(leading1->GetEMCALcluster()))->E()>.5  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kTRD, leading1)==detOK  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kTPC, leading1)==detOK  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kEMCAL, leading1)==detOK  &&  leading1->GetTRDntrackletsPID()<4  &&  fPIDResponse->ComputeTRDProbability(leading1, AliPID::kElectron, elecLikeTRD, AliTRDPIDResponse::kLQ2D) == detOK  &&  nSigmaTPC<2  &&  nSigmaTPC>-2  &&  elecLikeTRD[0]>.9  &&  EOP<1.15  &&  EOP>0.85){
+
+                                histoName = TString::Format("%s/%s/HFERejection", groupName[0].Data(), radName[y].Data());
+                                fHistManager.FillTH1(histoName, 1);
+                            }else{
+                                histoName = TString::Format("%s/%s/HFERejection", groupName[0].Data(), radName[y].Data());
+                                fHistManager.FillTH1(histoName, 2);
+                            }
+
+
+                            for(Int_t k=0;k<leadingB2BF[y]->GetNumberOfTracks();k++){
+                                AliAODTrack* trk = (AliAODTrack*)leadingB2BF[y]->Track(k);
+                                if(!trk){continue;}
+                                Double_t ElecMass=.000511;
+
+                                if(trk->GetMostProbablePID()==AliAODTrack::kElectron&&trk->Charge()==leading1->Charge()){
+
+                                    Double_t assocE1=TMath::Sqrt(leading1->P()*leading1->P()+ElecMass*ElecMass);
+                                    Double_t assocE2=TMath::Sqrt(trk->P()*trk->P()+ElecMass*ElecMass);
+
+                                    TLorentzVector assoc1(leading1->Px(), leading1->Py(), leading1->Pz(), assocE1);
+                                    TLorentzVector assoc2(trk->Px(), trk->Py(), trk->Pz(), assocE2);
+
+                                    Double_t InvMass=(assoc1+assoc2).M();
+
+                                    histoName = TString::Format("%s/%s/tracks/LeadingFInvMassLS", groupName[0].Data(), radName[y].Data());
+                                    fHistManager.FillTH1(histoName, InvMass);
+                                }
+
+                                if(trk->GetMostProbablePID()==AliAODTrack::kElectron&&trk->Charge()!=leading1->Charge()&&trk->Charge()!=0){
+
+                                    Double_t assocE1=TMath::Sqrt(leading1->P()*leading1->P()+ElecMass*ElecMass);
+                                    Double_t assocE2=TMath::Sqrt(trk->P()*trk->P()+ElecMass*ElecMass);
+
+                                    TLorentzVector assoc1(leading1->Px(), leading1->Py(), leading1->Pz(), assocE1);
+                                    TLorentzVector assoc2(trk->Px(), trk->Py(), trk->Pz(), assocE2);
+
+                                    Double_t InvMass=(assoc1+assoc2).M();
+
+                                    histoName = TString::Format("%s/%s/tracks/LeadingFInvMassULS", groupName[0].Data(), radName[y].Data());
+                                    fHistManager.FillTH1(histoName, InvMass);
+                                }
+
+
+                            }
+
                             histoName = TString::Format("%s/%s/Area", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->Area());
 
@@ -456,6 +581,9 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
                             histoName = TString::Format("%s/%s/MaxChPt", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt());
+
+                            histoName = TString::Format("%s/%s/LeadingPtFraction", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt()/leadingB2BC[y]->Pt());
 
                             Double_t g = 0;
                             Double_t g2 = 0;
@@ -483,13 +611,19 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
                             for(Int_t ind = 0;ind<100;ind++){
                                 Double_t t = 0;
+                                Double_t td = 0;
                                 for(Int_t k=0;k<jet->GetNumberOfTracks();k++){
                                     AliAODTrack* trk = (AliAODTrack*)jet->Track(k);
                                     if(!trk){continue;}
                                     t = t + trk->Pt()*TMath::Exp(-TMath::Abs(jet->Eta()-trk->Eta())*(1-a_vals[ind]));
+                                    td = td + trk->Pt()*TMath::Abs(jet->Eta()-trk->Eta())*TMath::Exp(-TMath::Abs(jet->Eta()-trk->Eta())*(1-a_vals[ind]));
                                 }
                                 histoName = TString::Format("%s/%s/Angularity", groupName[i].Data(), radName[y].Data());
-                                fHistManager.FillTH2(histoName, a_vals[ind], t/(2*jet->E()));      
+                                fHistManager.FillTH2(histoName, a_vals[ind], t/(2*jet->E())); 
+                                
+                                histoName = TString::Format("%s/%s/AngularityDeriv", groupName[i].Data(), radName[y].Data());
+                                fHistManager.FillTH2(histoName, a_vals[ind], td/(2*jet->E())); 
+
                             }
 
                             histoName = TString::Format("%s/%s/Girth", groupName[i].Data(), radName[y].Data());
@@ -500,6 +634,10 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
                             histoName = TString::Format("%s/%s/CMoment", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, g3);
+
+
+
+
 
                         }
 
@@ -522,6 +660,9 @@ void AliAnalysisTaskPatJet::FillJetHistos()
                             histoName = TString::Format("%s/%s/MaxChPt", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt());
 
+                            histoName = TString::Format("%s/%s/LeadingPtFraction", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt()/leadingB2BC[y]->Pt());
+
                             Double_t g = 0;
                             Double_t g2 = 0;
                             Double_t g3 = 0;
@@ -548,13 +689,18 @@ void AliAnalysisTaskPatJet::FillJetHistos()
 
                             for(Int_t ind = 0;ind<100;ind++){
                                 Double_t t = 0;
+                                Double_t td = 0;
                                 for(Int_t k=0;k<jet->GetNumberOfTracks();k++){
                                     AliAODTrack* trk = (AliAODTrack*)jet->Track(k);
                                     if(!trk){continue;}
                                     t = t + trk->Pt()*TMath::Exp(-TMath::Abs(jet->Eta()-trk->Eta())*(1-a_vals[ind]));
+                                    td = td + trk->Pt()*TMath::Abs(jet->Eta()-trk->Eta())*TMath::Exp(-TMath::Abs(jet->Eta()-trk->Eta())*(1-a_vals[ind]));
                                 }
                                 histoName = TString::Format("%s/%s/Angularity", groupName[i].Data(), radName[y].Data());
-                                fHistManager.FillTH2(histoName, a_vals[ind], t/(2*jet->E()));      
+                                fHistManager.FillTH2(histoName, a_vals[ind], t/(2*jet->E()));     
+                                
+                                histoName = TString::Format("%s/%s/AngularityDeriv", groupName[i].Data(), radName[y].Data());
+                                fHistManager.FillTH2(histoName, a_vals[ind], td/(2*jet->E())); 
                             }
 
                             histoName = TString::Format("%s/%s/Girth", groupName[i].Data(), radName[y].Data());
@@ -568,7 +714,7 @@ void AliAnalysisTaskPatJet::FillJetHistos()
                         }
                     }
                 }
-                jetInd++;
+
             }       
         }
     } 

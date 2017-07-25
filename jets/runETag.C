@@ -25,7 +25,7 @@ void runETag(
          const char *gridmode = "test", // Set the run mode (can be "full", "test", "offline", "submit" or "terminate"). Full & Test work for proof
          const bool bMCtruth = 0, // 1 = MCEvent handler is on (MC truth), 0 = MCEvent handler is off (MC reconstructed/real data)
          const bool bMCphyssel = 0, // 1 = looking at MC truth or reconstructed, 0 = looking at real data
-         const Long64_t nentries = 100000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
+         const Long64_t nentries = 30000, // for local and proof mode, ignored in grid mode. Set to 1234567890 for all events.
          const Long64_t firstentry = 0, // for local and proof mode, ignored in grid mode
          const char *proofdataset = "/alice/data/LHC10c_000120821_p1", // path to dataset on proof cluster, for proof analysis
          const char *proofcluster = "alice-caf.cern.ch", // which proof cluster to use in proof mode

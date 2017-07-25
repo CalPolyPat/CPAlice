@@ -4987,7 +4987,7 @@
     <event name="999">
       <file name="AliAOD.root" aclId="" broken="0" ctime="2015-03-12 06:03:24" dir="109916560" entryId="109918646" expiretime="" gowner="alidaq" guid="FDBF7AE0-C874-11E4-9DC4-47F0469FF6D9" guidtime="11E4C874" jobid="482060157" lfn="/alice/data/2012/LHC12d/000184209/pass2/12000184209042.22/AliAOD.root" md5="52a76281cf275a638ad75e01cbad7bd2" owner="alidaq" perm="755" replicated="0" size="9184099" turl="alien:///alice/data/2012/LHC12d/000184209/pass2/12000184209042.22/AliAOD.root" type="f" />
     </event>
-    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184209 pass2/*/AliAOD.root" creator="admin" date="Thu Jul 20 02:46:05 CEST 2017" timestamp="1500511565" />
+    <info command="[/alice/cern.ch/user/p/psteffan/]: find -z -x collection -l 15000 -o 0 /alice/data/2012/LHC12d/000184209 pass2/*/AliAOD.root" creator="admin" date="Tue Jul 25 20:31:27 CEST 2017" timestamp="1501007487" />
   </collection>
 </alien>
 

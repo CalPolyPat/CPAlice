@@ -63,7 +63,7 @@ void PSHFEtask()
    AliLog::SetGlobalLogLevel(AliLog::kWarning);
    TChain *chain = CreateChain("wn.xml", anatype);
 
-   mgr->StartAnalysis("localfile", chain, 100000, 0);
+   mgr->StartAnalysis("localfile", chain, 30000, 0);
    timer.Stop();
    timer.Print();
 }

@@ -61,7 +61,7 @@ void PSJetTask()
    AliAnalysisManager *mgr = AliAnalysisAlien::LoadAnalysisManager("PSJetTask.root");
    if (!mgr) return;
    mgr->PrintStatus();
-   AliLog::SetGlobalLogLevel(AliLog::kWarning);
+   AliLog::SetGlobalLogLevel(AliLog::kError);
    TChain *chain = CreateChain("wn.xml", anatype);
 
    mgr->StartAnalysis("localfile", chain, 10000, 0);
