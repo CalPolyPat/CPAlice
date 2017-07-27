@@ -9,7 +9,7 @@ void makeRatioPlots(){
 
     TString radName[3] = {"R02", "R04", "R07"};
 
-    TString histoName[11];
+    TString histoName[12];
     histoName[0] = TString("Area");
     histoName[1] = TString("Pt");
     histoName[2] = TString("E");
@@ -20,7 +20,8 @@ void makeRatioPlots(){
     histoName[7] = TString("QMoment");
     histoName[8] = TString("CMoment");
     histoName[9] = TString("Angularity");
-    histoName[10] = TString("LeadingPtFraction");
+    histoName[10] = TString("AngularityDeriv");
+    histoName[11] = TString("LeadingPtFraction");
 
     THashList *hlist0[3] = {((THashList*)list->At(0))->At(0), ((THashList*)list->At(0))->At(1), ((THashList*)list->At(0))->At(2)};
     THashList *hlist1[3] = {((THashList*)list->At(1))->At(0), ((THashList*)list->At(1))->At(1), ((THashList*)list->At(1))->At(2)};
@@ -33,7 +34,7 @@ void makeRatioPlots(){
     pad1->Draw();
 
     for(Int_t j=0;j<3;j++){
-        for(Int_t i=0;i<11;i++){
+        for(Int_t i=0;i<12;i++){
 
             TH1* histE = (TH1*)(hlist0[j]->FindObject(TString::Format("%s", histoName[i].Data())));
             TH1* histH = (TH1*)(hlist1[j]->FindObject(TString::Format("%s", histoName[i].Data())));
@@ -48,18 +49,25 @@ void makeRatioPlots(){
             histE->Draw("colz");
             histH->Draw("same");
 
-            TH1* histRat = (TH1*)histE->Clone(histE->GetName());
+            TH1* histRat = (TH1*)histH->Clone(histH->GetName());
             //histE->Copy(*histRat);
 
-            histRat->Divide(histH);
+            histRat->Divide(histE);
             TH1* histIF = (TH1*)hlist2[j]->FindObject(TString::Format("%s", histoName[i].Data()));
 
             histIF = histRat;
 
-            histIF->SetMaximum(2);
+            histIF->SetMaximum(2.5);
             histIF->SetOption("P");
+            histIF->SetStats(0);
             histIF->SetMarkerStyle(kFullCircle);
-            histIF->Draw("colz");
+            TLine* line = new TLine(0,1,100, 1);
+            
+            TLine* cf = new TLine(0,4./9.,100, 4./9.);
+            
+            histIF->Draw("plcolz");
+            line->Draw();
+            cf->Draw();
             c->SaveAs(TString::Format("./ratio_plots/%s/%s.png", radName[j].Data(), histIF->GetName()));
 
         }

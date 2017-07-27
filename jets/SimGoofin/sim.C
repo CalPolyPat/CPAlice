@@ -1,0 +1,22 @@
+void sim(Int_t nev=100){
+
+	gSystem->SetIncludePath("-I$ROOTSYS/include -I$ALICE_ROOT/include\ -I$ALICE_ROOT -I$ALICE/geant3/TGeant3");
+
+	AliSimulation simulator;
+	// Measure the total time spent in the simulation
+	TStopwatch timer;
+	timer.Start();
+	simulator.SetRunNumber(184127);	
+// List of detectors, where both summable digits and digits are provided
+	simulator.SetMakeSDigits("TRD TOF PHOS EMCAL RICH MUON ZDC PMD FMD START VZERO");
+	// Direct conversion of hits to digits for faster processing (ITS TPC)
+	simulator.SetDefaultStorage("alien://Folder=/alice/data/2012/OCDB");
+        simulator.SetCDBSnapshotMode("OCDB_MCsim.root");
+	simulator.UseVertexFromCDB();
+	simulator.UseMagFieldFromGRP();
+	simulator.SetMakeDigitsFromHits("ITS TPC");
+	simulator.SetConfigFile("Config.C");
+	simulator.Run(nev);
+	timer.Stop();
+	timer.Print();
+}
