@@ -196,15 +196,15 @@ AliAnalysisGrid* CreateAlienHandler(const char *taskname, const char *gridmode, 
     plugin->SetRunPrefix("000");   // 000 is real data, MC data would be different
     // ...then add run numbers to be considered
     Int_t runlist[110]={184127, 184132, 184135, 184137, 184138, 184188, 184208, 184209, 184215, 184371, 184673, 184678, 184682, 184687, 184784, 184786, 184928, 184933, 184938, 184964, 184967, 184968, 184987, 184988, 184990, 185029, 185031, 185116, 185126, 185127, 185132, 185134, 185157, 185160, 185164, 185189, 185196, 185198, 185203, 185206, 185208, 185221, 185217, 185282, 185284, 185288, 185289, 185291, 185292, 185293, 185296, 185299, 185300, 185302, 185303, 185349, 185350, 185351, 185356, 185359, 185360, 185361, 185362, 185363, 185371, 185375, 185457, 185461, 185465, 185563, 185565, 185574, 185575, 185578, 185580, 185581, 185582, 185583, 185588, 185589, 185680, 185687, 185695, 185697, 185698, 185699, 185701, 185734, 185735, 185738, 185756, 185757, 185764, 185765, 185768, 185775, 185776, 185778, 185784, 185909, 185912, 186163, 186164, 186165, 186167, 186205, 186208, 186229, 186319, 186320};  
-    for (Int_t ind=0; ind<100; ind++) {
+    for (Int_t ind=0; ind<50; ind++) {
         plugin->AddRunNumber(runlist[ind]);
     }
 
     plugin->SetDefaultOutputs(kTRUE);
     
-    plugin->SetNrunsPerMaster(5); //Not sure why this is here
+    plugin->SetNrunsPerMaster(10); //Not sure why this is here
 
-    plugin->SetOverwriteMode(kFALSE); //See previous comment
+    plugin->SetOverwriteMode(kTRUE); //See previous comment
 
     //plugin->SetMergeViaJDL(); //Always use unless you would like an output for each subjob
 

@@ -7,6 +7,7 @@
     #include <AliVCluster.h>
     #include <AliVParticle.h>
     #include <AliLog.h>
+    #include <math.h>
 
 
     #include "AliAnalysisTaskPatJet.h"
@@ -115,6 +116,27 @@ void AliAnalysisTaskPatJet::InitJetHistos()
     radName[1] = TString("R04");
     radName[2] = TString("R07");
 
+    Double_t PtTemp[21] = {0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,34,38,44,50,58};
+
+    Double_t MaxChPtTemp[12] = {0,2,4,6,8,10,12,14,16,20,24,30};
+
+    Double_t AreaTemp[40] = {0, 1/40., 2/40., 3/40., 4/40., 5/40., 6/40., 7/40., 8/40., 9/40., 10/40., 11/40., 12/40., 13/40., 14/40., 15/40., 16/40., 17/40., 18/40., 19/40., 20/40., 21/40., 22/40., 23/40., 24/40., 25/40., 26/40., 27/40., 28/40., 29/40., 30/40., 31/40., 32/40., 33/40., 34/40., 35/40., 36/40., 37/40., 38/40., 39/40.};
+
+    Double_t NchTemp[30] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29};
+
+    Double_t GQCTemp[40] = {0, .005, .01, .015, .02, .025, .03, .035, .04, .045, .05, .055, .06, .065, .07, .075, .08, .085, .09, .095, .1, .105, .11, .115, .12, .125, .13, .135, .14, .145, .15, .155, .16, .165, .17, .175, .18, .185, .19, .195};
+
+    Double_t LFTemp[40] = {0, 1.3/40., 2.6/40., 3.9/40., 5.2/40., 6.5/40., 7.8/40., 9.1/40., 10.4/40., 11.7/40., 13/40., 14.3/40., 15.6/40., 16.9/40., 18.2/40., 19.5/40., 20.8/40., 22.1/40., 23.4/40., 24.7/40., 26/40., 27.3/40., 28.6/40., 29.9/40., 31.2/40., 32.5/40., 33.8/40., 35.1/40., 36.4/40., 37.7/40., 39/40., 40.3/40., 41.6/40., 42.9/40., 44.2/40., 45.5/40., 46.8/40., 48.1/40., 49.4/40., 50.7/40.};
+
+    TArrayD* PtBins = new TArrayD(21, PtTemp);
+    TArrayD* MaxChPtBins = new TArrayD(12, MaxChPtTemp);
+    TArrayD* AreaBins = new TArrayD(40, AreaTemp);
+    TArrayD* NchBins = new TArrayD(30, NchTemp);
+    TArrayD* GBins = new TArrayD(40, GQCTemp);
+    TArrayD* CBins= new TArrayD(40, GQCTemp);
+    TArrayD* QBins= new TArrayD(40, GQCTemp);
+    TArrayD* LeadingFracBins = new TArrayD(40, LFTemp);
+
 
 
     for(Int_t i=0; i<3;i++){
@@ -130,41 +152,41 @@ void AliAnalysisTaskPatJet::InitJetHistos()
             //jet area
             histoName = TString::Format("%s/%s/Area", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Jet area for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1);
+            fHistManager.CreateTH1(histoName, histoTitle, *AreaBins);
 
             //jet energy
             histoName = TString::Format("%s/%s/E", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Jet Energy for away side jets(Calculated using jet mass)");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 80);
+            fHistManager.CreateTH1(histoName, histoTitle, *PtBins);
 
             //
             histoName = TString::Format("%s/%s/Pt", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Jet Pt for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 80);
+            fHistManager.CreateTH1(histoName, histoTitle, *PtBins);
 
             histoName = TString::Format("%s/%s/Nch", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Charged particle multiplicity for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 30);
+            fHistManager.CreateTH1(histoName, histoTitle, *NchBins);
 
             histoName = TString::Format("%s/%s/M", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Jet mass for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1);
+            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, .01);
 
             histoName = TString::Format("%s/%s/MaxChPt", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Pt of leading charged constituent for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 50);
+            fHistManager.CreateTH1(histoName, histoTitle, *MaxChPtBins);
 
             histoName = TString::Format("%s/%s/Girth", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Girth or first geometric moment for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1);
+            fHistManager.CreateTH1(histoName, histoTitle, *GBins);
 
             histoName = TString::Format("%s/%s/QMoment", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Quadratic geometric moment for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1);
+            fHistManager.CreateTH1(histoName, histoTitle, *QBins);
 
             histoName = TString::Format("%s/%s/CMoment", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Cubic geometric moment for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1);
+            fHistManager.CreateTH1(histoName, histoTitle, *CBins);
 
             histoName = TString::Format("%s/%s/Angularity", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Angularity vs. parameter a for away side jets");
@@ -176,7 +198,7 @@ void AliAnalysisTaskPatJet::InitJetHistos()
 
             histoName = TString::Format("%s/%s/LeadingPtFraction", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("Leading particle pT fraction for away side jets");
-            fHistManager.CreateTH1(histoName, histoTitle, NBins, 0, 1.3);
+            fHistManager.CreateTH1(histoName, histoTitle, *LeadingFracBins);
 
             histoName = TString::Format("%s/%s/tracks/DCA", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("DCA for tracks in away side jets");
@@ -193,6 +215,45 @@ void AliAnalysisTaskPatJet::InitJetHistos()
             histoName = TString::Format("%s/%s/tracks/dEdx", groupName[i].Data(), radName[j].Data());
             histoTitle = TString::Format("dEdx by Pt for tracks in away side jets");
             fHistManager.CreateTH2(histoName, histoTitle, NBins*2, 0, 50, NBins, -30, 180);
+
+            //by Pt histos
+            //jet area
+            histoName = TString::Format("%s/%s/AreaByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Jet area vs Jet Pt for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *AreaBins);
+
+            histoName = TString::Format("%s/%s/NchByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Charged particle multiplicity vs Jet Pt for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *NchBins);
+
+            histoName = TString::Format("%s/%s/MaxChPtByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Pt of leading charged constituent vs Jet Pt for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *MaxChPtBins);
+
+            histoName = TString::Format("%s/%s/GirthByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Girth or first geometric moment vs Jet Pt for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *GBins);
+
+            histoName = TString::Format("%s/%s/QMomentByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Quadratic geometric moment vs Jet Ptfor away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *QBins);
+
+            histoName = TString::Format("%s/%s/CMomentByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Cubic geometric moment vs Jet Pt for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *CBins);
+
+            histoName = TString::Format("%s/%s/LeadingPtFractionByPt", groupName[i].Data(), radName[j].Data());
+            histoTitle = TString::Format("Leading particle pT fraction vs Jet Pt for away side jets");
+            fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *LeadingFracBins);
+
+            //Moments
+            for(Int_t n=0;n<11;n++){
+                for(Int_t m=0;m<11;m++){
+                    histoName = TString::Format("%s/%s/Moments/M%d%d", groupName[i].Data(), radName[j].Data(), n, m);
+                    histoTitle = TString::Format("M%d%d", n, m);
+                    fHistManager.CreateTH2(histoName, histoTitle, *PtBins, *NchBins);
+                }
+            }
 
         }
     }
@@ -511,7 +572,7 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
 
                 if(B2BEv&&leading1!=NULL&&CJetFill&&jetInd==jetCnt){
 
-
+                    Double_t EOP = -1;
 
                     for(Int_t i=0; i<3; i++){
                         if(i==0&&leading1->GetMostProbablePID()==AliAODTrack::kElectron){
@@ -522,18 +583,19 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
 
                             Double_t nSigmaTPC;
                             nSigmaTPC = fPIDResponse->NumberOfSigmasTPC(leading1,AliPID::kElectron);
-                            
-                            Double_t EOP = -1;
 
-                            if(leading1->GetEMCALcluster()!=-99999){
+
+
+                            /*if(leading1->GetEMCALcluster()!=-99999){
                                 Int_t clid = leading1->GetEMCALcluster();
                                 AliAODCaloCluster* cl = aod->GetCaloCluster(clid);
                                 if(cl){
+                                    cout<<"FIlling EOP with cluster ID:"<<clid<<"\n";
                                     EOP = cl->E()/leading1->Pt();
                                 }
-                            }
+                            }*/
 
-                            if(leading1->IsHybridGlobalConstrainedGlobal()  &&  ((AliAODCaloCluster*)aod->GetCaloCluster(leading1->GetEMCALcluster()))->E()>.5  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kTRD, leading1)==detOK  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kTPC, leading1)==detOK  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kEMCAL, leading1)==detOK  &&  leading1->GetTRDntrackletsPID()<4  &&  fPIDResponse->ComputeTRDProbability(leading1, AliPID::kElectron, elecLikeTRD, AliTRDPIDResponse::kLQ2D) == detOK  &&  nSigmaTPC<2  &&  nSigmaTPC>-2  &&  elecLikeTRD[0]>.9  &&  EOP<1.15  &&  EOP>0.85){
+                            if(leading1->IsHybridGlobalConstrainedGlobal()  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kTRD, leading1)==detOK  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kTPC, leading1)==detOK  &&  fPIDResponse->CheckPIDStatus(AliPIDResponse::kEMCAL, leading1)==detOK  &&  leading1->GetTRDntrackletsPID()<4  &&  fPIDResponse->ComputeTRDProbability(leading1, AliPID::kElectron, elecLikeTRD, AliTRDPIDResponse::kLQ2D) == detOK  &&  nSigmaTPC<2  &&  nSigmaTPC>-2  &&  elecLikeTRD[0]>.9){
 
                                 histoName = TString::Format("%s/%s/HFERejection", groupName[0].Data(), radName[y].Data());
                                 fHistManager.FillTH1(histoName, 0.);
@@ -581,6 +643,9 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                             histoName = TString::Format("%s/%s/Area", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->Area());
 
+                            histoName = TString::Format("%s/%s/AreaByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->Area());
+
                             histoName = TString::Format("%s/%s/E", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->E());
 
@@ -590,18 +655,29 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                             histoName = TString::Format("%s/%s/Nch", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->Nch());
 
+                            histoName = TString::Format("%s/%s/NchByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->Nch());
+
                             histoName = TString::Format("%s/%s/M", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->M());
 
                             histoName = TString::Format("%s/%s/MaxChPt", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt());
 
+                            histoName = TString::Format("%s/%s/MaxChPtByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->MaxChargedPt());
+
                             histoName = TString::Format("%s/%s/LeadingPtFraction", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt()/leadingB2BC[y]->Pt());
+
+                            histoName = TString::Format("%s/%s/LeadingPtFractionByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->MaxChargedPt()/leadingB2BC[y]->Pt());
 
                             Double_t g = 0;
                             Double_t g2 = 0;
                             Double_t g3 = 0;
+                            
+                            Double_t mom[11][11] = {-1};
                             for(Int_t k=0;k<jet->GetNumberOfTracks();k++){
                                 AliAODTrack* trk = (AliAODTrack*)jet->Track(k);
                                 if(!trk){continue;}
@@ -609,6 +685,12 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                                 g = g + (trk->Pt()/jet->Pt())*jet->DeltaR(trk);
                                 g2 = g2 + ((trk->Pt()*trk->Pt())/jet->Pt())*jet->DeltaR(trk);
                                 g3 = g3 + ((trk->Pt()*trk->Pt()*trk->Pt())/jet->Pt())*jet->DeltaR(trk);
+                                
+                                for(Int_t n=0;n<11;n++){
+                                    for(Int_t m=0;m<11;m++){
+                                        mom[n][m] += pow((trk->Pt()/jet->Pt()), n)*pow(TMath::Abs(jet->Eta()-trk->Eta()), m);
+                                    }
+                                }
 
                                 histoName = TString::Format("%s/%s/tracks/DCA", groupName[i].Data(), radName[y].Data());
                                 fHistManager.FillTH1(histoName, trk->DCA());
@@ -622,6 +704,8 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                                 histoName = TString::Format("%s/%s/tracks/dEdx", groupName[i].Data(), radName[y].Data());
                                 fHistManager.FillTH2(histoName, trk->Pt(), trk->GetTPCsignal());
                             }
+                            
+                            
 
                             for(Int_t ind = 0;ind<100;ind++){
                                 Double_t t = 0;
@@ -649,7 +733,21 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                             histoName = TString::Format("%s/%s/CMoment", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, g3);
 
+                            histoName = TString::Format("%s/%s/GirthByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), g);
 
+                            histoName = TString::Format("%s/%s/QMomentByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), g2);
+
+                            histoName = TString::Format("%s/%s/CMomentByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), g3);
+                            
+                            for(Int_t n=0;n<11;n++){
+                                for(Int_t m=0;m<11;m++){
+                                    histoName = TString::Format("%s/%s/Moments/M%d%d", groupName[i].Data(), radName[y].Data(), n, m);
+                                    fHistManager.FillTH2(histoName, leadingB2BC[y]->Pt(), mom[n][m]);
+                                }
+                            }
 
 
 
@@ -658,6 +756,9 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                         if(i==1&&leading1->GetMostProbablePID()!=AliAODTrack::kElectron){
                             histoName = TString::Format("%s/%s/Area", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->Area());
+
+                            histoName = TString::Format("%s/%s/AreaByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->Area());
 
                             histoName = TString::Format("%s/%s/E", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->E());
@@ -668,14 +769,23 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
                             histoName = TString::Format("%s/%s/Nch", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->Nch());
 
+                            histoName = TString::Format("%s/%s/NchByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->Nch());
+
                             histoName = TString::Format("%s/%s/M", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->M());
 
                             histoName = TString::Format("%s/%s/MaxChPt", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt());
 
+                            histoName = TString::Format("%s/%s/MaxChPtByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->MaxChargedPt());
+
                             histoName = TString::Format("%s/%s/LeadingPtFraction", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, leadingB2BC[y]->MaxChargedPt()/leadingB2BC[y]->Pt());
+
+                            histoName = TString::Format("%s/%s/LeadingPtFractionByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), leadingB2BC[y]->MaxChargedPt()/leadingB2BC[y]->Pt());
 
                             Double_t g = 0;
                             Double_t g2 = 0;
@@ -725,6 +835,15 @@ void AliAnalysisTaskPatJet::FillJetHistos(AliAODEvent* aod, AliPIDResponse* fPID
 
                             histoName = TString::Format("%s/%s/CMoment", groupName[i].Data(), radName[y].Data());
                             fHistManager.FillTH1(histoName, g3);
+
+                            histoName = TString::Format("%s/%s/GirthByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), g);
+
+                            histoName = TString::Format("%s/%s/QMomentByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), g2);
+
+                            histoName = TString::Format("%s/%s/CMomentByPt", groupName[i].Data(), radName[y].Data());
+                            fHistManager.FillTH1(histoName, leadingB2BC[y]->Pt(), g3);
                         }
                     }
                 }

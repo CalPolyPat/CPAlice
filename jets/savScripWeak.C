@@ -2135,7 +2135,7 @@
         TH1F* Cor;
         TH1F* Dp;
         TH1F* DpM;
-        Double_t assopt[7]={.3, .5, .8, 1, 2, 4, 999};
+        Double_t assopt[7]={.3, 1, 2, 4, 8};
         TString trgName[3]={"MB", "EMC7", "EMCEGA"};
         for(Int_t i=0;i<indMix;i++){
             cout<<i<<'\n';
@@ -2149,8 +2149,8 @@
             if(Dp->Divide(DpM)){
                 Cor=Dp;
                 Cor->Draw();
-                //Cor->SetTitle(Form("Correlation Function for %s%d%s%d%s%.1f%s%.1f%s%s;\\Delta\\phi;\\frac{N_{same}}{N_{mix}}","trig pt: ",i<6?1:i<12?2:i<18?4:i<24?1:i<30?2:i<36?4:i<42?1:i<48?2:i<54?4:-1,"-",i<6?2:i<12?4:i<18?8:i<24?2:i<30?4:i<36?8:i<42?2:i<48?4:i<54?8:-1, ", assoc pt: ", assopt[i%6], "-", assopt[i%6+1], " for ", trgName[i/18].Data()));
-                c1->SaveAs(Form("./plotsKlayWeakNoSSSig/Correlation_%d%s%d%s%d%s%.1f%s%.1f.png",i,"trig_pt",i<6?1:i<12?2:i<18?4:i<24?1:i<30?2:i<36?4:i<42?1:i<48?2:i<54?4:-1,"",i<6?2:i<12?4:i<18?8:i<24?2:i<30?4:i<36?8:i<42?2:i<48?4:i<54?8:-1, "assoc_pt", assopt[i%6], "", assopt[i%6+1]));
+                Cor->SetTitle(Form("Correlation Function for %s%d%s%d%s%.1f%s%.1f%s%s;\\Delta\\phi;\\frac{N_{same}}{N_{mix}}","trig pt: ",i<5?1:i<10?2:i<15?4:i<20?1:i<25?2:i<30?4:i<35?1:i<40?2:i<45?4:-1,"-",i<5?2:i<10?4:i<15?8:i<20?2:i<25?4:i<30?8:i<35?2:i<40?4:i<45?8:-1, ", assoc pt: ", assopt[i%5], "-", assopt[i%5+1], " for ", trgName[i/15].Data()));
+                c1->SaveAs(Form("./plotsKlayWeakNoSSSig/%sCorrelation_%d%s%d%s%d%s%.1f%s%.1f.png",trgName[i/15].Data(), i,"trig_pt",i<5?1:i<10?2:i<15?4:i<20?1:i<25?2:i<30?4:i<35?1:i<40?2:i<45?4:-1,"",i<5?2:i<10?4:i<15?8:i<20?2:i<25?4:i<30?8:i<35?2:i<40?4:i<45?8:-1, "assoc_pt", assopt[i%5], "", assopt[i%5+1]));
             }
         }
 
